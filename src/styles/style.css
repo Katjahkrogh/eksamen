@@ -26,4 +26,48 @@
   --purelyWhite: #ffffff;
   /* Bruges istedet for sort til typografier */
   --darkBrown: #311e02;
+
+  --mobileH1: 30px;
+  --mobileH2: 30px;
+  --mobileH3: 25px;
+  --mobileH4: 20px;
+  --mobileP: 20px;
+}
+
+h1 {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 41px;
+  text-transform: uppercase;
+  color: var(--purelyWhite);
+}
+
+h2 {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 41px;
+  letter-spacing: 0.04em;
+  color: var(--darkBrown);
+}
+
+h3 {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 34px;
+  color: var(--darkBrown);
+}
+
+h4 {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  color: var(--darkBrown);
 }

@@ -1,0 +1,38 @@
+---
+import "../styles/style.css";
+import Bestsellercard from "../components/Bestsellercard.astro";
+---
+
+<section id="bestseller">
+  <img src="../svgfiles/bestsellercircle.svg" alt="bestseller" class="bestsellercircle" />
+  <div class="carousel"><Bestsellercard /><Bestsellercard /><Bestsellercard /></div>
+</section>
+
+<style>
+  /* mobileview */
+  #bestseller {
+    background-color: var(--darkOcean);
+    height: 620px;
+  }
+  .bestsellercircle {
+    position: absolute;
+    z-index: 100;
+    margin: 30px 0 0 5px;
+    animation: spin 10s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .carousel {
+    display: flex;
+    gap: 22px;
+    overflow-x: scroll;
+    padding: 77px 0 0 30px;
+  }
+</style>
