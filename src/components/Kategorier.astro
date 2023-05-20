@@ -7,38 +7,38 @@ import "../styles/style.css";
   <div class="flex-layout">
     <a href="#">
       <div class="kategori-cirkel">
-        <img src="../images/210318_PurelyProfessional_3_100865.jpg" alt="" />
-        <div><p>Hudpleje</p></div>
+        <img src="../images/210318_PurelyProfessional_3_100865.jpg" alt="" class="kategori-img" />
+        <div><p class="kategori-tekst">Hudpleje</p></div>
       </div>
     </a>
     <a href="#">
       <div class="kategori-cirkel">
-        <img src="../images/210319_PurelyProfessional-2102444-e1666964250729.jpg" alt="" />
-        <div><p>Shampoo</p></div>
+        <img src="../images/210319_PurelyProfessional-2102444-e1666964250729.jpg" alt="" class="kategori-img" />
+        <div><p class="kategori-tekst">Shampoo</p></div>
       </div>
     </a>
     <a href="#">
       <div class="kategori-cirkel">
-        <img src="../images/210318_PurelyProfessional-2100554-1-e1675419248356.jpg" alt="" />
-        <div><p>Hårpleje</p></div>
+        <img src="../images/210318_PurelyProfessional-2100554-1-e1675419248356.jpg" alt="" class="kategori-img" />
+        <div><p class="kategori-tekst">Hårpleje</p></div>
       </div>
     </a>
     <a href="#">
       <div class="kategori-cirkel">
-        <img src="../images/210318_PurelyProfessional-2100251.jpg" alt="" />
-        <div><p>Ansigtspleje</p></div>
+        <img src="../images/210318_PurelyProfessional-2100251.jpg" alt="" class="kategori-img" />
+        <div><p class="kategori-tekst">Ansigtspleje</p></div>
       </div>
     </a>
     <a href="#">
       <div class="kategori-cirkel">
-        <img src="../images/210319_PurelyProfessional-2102361-e1675348761705.jpg" alt="" />
-        <div><p>Styling</p></div>
+        <img src="../images/210319_PurelyProfessional-2102361-e1675348761705.jpg" alt="" class="kategori-img" />
+        <div><p class="kategori-tekst">Styling</p></div>
       </div>
     </a>
     <a href="#">
       <div class="kategori-cirkel">
-        <img src="../images/Toilettaske_hand_108343-e1675418310920.jpg" alt="" />
-        <div><p>Tilbehør</p></div>
+        <img src="../images/Toilettaske_hand_108343-e1675418310920.jpg" alt="" class="kategori-img" />
+        <div><p class="kategori-tekst">Tilbehør</p></div>
       </div>
     </a>
   </div>
@@ -47,7 +47,7 @@ import "../styles/style.css";
 <style>
   /* mobileview */
   #kategorier {
-    padding: 38px 0 38px 0;
+    padding: 65px 0 38px 0;
     background-color: var(--lightSand);
   }
   h2 {
@@ -68,7 +68,7 @@ import "../styles/style.css";
     grid-template-columns: 1fr;
   }
 
-  .kategori-cirkel img {
+  .kategori-img {
     object-fit: cover;
     width: 345px;
     height: 345px;
@@ -81,12 +81,35 @@ import "../styles/style.css";
     justify-content: center;
     grid-area: 1/1/2/2;
   }
-  .kategori-cirkel p {
+  .kategori-tekst {
     color: var(--purelyWhite);
     font-size: 50px;
     line-height: 68px;
+    display: inline-block;
+    padding-bottom: 2px;
+    position: relative;
   }
 
+  .kategori-tekst::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    border-radius: 1.5px;
+    background-color: var(--purelyWhite);
+    transition: width 0.5s ease-out;
+  }
+
+  .kategori-cirkel:hover .kategori-tekst::before {
+    width: 100%;
+    left: 0;
+    right: auto;
+  }
+  .kategori-cirkel:hover .kategori-img {
+    opacity: 80%;
+  }
   /* Media queries */
   /* tablet format (over 600px)*/
   @media (min-width: 600px) {
