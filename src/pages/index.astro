@@ -1,5 +1,11 @@
 ---
 import Bestseller from "../components/Bestseller.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Heroindex from "../components/Heroindex.astro";
+import Kategorier from "../components/Kategorier.astro";
+import Raadogguides from "../components/Raadogguides.astro";
+import Thepurelypromisebanner from "../components/Thepurelypromisebanner.astro";
 import "../styles/style.css";
 ---
 
@@ -12,8 +18,13 @@ import "../styles/style.css";
     <title>Purely Professionals</title>
   </head>
   <body>
-    <h1>Bestseller</h1>
+    <Header />
+    <Heroindex />
+    <Thepurelypromisebanner />
     <Bestseller />
+    <Kategorier />
+    <Raadogguides />
+    <Footer />
   </body>
 </html>
 
