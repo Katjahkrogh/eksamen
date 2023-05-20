@@ -2,10 +2,90 @@
 import "../styles/style.css";
 ---
 
-<section id="kategorier"></section>
+<section id="kategorier">
+  <h2>Shop via kategori</h2>
+  <div class="flex-layout">
+    <a href="#">
+      <div class="kategori-cirkel">
+        <img src="../images/210318_PurelyProfessional_3_100865.jpg" alt="" />
+        <div><p>Hudpleje</p></div>
+      </div>
+    </a>
+    <a href="#">
+      <div class="kategori-cirkel">
+        <img src="../images/210319_PurelyProfessional-2102444-e1666964250729.jpg" alt="" />
+        <div><p>Shampoo</p></div>
+      </div>
+    </a>
+    <a href="#">
+      <div class="kategori-cirkel">
+        <img src="../images/210318_PurelyProfessional-2100554-1-e1675419248356.jpg" alt="" />
+        <div><p>Hårpleje</p></div>
+      </div>
+    </a>
+    <a href="#">
+      <div class="kategori-cirkel">
+        <img src="../images/210318_PurelyProfessional-2100251.jpg" alt="" />
+        <div><p>Ansigtspleje</p></div>
+      </div>
+    </a>
+    <a href="#">
+      <div class="kategori-cirkel">
+        <img src="../images/210319_PurelyProfessional-2102361-e1675348761705.jpg" alt="" />
+        <div><p>Styling</p></div>
+      </div>
+    </a>
+    <a href="#">
+      <div class="kategori-cirkel">
+        <img src="../images/Toilettaske_hand_108343-e1675418310920.jpg" alt="" />
+        <div><p>Tilbehør</p></div>
+      </div>
+    </a>
+  </div>
+</section>
 
 <style>
   /* mobileview */
+  #kategorier {
+    padding: 38px 0 38px 0;
+    background-color: var(--lightSand);
+  }
+  h2 {
+    margin-left: 30px;
+  }
+  .flex-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 38px;
+    align-items: center;
+  }
+  .kategori-cirkel {
+    width: 345px;
+    height: 345px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .kategori-cirkel img {
+    object-fit: cover;
+    width: 345px;
+    height: 345px;
+    border-radius: 50%;
+    grid-area: 1/1/2/2;
+  }
+  .kategori-cirkel div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: 1/1/2/2;
+  }
+  .kategori-cirkel p {
+    color: var(--purelyWhite);
+    font-size: 50px;
+    line-height: 68px;
+  }
 
   /* Media queries */
   /* tablet format (over 600px)*/
