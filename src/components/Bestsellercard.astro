@@ -3,9 +3,16 @@ import "../styles/style.css";
 ---
 
 <section id="bestseller-card">
-  <img src="../products/210318_PurelyProfessional-299844-e1678279419699-1024x1024.jpg" alt="" />
-  <!-- <img src="../products/purely_shampoo_4_300ml.jpg" alt="" /> -->
-
+  <div class="container">
+    <div class="img-wrapper">
+      <img src="../products/210318_PurelyProfessional-299844-e1678279419699-1024x1024.jpg" alt="" class="product-img" />
+      <img src="../products/purely_shampoo_4_300ml.jpg" alt="" class="hover-img" />
+      <div class="overlay">
+        <p>Til krøllet går</p>
+        <img src="../svgfiles/krollet.svg" alt="hårtype" />
+      </div>
+    </div>
+  </div>
   <h3>Shampoo 0</h3>
   <h4>179 kr.</h4>
 </section>
@@ -15,12 +22,61 @@ import "../styles/style.css";
   #bestseller-card {
     width: 323px;
   }
-  img {
+  .product-img,
+  .hover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
     height: 417px;
     width: 323px;
     object-fit: cover;
+    transition: opacity 0.3s ease;
   }
   h3 {
     margin: 12px 0px 4px 0px;
+  }
+
+  /* Tekst oven på produktbillede */
+  .container {
+    position: relative;
+  }
+
+  .img-wrapper {
+    position: relative;
+    display: inline-block;
+    height: 417px;
+    width: 323px;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+    justify-content: right;
+    width: 100%;
+    height: 100%;
+    color: var(--purely-white);
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    padding: 10px;
+  }
+
+  /* Hover billede skifter */
+  .hover-img {
+    opacity: 0;
+  }
+  .img-wrapper:hover .product-img {
+    opacity: 0;
+  }
+
+  .img-wrapper:hover .hover-img {
+    opacity: 1;
+  }
+
+  .img-wrapper:hover .overlay {
+    opacity: 0;
   }
 </style>

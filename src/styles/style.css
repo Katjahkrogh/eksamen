@@ -26,12 +26,6 @@
   --purelyWhite: #ffffff;
   /* Bruges istedet for sort til typografier */
   --darkBrown: #311e02;
-
-  --mobileH1: 30px;
-  --mobileH2: 30px;
-  --mobileH3: 25px;
-  --mobileH4: 20px;
-  --mobileP: 20px;
 }
 
 a {
@@ -68,6 +62,15 @@ h3 {
 }
 
 h4 {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  color: var(--darkBrown);
+}
+
+p {
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
