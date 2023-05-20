@@ -26,12 +26,6 @@
   --purelyWhite: #ffffff;
   /* Bruges istedet for sort til typografier */
   --darkBrown: #311e02;
-
-  --mobileH1: 30px;
-  --mobileH2: 30px;
-  --mobileH3: 25px;
-  --mobileH4: 20px;
-  --mobileP: 20px;
 }
 
 a {
