@@ -1,12 +1,138 @@
 ---
 import "../styles/style.css";
 ---
+
 <header>
-<section id="header"></section>
+  <nav>
+    <div id="logo"><img src="../images/logo-hvid.png" alt="logo" /></div>
+    <div class="burger-menu">
+      <div class="burger"></div>
+      <div class="burger"></div>
+      <div class="burger"></div>
+    </div>
+    <div class="menu">
+      <ul>
+        <li><a href="produkt">Shop</a></li>
+        <li><a href="purelypromise">The Purely Promise</a></li>
+        <li><a href="refilleries">Refilleries</a></li>
+        <li><a href="om">Om Purely</a></li>
+        <li><a href="vidensbank">Vidensbank</a></li>
+      </ul>
+      <div id="socials">
+        <a href="#"
+          ><img src="../svgfiles/instagram-logo.svg" alt="Instagram logo" /></a
+        >
+        <a href="#"
+          ><img src="../svgfiles/facebook-logo.svg" alt="Facebook logo" /></a
+        >
+        <a href="#"><img src="../svgfiles/mail-logo.svg" alt="Mail logo" /></a>
+      </div>
+    </div>
+  </nav>
 </header>
 
 <style>
   /* mobileview */
+  #socials a {
+    text-align: center;
+  }
+  #socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25%;
+  }
+
+  #socials img {
+    width: 40%;
+  }
+
+  #logo img {
+    width: 60px;
+    height: 48px;
+  }
+  header {
+    background-color: var(--darkSand);
+    padding: 25px;
+    position: relative;
+  }
+
+  .burger-menu {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu li {
+    list-style: none;
+  }
+
+  li a {
+    line-height: 3em;
+  }
+
+  a {
+    font-size: 2rem;
+    color: var(--purelyWhite);
+    font-family: Open Sans, sans-serif;
+  }
+  .burger-menu {
+    position: fixed;
+    top: 35px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+  }
+
+  .burger {
+    width: 100%;
+    height: 3px;
+    background-color: var(--purelyWhite);
+    transition: transform 0.3s;
+  }
+  .burger-menu.active .burger:nth-child(1) {
+    transform: rotate(-45deg);
+  }
+  .burger-menu.active .burger:nth-child(2) {
+    transform: rotate(45deg);
+  }
+
+  .burger-menu.active .burger:nth-child(3) {
+    opacity: 0;
+  }
+  .menu {
+    display: none;
+  }
+  .menu.active {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    background-color: var(--darkSand);
+  }
+
+  ul {
+    text-align: center;
+  }
+
+  body {
+    overflow: hidden;
+  }
+
+  .content {
+    display: none;
+  }
 
   /* Media queries */
   /* tablet format (over 600px)*/
@@ -20,3 +146,28 @@ import "../styles/style.css";
   @media (min-width: 1200px) {
   }
 </style>
+
+<script>
+  const burgerMenu = document.querySelector(".burger-menu");
+  const menu = document.querySelector(".menu");
+  const body = document.querySelector("body");
+
+  burgerMenu.addEventListener("click", function () {
+    burgerMenu.classList.toggle("active");
+    menu.classList.toggle("active");
+    body.classList.toggle("active");
+    toggleBurgerIcon();
+  });
+
+  menu.addEventListener("click", function () {
+    burgerMenu.classList.remove("active");
+    menu.classList.remove("active");
+    body.classList.remove("active");
+    toggleBurgerIcon();
+  });
+
+  function toggleBurgerIcon() {
+    const burgerIcons = burgerMenu.querySelectorAll(".burger");
+    burgerIcons.forEach((burger) => burger.classList.toggle(".cross"));
+  }
+</script>
