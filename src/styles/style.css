@@ -70,6 +70,15 @@ h4 {
   color: var(--darkBrown);
 }
 
+h5 {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  color: var(--darkBrown);
+}
+
 p {
   font-family: "Open Sans";
   font-style: normal;
@@ -77,4 +86,10 @@ p {
   font-size: 20px;
   line-height: 27px;
   color: var(--darkBrown);
+}
+
+a {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
 }

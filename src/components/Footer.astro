@@ -2,13 +2,113 @@
 import "../styles/style.css";
 ---
 
-<section id="footer"></section>
+<section id="footer">
+  <div class="kontakt">
+    <h5>Kontakt os</h5>
+    <div class="some-links">
+      <a href="https://www.instagram.com/purelyprofessional/" target="_blank"><img src="../svgfiles/instagram-logo.svg" alt="Instagram link" class="some-logo" /></a>
+      <a href="https://www.facebook.com/PurelyProfessionalDK/?locale=da_DK" target="_blank"><img src="../svgfiles/facebook-logo.svg" alt="Facebook link" class="some-logo" /></a>
+      <a href="mailto:kundeservice@purelyprofessional.dk" target="_blank"><img src="../svgfiles/mail-logo.svg" alt="Mail link" class="some-logo" /></a>
+    </div>
+  </div>
+
+  <p class="adresse">
+    Malmøgade 2 kld. th <br />
+    2100 København Ø
+  </p>
+
+  <div class="betaling">
+    <h5>Betalingsmuligheder</h5>
+    <div class="betalingsmuligheder">
+      <img src="../images/applepay.webp" alt="" class="betal-logo" />
+      <img src="../images/dankortlogo.webp" alt="" class="betal-logo" />
+      <img src="../images/visalogo.webp" alt="" class="betal-logo" />
+      <img src="../images/mastercardlogo.webp" alt="" class="betal-logo" />
+    </div>
+  </div>
+
+  <ul class="navigation">
+    <li><a href="produkt">Shop</a></li>
+    <li><a href="purelypromise">The Purely Promise</a></li>
+    <li><a href="refilleries">Refilleries</a></li>
+    <li><a href="om">Om Purely</a></li>
+    <li><a href="vidensbank">Vidensbank</a></li>
+  </ul>
+
+  <p class="copyright">@2023 Purely Professional</p>
+</section>
 
 <style>
   /* mobileview */
-  footer {
+  #footer {
     height: 635px;
     background-color: var(--darkSand);
+    padding: 65px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+  .kontakt,
+  .betaling {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .some-links {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+  }
+  .some-logo {
+    width: 40px;
+  }
+
+  .adresse {
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+  }
+
+  .betalingsmuligheder {
+    background-color: var(--lightSand);
+    border-radius: 28px;
+    height: 60px;
+    width: 310px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .betal-logo {
+    width: 55px;
+  }
+
+  .navigation {
+    height: 83px;
+    width: 100vw;
+    background-color: var(--lightSand);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  li {
+    list-style: none;
+    padding: 8px 19px;
+    text-decoration: underline;
+  }
+
+  a {
+    color: var(--darkBrown);
+  }
+  .copyright {
+    color: var(--purelyWhite);
+    width: 100vw;
+    text-align: center;
   }
 
   /* Media queries */
