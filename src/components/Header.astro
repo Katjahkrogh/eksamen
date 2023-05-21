@@ -4,7 +4,7 @@ import "../styles/style.css";
 
 <header>
   <nav>
-    <div id="logo"><img src="../images/logo-hvid.png" alt="logo" /></div>
+    <div id="logo"><a href="/"><img src="../images/logo-hvid.png" alt="logo" /></a></div>
     <div class="burger-menu">
       <div class="burger"></div>
       <div class="burger"></div>
@@ -40,7 +40,7 @@ import "../styles/style.css";
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 25%;
+    margin-top: 15%;
   }
 
   #socials img {
@@ -69,6 +69,7 @@ import "../styles/style.css";
 
   .menu li {
     list-style: none;
+    margin-top: 3%;
   }
 
   li a {
@@ -76,12 +77,12 @@ import "../styles/style.css";
   }
 
   a {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: var(--purelyWhite);
     font-family: Open Sans, sans-serif;
   }
   .burger-menu {
-    position: fixed;
+    position: absolute;
     top: 35px;
     right: 20px;
     display: flex;
@@ -116,10 +117,11 @@ import "../styles/style.css";
     flex-direction: column;
     position: fixed;
     right: 0;
-    height: 100%;
+    height: fit-content;
     width: 100%;
     z-index: 9999;
     background-color: var(--darkSand);
+    position: sticky;
   }
 
   ul {
