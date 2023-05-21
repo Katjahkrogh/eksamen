@@ -2,12 +2,67 @@
 import "../styles/style.css";
 ---
 
-<section id="tpp-banner"></section>
+<section id="tpp-banner">
+  <div class="tpp">
+    <h4>RENHED</h4>
+    <h4>–</h4>
+    <h4>ENKELTHED</h4>
+    <h4>–</h4>
+    <h4>FORMÅL</h4>
+    <h4>–</h4>
+    <h4>OMTANKE</h4>
+    <h4>–</h4>
+    <h4>VIRKNING</h4>
+    <h4>–</h4>
+  </div>
+  <div class="tpp">
+    <h4>RENHED</h4>
+    <h4>–</h4>
+    <h4>ENKELTHED</h4>
+    <h4>–</h4>
+    <h4>FORMÅL</h4>
+    <h4>–</h4>
+    <h4>OMTANKE</h4>
+    <h4>–</h4>
+    <h4>VIRKNING</h4>
+    <h4>–</h4>
+  </div>
+</section>
 
 <style>
-  /* mobileview */
+  #tpp-banner {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
 
-  /* Media queries */
+    align-items: center;
+
+    height: 71px;
+    background-color: #e2e6df;
+  }
+
+  .tpp {
+    display: flex;
+    color: var(--purelyBlue);
+    animation: animate 20s infinite linear;
+  }
+
+  h4 {
+    line-height: 71px;
+    width: max-content;
+    color: var(--purelyBlue);
+    padding: 15px;
+  }
+  @keyframes animate {
+    0% {
+      transform: translateX(0%);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
   /* tablet format (over 600px)*/
   @media (min-width: 600px) {
   }
