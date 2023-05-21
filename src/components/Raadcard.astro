@@ -3,10 +3,51 @@ import "../styles/style.css";
 ---
 
 <section id="raad-card">
+  <img src="../images/Nyhjemmesidebillede-5-scaled.jpg" alt="" class="card-img" />
+  <h2 class="overskrift">Overskrift</h2>
+  <p class="paragraf">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+  <img src="../svgfiles/pil.svg" alt="" class="pil" />
 </section>
 
 <style>
   /* mobileview */
+  #raad-card {
+    width: 310px;
+    height: 510px;
+    background-color: var(--mediumOcean);
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    display: flex;
+    flex-direction: column;
+  }
+  .card-img {
+    width: 280px;
+    height: 230px;
+    object-fit: cover;
+    margin-top: 15px;
+    align-self: center;
+  }
+  .overskrift {
+    color: var(--purelyWhite);
+    width: 280px;
+    padding: 15px 15px 26px 15px;
+    padding-top: 15px;
+  }
+
+  .paragraf {
+    height: 132px;
+    width: 280px;
+    color: var(--purelyWhite);
+    font-size: 16px;
+    align-self: center;
+    margin-bottom: 15px;
+  }
+  .pil {
+    width: 30px;
+    margin-right: 15px;
+    align-self: flex-end;
+  }
 
   /* Media queries */
   /* tablet format (over 600px)*/
