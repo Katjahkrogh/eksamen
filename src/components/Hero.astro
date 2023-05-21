@@ -2,11 +2,41 @@
 import "../styles/style.css";
 ---
 
-<section id="hero"></section>
+<section id="hero">
+  <img src="../images/Texturepaste_123320-e1662120018541.jpg" alt="" class="hero-img" />
+  <div class="tekst">
+    <h1>The purely promise</h1>
+    <h4>Vi kalder vores grundværdier for The Purely Promise. <br />Dette er vores løfte til dig, når du vælger at tage hensyn til dig selv, dine nærmeste og dine omgivelser.</h4>
+  </div>
+</section>
 
 <style>
   /* mobileview */
+  #hero {
+    width: 100%;
+    height: 507px;
+    display: grid;
+  }
 
+  .hero-img {
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    grid-area: 1/1/2/2;
+  }
+  .tekst {
+    width: 330px;
+    height: 100%;
+    margin-left: 15px;
+    grid-area: 1/1/2/2;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 240px;
+  }
+  h4 {
+    color: var(--purelyWhite);
+  }
   /* Media queries */
   /* tablet format (over 600px)*/
   @media (min-width: 600px) {
