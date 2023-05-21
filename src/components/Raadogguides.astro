@@ -5,7 +5,12 @@ import Raadcard from "../components/Raadcard.astro";
 
 <section id="raad-og-guides">
   <h2>Råd og guides</h2>
-  <Raadcard />
+  <div class="caurosel">
+    <Raadcard />
+    <Raadcard />
+    <Raadcard />
+    <Raadcard />
+  </div>
 </section>
 
 <style>
@@ -14,6 +19,16 @@ import Raadcard from "../components/Raadcard.astro";
     padding: 65px 0 38px 0;
     background-color: var(--mediumSand);
     height: 700px;
+  }
+  h2 {
+    margin-left: 30px;
+    padding-bottom: 38px;
+  }
+  .caurosel {
+    margin-left: 15px;
+    display: flex;
+    gap: 18px;
+    overflow-x: scroll;
   }
 
   /* Media queries */
