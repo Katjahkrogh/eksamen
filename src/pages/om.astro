@@ -1,6 +1,9 @@
 ---
 import "../styles/style.css";
 import Hero from "../components/Hero.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Thepurelypromisebanner from "../components/Thepurelypromisebanner.astro";
 ---
 
 <html lang="en">
@@ -12,12 +15,173 @@ import Hero from "../components/Hero.astro";
     <title>Om Purely</title>
   </head>
   <body>
+    <Header />
     <Hero />
+    <main>
+      <div id="founders">
+        <img src="../images/cecilie.png" alt="Cecilie" />
+        <img src="../images/ole.png" alt="Ole" />
+        <img src="../images/julie.png" alt="Julie" />
+      </div>
+      <p>
+        Etableret i 2011 af kemiker Ole Olsen og døtrene Julie og Cecilie
+        Kampmann.
+      </p>
+      <div id="luksus">
+        <h2>Prisvenlig</h2>
+        <h2>luksus</h2>
+      </div>
+      <p>
+        Vores vison har siden starten været at skabe hår- og hudpleje til dig,
+        der ønsker prisvenlige, luksuriøse og effektive produkter uden parfume
+        og anden unødvendig kemi.
+      </p>
+      <div id="vand">
+        <img src="../images/IMG_6902-kopi.jpg" alt="Produkt i vand" />
+      </div>
+      <h2 id="passion">Passion</h2>
+      <p>
+        For os har Purely Professional altid været et projekt af passion. Vi har
+        prøvet os frem drevet af nysgerrighed, stædighed og lysten til at
+        fremstille produkter, vi selv drømte om at bruge.
+      </p>
+      <div id="vaerdier">
+        <img src="../images/img-olie.png" alt="" />
+        <br />
+        <br />
+        <h2>Værdier</h2>
+        <p>
+          Vores produkter skal være enkle og rene, de skal virke og have et
+          formål, herudover skal de ikke belaste naturen eller udsætte
+          forbrugeren for unødige indholdsstoffer.
+        </p>
+        <p><u>The Purely Promise</u> er betegnelsen for disse grundværdier.</p>
+        <br />
+      </div>
+      <Thepurelypromisebanner />
+      <div id="vaerdier2">
+        <p>
+          Det er vores løfte til dig, når du står med et Purely produkt i
+          hænderne, at vi har fremstillet det med omtanke og af kun de reneste
+          ingredienser, som virker til dit specifikke formål.
+        </p>
+        <br />
+        <br />
+        <a href="purelypromise">The Purely Promise</a>
+      </div>
+      <img
+        src="../images/210318_PurelyProfessional_3_100865.jpg"
+        alt="Purely model"
+        id="model"
+      />
+      <h2 id="blaa">Hvad så nu?</h2>
+      <p id="bottom-p">
+        Purley Professional er særligt optaget af de mange miljømæssige
+        aspekter, som et skønhedsbrand bør forholde sig til, og arbejder
+        kontinuerligt med at optimere bæredygtigheden af alt fra ingredienser
+        til emballager for at garantere et fremtidssikret produkt for både
+        bruger og omverden.
+      </p>
+    </main>
+    <Footer />
   </body>
 </html>
 
 <style>
   /* Mobile first */
+  main {
+    background-color: var(--lightSand);
+    overflow: hidden;
+  }
+
+  #founders img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    margin-top: 25px;
+  }
+
+  #founders {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  p {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 25px;
+  }
+
+  #luksus {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 30px;
+  }
+
+  #vand img {
+    max-width: 100%;
+    margin-top: 50px;
+  }
+
+  #passion {
+    margin-left: 15px;
+    margin-top: 30px;
+  }
+
+  #vaerdier {
+    background-color: var(--mediumSand);
+    margin-left: 15px;
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    flex-direction: column;
+  }
+
+  #vaerdier img {
+    width: 347px;
+  }
+
+  #vaerdier h2 {
+    margin-left: 15px;
+  }
+
+  #vaerdier2 {
+    background-color: var(--mediumSand);
+    margin-left: 15px;
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  #vaerdier2 a {
+    color: var(--darkBrown);
+    text-align: right;
+    margin-right: 15px;
+    margin-bottom: 30px;
+    text-decoration: underline 2px solid var(--purelyBlue);
+    cursor: pointer;
+  }
+
+  #model {
+    width: 390px;
+    height: 393px;
+    margin-top: 15px;
+  }
+
+  #blaa {
+    margin-left: 15px;
+    color: var(--purelyBlue);
+    margin-top: 30px;
+  }
+
+  #bottom-p {
+    margin-bottom: 70px;
+  }
 
   /* tablet format (over 600px)*/
   @media (min-width: 600px) {
