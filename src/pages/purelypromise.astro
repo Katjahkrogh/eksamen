@@ -1,21 +1,53 @@
 ---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import Tppcard from "../components/Tppcard.astro";
 import "../styles/style.css";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>The Purely Promise</title>
-	</head>
-	<body>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>The Purely Promise</title>
+  </head>
+  <body>
+    <header>
+      <Header />
+      <Hero />
+    </header>
+    <main>
+      <div class="card-holder">
+        <Tppcard />
+        <Tppcard />
+        <Tppcard />
+        <Tppcard />
+        <Tppcard />
+      </div>
+    </main>
+    <footer>
+      <Footer />
+    </footer>
+  </body>
 </html>
 
 <style>
   /* Mobile first */
+  body {
+    background-color: var(--lightSand);
+  }
+  .card-holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 26px;
+    width: 100%;
+    height: fit-content;
+    margin: 26px 0;
+  }
 
   /* tablet format (over 600px)*/
   @media (min-width: 600px) {
