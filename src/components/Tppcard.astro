@@ -1,0 +1,129 @@
+---
+import "../styles/style.css";
+---
+
+<div id="tpp-card">
+  <div class="svg-container">
+    <p>svg her</p>
+    <!-- plads til illustration her -->
+  </div>
+  <h3 class="overskrift">Enkelthed</h3>
+  <p class="paragraf">Vi holder vores produkter og koncepter enkle og overskuelige, så du let kan orientere dig.</p>
+  <div class="link" id="link-knap">
+    <div class="link-tekst">
+      <p id="read-more" class="">Læs mere</p><p id="luk" class="hide">luk</p>
+      <img src="../svgfiles/pil.svg" alt="" class="pil" id="blaa-pil" />
+    </div>
+    <hr class="underline" />
+  </div>
+</div>
+<div class="hide" id="open-menu">
+  <!-- Sæt indhold in her  -->
+</div>
+
+<style>
+  #tpp-card {
+    background-color: var(--purelyWhite);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    width: 360px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+    position: relative;
+    height: 414px;
+    margin-bottom: 26px;
+  }
+
+  .svg-container {
+    width: 126px;
+    height: 112px;
+    margin-top: 42px;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+  }
+
+  .paragraf,
+  .overskrift {
+    text-align: center;
+    align-self: center;
+  }
+  .paragraf {
+    width: 330px;
+    height: 100px;
+  }
+  /* -- link med pil -- */
+  .link {
+    align-self: flex-end;
+    margin-right: 15px;
+  }
+  .link-tekst {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 2px;
+  }
+  .link-tekst p {
+    color: var(--purelyBlue);
+  }
+  .pil {
+    width: 16px;
+  }
+
+  .underline {
+    border: 1.5px solid var(--purelyBlue);
+    width: 100%;
+    border-radius: 1.5px;
+    margin-bottom: 25px;
+  }
+  /* ------------------ */
+
+  /* sektionen når kortet er åbent */
+
+  #open-menu {
+    /* position: absolute; */
+    background-color: var(--lightSand);
+    width: 360px;
+    border-radius: 0 0 5px 5px;
+    height: 200px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    margin-top: -31px;
+    margin-bottom: 26px;
+    z-index: -1;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .rotate {
+    transform: rotate(180deg);
+  }
+</style>
+
+<script>
+  // her skal der være script, så menuerne kan åbne
+  const readMoreButton = document.getElementById("link-knap");
+  const openMenu = document.getElementById("open-menu");
+  const blaaPil = document.getElementById("blaa-pil");
+  const lukTekst = document.getElementById("luk");
+  const readMore = document.getElementById("read-more");
+
+  readMoreButton.addEventListener("click", () => {
+    if (openMenu.classList.contains("hide")) {
+      openMenu.classList.remove("hide");
+      blaaPil.classList.add("rotate");
+      lukTekst.classList.remove("hide");
+      readMore.classList.add("hide");
+    } else {
+      openMenu.classList.add("hide");
+      blaaPil.classList.remove("rotate");
+      lukTekst.classList.add("hide");
+      readMore.classList.remove("hide");
+    }
+  });
+</script>
