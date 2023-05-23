@@ -2,10 +2,64 @@
 import "../styles/style.css";
 ---
 
-<section id="product-card"></section>
+<section id="product-card">
+  <img
+    src="../products/Shampoo_1_1L_hand_108265-e1676897701559-1024x1024.jpg"
+    alt=""
+    title="produkt-img"
+  />
+  <div id="tekst">
+    <h4 title="navn">Shampoo 0</h4>
+    <p title="pris">179,00 kr.</p>
+  </div>
+  <button id="knap">Føj til kurv</button>
+</section>
 
 <style>
   /* mobileview */
+
+  #product-card {
+    background-color: var(--purelyWhite);
+    max-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+  }
+  img {
+    width: 160px;
+    height: 160px;
+  }
+
+  #tekst {
+    margin-left: 5px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    text-align: left;
+  }
+  h4 {
+    font-weight: 300;
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  #knap {
+    background-color: var(--darkSand);
+    border: none;
+    color: var(--purelyWhite);
+    padding: 6px;
+    font-weight: 400;
+    font-family: "Open Sans";
+    border-radius: 5px;
+    align-items: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
 
   /* Media queries */
   /* tablet format (over 600px)*/
