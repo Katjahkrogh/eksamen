@@ -11,7 +11,7 @@ import "../styles/style.css";
   <p class="paragraf">Vi holder vores produkter og koncepter enkle og overskuelige, så du let kan orientere dig.</p>
   <div class="link" id="link-knap">
     <div class="link-tekst">
-      <p id="read-more" class="">Læs mere</p><p id="luk" class="hide">luk</p>
+      <p id="read-more">Læs mere</p><p id="luk" class="hide">luk</p>
       <img src="../svgfiles/pil.svg" alt="" class="pil" id="blaa-pil" />
     </div>
     <hr class="underline" />
@@ -19,6 +19,70 @@ import "../styles/style.css";
 </div>
 <div class="hide" id="open-menu">
   <!-- Sæt indhold in her  -->
+  <img src="../images/210318_purelyprofessional 2100469.JPG" alt="" class="img1" />
+  <p class="tekst">Kernen i vores koncept er enkelheden. Det har altid været vores målsætning, at lave enkle produkter der virker. Skære det unødvendige fra og fokusere på det essentielle.</p>
+  <div class="billede-med-streg right">
+    <img src="../images/210318_purelyprofessional 2100469.JPG" alt="" class="img2" />
+    <div class="streg"></div>
+  </div>
+  <div class="tekst-felt">
+    <h2>Produkter</h2>
+    <p class="tekst">
+      Nå vi formulerer produkter, gør vi det altid ud fra den intention, at der ikke skal være nogle unødvendige ingredienser i. Det betyder, at vi arbejder aktivt på at bruge færrest mulige indholdsstoffer. Når vi formulerer vores produkter med et
+      minimum af ingredienser gør vi dem enkle og let overskuelige.
+    </p>
+    <p class="tekst">
+      Vi har altid undret os over lange ingredienslister på skønheds- og plejeprodukter. Når man bruger rigtig mange ingredienser i et produkt, kan man af gode grunde ikke have særligt meget i af hver ingrediens. Et andet problem med mange
+      indholdsstoffer er, at det bliver svært for brugeren, at gennemskue hvad, der er i et produkt og hvorfor.
+    </p>
+    <p class="tekst">
+      I en tid hvor flere og flere af os døjer med forskellige grader af overfølsomhed, allergi, intolerance eller måske har meget bevidste holdninger til, hvad vi vil byde vores krop og naturen, er det rart at kunne overskue indholdet af vores
+      produkter. Jo mindre vi tilsætter vores produkter, jo mindre skal du bekymre dig om.
+    </p>
+  </div>
+  <div class="billede-med-streg left">
+    <img src="../images/210318_purelyprofessional 2100469.JPG" alt="" class="img2" />
+    <div class="streg"></div>
+  </div>
+  <div class="tekst-felt">
+    <h2>Kommunikation</h2>
+    <p class="tekst">
+      Enkelheden som filosofi gør sig også gældende, i forhold til den måde, vi kommunikere på og i forhold til vores æstetik. Vi gør os meget umage med at gøre vores ingrediensliste overskuelig og læsevenlig, så man som forbruger hurtigt kan
+      orientere sig i indholdsstofferne. Vi kan ikke garantere, at der ikke er nogen, der har en overfølsomhed over for en ingrediens i et af vores produkter, men vi kan gøre det let for dig, at finde ud af hvad der er i og hvorfor. <br />
+      Du kan læse meget mere om vores ingredienser i vores leksikon over indholdsstoffer.
+    </p>
+
+    <div class="link" id="link-knap">
+      <a href="#">
+        <div class="link-tekst">
+          <p>Vores leksikon</p>
+          <img src="../svgfiles/pil.svg" alt="" class="pil pil-right" />
+        </div>
+        <hr class="underline" />
+      </a>
+    </div>
+    <p class="tekst">
+      Vi gør os også altid umage med at gøre vores produktbeskrivelser enkle og jordnære, så du som forbruger ikke er i tvivl om, hvad dit produkt kan, og hvorledes det skal anvendes. Det kan til tider være udfordrende, da det ofte er komplekse
+      processer, der er på spil i de mere avancerede produkter. Men vi ser det som vores fornemmeste opgave, at kunne formidle både brugen af et produkt, og videnskaben der ligger bag.
+    </p>
+  </div>
+  <img src="../images/210318_purelyprofessional 2100469.JPG" alt="" class="img4" />
+  <div class="tekst-felt">
+    <h2>Æstetik</h2>
+    <p class="tekst">
+      Rent visuelt er vi også tiltrukket af det enkle. Lige siden vores lancering har vi arbejdet med et meget enkelt og rent udtryk, der skal gøre det nemt at identificere hvad de forskellige produkter kan, men også via det visuelle give en
+      indføring i de enkle tanker, der ligger bag Purely Professional.
+    </p>
+    <p class="tekst">Det er overskueligt og let afkodeligt, når du møder vores produkter ude i verdenen - både fysisk og virtuelt. Vi arbejder derfor med tydelige kategorifarver og numre, der gør det let at skille produkterne fra hinanden.</p>
+  </div>
+
+  <div class="link" id="link-knap">
+    <div class="link-tekst">
+      <p>luk</p>
+      <img src="../svgfiles/pil.svg" alt="" class="pil" id="pil-op" />
+    </div>
+    <hr class="underline" />
+  </div>
 </div>
 
 <style>
@@ -60,6 +124,7 @@ import "../styles/style.css";
     align-self: flex-end;
     margin-right: 15px;
   }
+
   .link-tekst {
     display: flex;
     gap: 10px;
@@ -80,6 +145,7 @@ import "../styles/style.css";
     border-radius: 1.5px;
     margin-bottom: 25px;
   }
+
   /* ------------------ */
 
   /* sektionen når kortet er åbent */
@@ -89,19 +155,84 @@ import "../styles/style.css";
     background-color: var(--lightSand);
     width: 360px;
     border-radius: 0 0 5px 5px;
-    height: 200px;
+    /* height: 200px; */
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     margin-top: -31px;
     margin-bottom: 26px;
     z-index: -1;
-  }
 
-  .hide {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    gap: 65px;
   }
 
   .rotate {
     transform: rotate(180deg);
+  }
+
+  /* indhold i åben menu */
+
+  .img1 {
+    height: 240px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .tekst,
+  h2 {
+    margin: 0 15px;
+  }
+
+  .billede-med-streg {
+    position: relative;
+    height: 370px;
+  }
+
+  .right {
+    align-self: flex-end;
+  }
+  .img2 {
+    width: 280px;
+    height: 360px;
+  }
+  .streg {
+    border: solid white 1px;
+    width: 280px;
+    height: 360px;
+    position: absolute;
+    top: 10px;
+  }
+
+  .right .streg {
+    left: -10px;
+  }
+
+  .left .streg {
+    left: 10px;
+  }
+
+  .tekst-felt {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+  }
+  .pil-right {
+    transform: rotate(-90deg);
+  }
+
+  .img4 {
+    width: 330px;
+    height: 360px;
+    object-fit: cover;
+    align-self: center;
+  }
+
+  #pil-op {
+    transform: rotate(180deg);
+  }
+
+  .hide {
+    display: none;
   }
 </style>
 
@@ -112,6 +243,7 @@ import "../styles/style.css";
   const blaaPil = document.getElementById("blaa-pil");
   const lukTekst = document.getElementById("luk");
   const readMore = document.getElementById("read-more");
+  const lukKnap = document.getElementById("pil-op");
 
   readMoreButton.addEventListener("click", () => {
     if (openMenu.classList.contains("hide")) {
@@ -126,4 +258,11 @@ import "../styles/style.css";
       readMore.classList.remove("hide");
     }
   });
+  // lukKnap.addEventListener("click", () => {
+  //   // få menuen lukket ved at trykke på luk
+  //   openMenu.classList.add("hide");
+  //   blaaPil.classList.remove("rotate");
+  //   lukTekst.classList.add("hide");
+  //   readMore.classList.remove("hide");
+  // });
 </script>
