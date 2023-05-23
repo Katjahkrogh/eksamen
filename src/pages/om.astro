@@ -19,9 +19,18 @@ import Thepurelypromisebanner from "../components/Thepurelypromisebanner.astro";
     <Hero />
     <main>
       <div id="founders">
-        <img src="../images/cecilie.png" alt="Cecilie" />
-        <img src="../images/ole.png" alt="Ole" />
-        <img src="../images/julie.png" alt="Julie" />
+        <div>
+          <img src="../images/cecilie.png" alt="Cecilie" />
+          <p>CECILIE</p>
+        </div>
+        <div>
+          <img src="../images/ole.png" alt="Ole" />
+          <p>OLE</p>
+        </div>
+        <div>
+          <img src="../images/julie.png" alt="Julie" />
+          <p>JULIE</p>
+        </div>
       </div>
       <p>
         Etableret i 2011 af kemiker Ole Olsen og døtrene Julie og Cecilie
@@ -67,7 +76,13 @@ import Thepurelypromisebanner from "../components/Thepurelypromisebanner.astro";
         </p>
         <br />
         <br />
-        <a href="purelypromise">The Purely Promise</a>
+        <div class="link">
+          <div class="link-tekst">
+            <a href="purelypromise">The Purely Promise</a>
+            <img src="../svgfiles/pil.svg" alt="" class="pil" />
+          </div>
+          <hr class="underline" />
+        </div>
       </div>
       <img
         src="../images/210318_PurelyProfessional_3_100865.jpg"
@@ -107,6 +122,13 @@ import Thepurelypromisebanner from "../components/Thepurelypromisebanner.astro";
     justify-content: space-between;
     margin-left: 15px;
     margin-right: 15px;
+  }
+
+  #founders p {
+    text-align: center;
+    font-weight: 300;
+    font-size: 15px;
+    margin-top: -2px;
   }
 
   p {
@@ -158,13 +180,30 @@ import Thepurelypromisebanner from "../components/Thepurelypromisebanner.astro";
     flex-direction: column;
   }
 
-  #vaerdier2 a {
-    color: var(--darkBrown);
-    text-align: right;
+  .link {
+    align-self: flex-end;
     margin-right: 15px;
-    margin-bottom: 30px;
-    text-decoration: underline 2px solid var(--purelyBlue);
-    cursor: pointer;
+  }
+  .link-tekst {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 2px;
+  }
+  .link-tekst a {
+    text-decoration: none;
+    color: var(--darkBrown);
+  }
+  .pil {
+    width: 16px;
+    rotate: -90deg;
+  }
+  .underline {
+    border: 1.5px solid var(--purelyBlue);
+    width: 100%;
+    border-radius: 1.5px;
+    margin-bottom: 25px;
   }
 
   #model {
