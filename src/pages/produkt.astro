@@ -1,5 +1,8 @@
 ---
 import Productcard from "../components/Productcard.astro";
+import Hero from "../components/Hero.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
 import "../styles/style.css";
 ---
 
@@ -12,21 +15,124 @@ import "../styles/style.css";
     <title>Shop</title>
   </head>
   <body>
-    <Productcard />
+    <Header />
+    <Hero />
+    <main>
+      <section id="type">
+        <h3>Vælg din hårtype</h3>
+        <div id="flex">
+          <div>
+            <img src="../images/Emilie_123437-e1662119971912.jpg" alt="" />
+            <p>Krøller i fint hår</p>
+            <br />
+          </div>
+          <div>
+            <img
+              src="../images/210319_PurelyProfessional-2101847-e1662119504658.jpg"
+              alt=""
+            />
+            <p>Fint hår</p>
+            <br />
+          </div>
+          <div>
+            <img
+              src="../images/Texturepaste_123320-e1662120018541.jpg"
+              alt=""
+            />
+            <p>Kraftigt hår</p>
+            <br />
+          </div>
+          <div>
+            <img src="../images/kraftigt-haar.jpg" alt="" />
+            <p>Krøller i kraftigt hår</p>
+            <br />
+          </div>
+          <div>
+            <img
+              src="../images/210319_PurelyProfessional101374-e1662120101448.jpg"
+              alt=""
+            />
+            <p>Hovedbunds-<br />problemer & skæl</p>
+          </div>
+          <div>
+            <img src="../images/Signe_123789-e1662120053667.jpg" alt="" />
+            <p>Farvet & kemisk behandlet hår</p>
+          </div>
+        </div>
+      </section>
+      <section id="cards">
+        <Productcard />
+        <Productcard />
+        <Productcard />
+        <Productcard />
+        <Productcard />
+        <Productcard />
+      </section>
+    </main>
+    <Footer />
   </body>
+
+  <style>
+    /* Mobile first */
+    body {
+      background-color: var(--lightSand);
+    }
+    #type {
+      background-color: var(--darkOcean);
+      padding-top: 5px;
+    }
+
+    h3 {
+      color: var(--purelyWhite);
+      text-align: center;
+      margin-top: 5%;
+      font-weight: 300;
+    }
+
+    #flex {
+      overflow: scroll;
+      align-items: center;
+      justify-content: space-between;
+      display: flex;
+    }
+
+    #type img {
+      width: 120px;
+      height: 120px;
+      border-radius: 100px;
+      margin-top: 25px;
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+
+    #type p {
+      font-size: 15px;
+      text-align: center;
+      font-weight: 400;
+      color: var(--purelyWhite);
+    }
+
+    /* cards */
+    #cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+      margin-top: 20px;
+      margin-bottom: 30px;
+      row-gap: 20px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    /* tablet format (over 600px)*/
+    @media (min-width: 600px) {
+    }
+
+    /* desktop format (over 900px)*/
+    @media (min-width: 900px) {
+    }
+
+    @media (min-width: 1200px) {
+    }
+  </style>
 </html>
-
-<style>
-  /* Mobile first */
-
-  /* tablet format (over 600px)*/
-  @media (min-width: 600px) {
-  }
-
-  /* desktop format (over 900px)*/
-  @media (min-width: 900px) {
-  }
-
-  @media (min-width: 1200px) {
-  }
-</style>
