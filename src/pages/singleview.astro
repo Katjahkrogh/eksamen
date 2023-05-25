@@ -3,6 +3,7 @@ import "../styles/style.css";
 import Hero from "../components/Hero.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import Seher from "../components/Seher.astro";
 ---
 
 <html lang="en">
@@ -23,28 +24,12 @@ import Footer from "../components/Footer.astro";
       </div>
       <div class="product">
         <div class="small-product-img" id="lille">
-          <img
-            src="../products/Shampoo_5_1L_hand_108314-e1666970307658-1024x1024.jpg"
-            alt="Billede 1"
-            onclick="myFunction(this)"
-          />
-          <img
-            src="../products/purely_shampoo_5_1l.jpg"
-            alt="Billede 2"
-            onclick="myFunction(this)"
-          />
-          <img
-            src="../products/210319_PurelyProfessional-2101657-e1666969576175-1024x1024.jpg"
-            alt="Billede 3"
-            onclick="myFunction(this)"
-          />
+          <img src="../products/Shampoo_5_1L_hand_108314-e1666970307658-1024x1024.jpg" alt="Billede 1" onclick="myFunction(this)" />
+          <img src="../products/purely_shampoo_5_1l.jpg" alt="Billede 2" onclick="myFunction(this)" />
+          <img src="../products/210319_PurelyProfessional-2101657-e1666969576175-1024x1024.jpg" alt="Billede 3" onclick="myFunction(this)" />
         </div>
         <div class="img-container">
-          <img
-            src="../products/Shampoo_5_1L_hand_108314-e1666970307658-1024x1024.jpg"
-            alt="Billede 1"
-            id="stor"
-          />
+          <img src="../products/Shampoo_5_1L_hand_108314-e1666970307658-1024x1024.jpg" alt="Billede 1" id="stor" />
         </div>
       </div>
       <div id="titler">
@@ -70,12 +55,11 @@ import Footer from "../components/Footer.astro";
         <div>
           <h4>Beskrivelse</h4>
           <p>
-            Er dit hår kraftigt, kruset og svært at kontrollere? Så er Shampoo 0
-            den shampoo, du leder efter. Her får du en sulfatfri shampoo, der
-            indeholder de mildeste vaskeaktive stoffer, så den vasker rent
-            samtidig med, at den bevarer hårets naturlige struktur og skællag.
+            Er dit hår kraftigt, kruset og svært at kontrollere? Så er Shampoo 0 den shampoo, du leder efter. Her får du en sulfatfri shampoo, der indeholder de mildeste vaskeaktive stoffer, så den vasker rent samtidig med, at den bevarer hårets
+            naturlige struktur og skællag.
           </p>
         </div>
+        <Seher />
         <Footer />
       </div>
     </main>
@@ -216,18 +200,13 @@ import Footer from "../components/Footer.astro";
     <script>
       function myFunction(smallImg) {
         var fullImg = document.getElementById("stor");
-        if (
-          fullImg instanceof HTMLImageElement &&
-          smallImg instanceof HTMLImageElement
-        ) {
+        if (fullImg instanceof HTMLImageElement && smallImg instanceof HTMLImageElement) {
           var smallImgSrc = smallImg.src;
           fullImg.src = smallImgSrc;
         }
       }
 
-      var smallProductImgs = document.querySelectorAll(
-        ".small-product-img img"
-      );
+      var smallProductImgs = document.querySelectorAll(".small-product-img img");
       smallProductImgs.forEach(function (img) {
         img.addEventListener("click", function () {
           myFunction(img);
