@@ -4,6 +4,15 @@ import Header from "../components/Header.astro";
 import Hero from "../components/Hero.astro";
 import Tppcard from "../components/Tppcard.astro";
 import "../styles/style.css";
+const url = "https://bwzhyxrwqgaljabpwzkv.supabase.co/rest/v1/Purely_Promise";
+const options = {
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ3emh5eHJ3cWdhbGphYnB3emt2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg3ODU1MzksImV4cCI6MTk5NDM2MTUzOX0.zKU7b6CyWwRwF95benSn0okCyoH-QtV96NdDXIKqslM",
+  },
+};
+const response = await fetch(url, options);
+const data = await response.json();
+console.log("hej med dig");
 ---
 
 <html lang="en">
@@ -21,11 +30,28 @@ import "../styles/style.css";
     </header>
     <main>
       <div class="card-holder">
-        <Tppcard />
-        <Tppcard />
-        <Tppcard />
-        <Tppcard />
-        <Tppcard />
+        <!-- <TppcardCopy /> -->
+        {
+          data.map((promise) => (
+            <Tppcard
+              id={promise.id}
+              illustration={`../svgfiles/${promise.card_illu}`}
+              title1={promise.card_title}
+              title2={promise.title_2}
+              title3={promise.title_3}
+              title4={promise.title_4}
+              text={promise.card_text}
+              p1={promise.p_1}
+              p2={promise.p_2}
+              p3={promise.p_3}
+              p4={promise.p_4}
+              img1={`../images/${promise.img_1}`}
+              img2={`../images/${promise.img_2}`}
+              img3={`../images/${promise.img_3}`}
+              img4={`../images/${promise.img_4}`}
+            />
+          ))
+        }
       </div>
     </main>
     <footer>
@@ -33,7 +59,6 @@ import "../styles/style.css";
     </footer>
   </body>
 </html>
-
 <style>
   /* Mobile first */
   body {
@@ -48,15 +73,14 @@ import "../styles/style.css";
     height: fit-content;
     margin: 26px 0;
   }
-
   /* tablet format (over 600px)*/
   @media (min-width: 600px) {
   }
-
   /* desktop format (over 900px)*/
   @media (min-width: 900px) {
   }
-
   @media (min-width: 1200px) {
   }
 </style>
+
+<script></script>

@@ -1,14 +1,17 @@
 ---
 import "../styles/style.css";
+import "../styles/tpp.css";
+const { id, illustration, title1, title2, title3, title4, text, p1, p2, p3, p4, img1, img2, img3, img4 } = Astro.props;
 ---
 
 <div id="tpp-card">
   <div class="svg-container">
-    <p>svg her</p>
-    <!-- plads til illustration her -->
+    <img src={illustration} alt="" class="illu" />
   </div>
-  <h3 class="overskrift">Enkelthed</h3>
-  <p class="paragraf">Vi holder vores produkter og koncepter enkle og overskuelige, så du let kan orientere dig.</p>
+  <h3 class="overskrift">{title1}</h3>
+  <p class="paragraf">
+    {text}
+  </p>
   <div class="link" id="link-knap">
     <div class="link-tekst">
       <p id="read-more">Læs mere</p><p id="luk" class="hide">luk</p>
@@ -20,63 +23,31 @@ import "../styles/style.css";
 <div class="hide" id="open-menu">
   <div class="flex-indhold">
     <!-- Sæt indhold in her  -->
-    <img src="../images/210318_purelyprofessional 2100469.JPG" alt="" class="img1" />
-    <p class="tekst">Kernen i vores koncept er enkelheden. Det har altid været vores målsætning, at lave enkle produkter der virker. Skære det unødvendige fra og fokusere på det essentielle.</p>
+    <img src={img1} alt="" class="img1" />
+    <p class="tekst">{p1}</p>
     <div class="billede-med-streg right">
-      <img src="../images/210318_purelyprofessional 2100469.JPG" alt="" class="img2" />
+      <img src={img2} alt="" class="img2" />
       <div class="streg"></div>
     </div>
     <div class="tekst-felt">
-      <h2>Produkter</h2>
-      <p class="tekst">
-        Nå vi formulerer produkter, gør vi det altid ud fra den intention, at der ikke skal være nogle unødvendige ingredienser i. Det betyder, at vi arbejder aktivt på at bruge færrest mulige indholdsstoffer. Når vi formulerer vores produkter med et
-        minimum af ingredienser gør vi dem enkle og let overskuelige.
-        <br />
-        <br />
-        Vi har altid undret os over lange ingredienslister på skønheds- og plejeprodukter. Når man bruger rigtig mange ingredienser i et produkt, kan man af gode grunde ikke have særligt meget i af hver ingrediens. Et andet problem med mange indholdsstoffer
-        er, at det bliver svært for brugeren, at gennemskue hvad, der er i et produkt og hvorfor.
-        <br />
-        <br />
-        I en tid hvor flere og flere af os døjer med forskellige grader af overfølsomhed, allergi, intolerance eller måske har meget bevidste holdninger til, hvad vi vil byde vores krop og naturen, er det rart at kunne overskue indholdet af vores produkter.
-        Jo mindre vi tilsætter vores produkter, jo mindre skal du bekymre dig om.
-      </p>
+      <h2>{title2}</h2>
+      <p class="tekst">{p2}</p>
     </div>
     <div class="billede-med-streg left">
-      <img src="../images/210318_purelyprofessional 2100469.JPG" alt="" class="img2" />
+      <img src={img3} alt="" class="img2" />
       <div class="streg"></div>
     </div>
-    <div class="tekst-felt">
-      <h2>Kommunikation</h2>
-      <p class="tekst">
-        Enkelheden som filosofi gør sig også gældende, i forhold til den måde, vi kommunikere på og i forhold til vores æstetik. Vi gør os meget umage med at gøre vores ingrediensliste overskuelig og læsevenlig, så man som forbruger hurtigt kan
-        orientere sig i indholdsstofferne. Vi kan ikke garantere, at der ikke er nogen, der har en overfølsomhed over for en ingrediens i et af vores produkter, men vi kan gøre det let for dig, at finde ud af hvad der er i og hvorfor. <br />
-        Du kan læse meget mere om vores ingredienser i vores leksikon over indholdsstoffer.
-      </p>
 
-      <div class="link" id="link-knap">
-        <a href="#">
-          <div class="link-tekst">
-            <p>Vores leksikon</p>
-            <img src="../svgfiles/pil.svg" alt="" class="pil pil-right" />
-          </div>
-          <hr class="underline" />
-        </a>
-      </div>
-      <p class="tekst">
-        Vi gør os også altid umage med at gøre vores produktbeskrivelser enkle og jordnære, så du som forbruger ikke er i tvivl om, hvad dit produkt kan, og hvorledes det skal anvendes. Det kan til tider være udfordrende, da det ofte er komplekse
-        processer, der er på spil i de mere avancerede produkter. Men vi ser det som vores fornemmeste opgave, at kunne formidle både brugen af et produkt, og videnskaben der ligger bag.
-      </p>
-    </div>
-    <img src="../images/210318_purelyprofessional 2100469.JPG" alt="" class="img4" />
-    <div class="tekst-felt">
-      <h2>Æstetik</h2>
-      <p class="tekst">
-        Rent visuelt er vi også tiltrukket af det enkle. Lige siden vores lancering har vi arbejdet med et meget enkelt og rent udtryk, der skal gøre det nemt at identificere hvad de forskellige produkter kan, men også via det visuelle give en
-        indføring i de enkle tanker, der ligger bag Purely Professional.
-      </p>
-      <p class="tekst">Det er overskueligt og let afkodeligt, når du møder vores produkter ude i verdenen - både fysisk og virtuelt. Vi arbejder derfor med tydelige kategorifarver og numre, der gør det let at skille produkterne fra hinanden.</p>
+    <div class="tekst-felt" id="p3-test">
+      <h2>{title3}</h2>
+      <div set:html={p3} />
     </div>
 
+    <img src={img4} alt="" class="img4" />
+    <div class="tekst-felt">
+      <h2>{title4}</h2>
+      <p class="tekst">{p4}</p>
+    </div>
     <div class="link" id="link-knap-luk">
       <div class="link-tekst">
         <p>luk</p>
@@ -105,13 +76,15 @@ import "../styles/style.css";
     width: 126px;
     height: 112px;
     margin-top: 42px;
-    background-color: aquamarine;
     display: flex;
     justify-content: center;
     align-items: center;
     align-self: center;
   }
 
+  .illu {
+    height: 100%;
+  }
   .paragraf,
   .overskrift {
     text-align: center;
@@ -271,4 +244,6 @@ import "../styles/style.css";
   //     readMore.classList.remove("hide");
   //   }
   // });
+
+  // document.getElementById("p3-test").innerHTML = ;
 </script>

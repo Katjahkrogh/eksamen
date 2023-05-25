@@ -19,12 +19,8 @@ import "../styles/style.css";
         <li><a href="vidensbank">Vidensbank</a></li>
       </ul>
       <div id="socials">
-        <a href="#"
-          ><img src="../svgfiles/instagram-logo.svg" alt="Instagram logo" /></a
-        >
-        <a href="#"
-          ><img src="../svgfiles/facebook-logo.svg" alt="Facebook logo" /></a
-        >
+        <a href="#"><img src="../svgfiles/instagram-logo.svg" alt="Instagram logo" /></a>
+        <a href="#"><img src="../svgfiles/facebook-logo.svg" alt="Facebook logo" /></a>
         <a href="#"><img src="../svgfiles/mail-logo.svg" alt="Mail logo" /></a>
       </div>
     </div>
@@ -33,18 +29,16 @@ import "../styles/style.css";
 
 <style>
   /* mobileview */
-  #socials a {
-    text-align: center;
-  }
+
   #socials {
     display: flex;
-    justify-content: center;
+    gap: 28px;
     align-items: center;
     margin-top: 15%;
   }
 
   #socials img {
-    width: 40%;
+    width: 40px;
   }
 
   #logo img {
@@ -100,14 +94,14 @@ import "../styles/style.css";
     transition: transform 0.3s;
   }
   .burger-menu.active .burger:nth-child(1) {
-    transform: rotate(-45deg);
+    transform: translateY(10px) rotate(45deg);
   }
   .burger-menu.active .burger:nth-child(2) {
-    transform: rotate(45deg);
+    opacity: 0;
   }
 
   .burger-menu.active .burger:nth-child(3) {
-    opacity: 0;
+    transform: translateY(-12.5px) rotate(-45deg);
   }
   .menu {
     display: none;
