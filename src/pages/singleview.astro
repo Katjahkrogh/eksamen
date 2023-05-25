@@ -1,30 +1,238 @@
 ---
 import "../styles/style.css";
+import Hero from "../components/Hero.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Singleview</title>
-	</head>
-	<body>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Singleview</title>
+  </head>
+  <body>
+    <header>
+      <Header />
+    </header>
+    <main>
+      <div id="pil">
+        <a href="produkt"><img src="../svgfiles/lang-pil-blue.svg" alt="" /></a>
+      </div>
+      <div class="product">
+        <div class="small-product-img" id="lille">
+          <img
+            src="../products/Shampoo_5_1L_hand_108314-e1666970307658-1024x1024.jpg"
+            alt="Billede 1"
+            onclick="myFunction(this)"
+          />
+          <img
+            src="../products/purely_shampoo_5_1l.jpg"
+            alt="Billede 2"
+            onclick="myFunction(this)"
+          />
+          <img
+            src="../products/210319_PurelyProfessional-2101657-e1666969576175-1024x1024.jpg"
+            alt="Billede 3"
+            onclick="myFunction(this)"
+          />
+        </div>
+        <div class="img-container">
+          <img
+            src="../products/Shampoo_5_1L_hand_108314-e1666970307658-1024x1024.jpg"
+            alt="Billede 1"
+            id="stor"
+          />
+        </div>
+      </div>
+      <div id="titler">
+        <h4>Purely Professional</h4>
+        <br />
+        <h2 title="title">Shampoo 5</h2>
+      </div>
+      <div id="knap-container">
+        <button id="knap">Føj til kurv</button>
+      </div>
+      <div id="pris">
+        <h3>300 ml</h3>
+        <hr />
+        <h3>179 kr.</h3>
+      </div>
+      <div id="beskrivelse">
+        <h4>Størrelse</h4>
+        <div id="size">
+          <button>60 ml</button>
+          <button>300 ml</button>
+          <button>1000 ml</button>
+        </div>
+        <div>
+          <h4>Beskrivelse</h4>
+          <p>
+            Er dit hår kraftigt, kruset og svært at kontrollere? Så er Shampoo 0
+            den shampoo, du leder efter. Her får du en sulfatfri shampoo, der
+            indeholder de mildeste vaskeaktive stoffer, så den vasker rent
+            samtidig med, at den bevarer hårets naturlige struktur og skællag.
+          </p>
+        </div>
+        <Footer />
+      </div>
+    </main>
+
+    <style>
+      /* Mobile first */
+      #pil img {
+        width: 25px;
+        rotate: 180deg;
+        margin-left: 10px;
+        margin-top: 15px;
+        cursor: pointer;
+      }
+
+      .small-product-img img {
+        height: 84px;
+        cursor: pointer;
+        opacity: 0.5;
+        display: flex;
+        flex-direction: column;
+        object-fit: cover;
+      }
+
+      .small-product-img img:hover {
+        opacity: 1;
+      }
+
+      .small-product-img {
+        float: left;
+      }
+      .img-container img {
+        height: 253px;
+        object-fit: cover;
+        border: 1px solid var(--purelyBlue);
+      }
+
+      .img-container {
+        float: right;
+      }
+
+      .product {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+      }
+
+      #titler {
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      #titler h4 {
+        font-weight: 300;
+      }
+      #knap-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #knap {
+        color: var(--purelyWhite);
+        background-color: var(--darkSand);
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        margin-left: 15px;
+        margin-right: 15px;
+        font-weight: 400;
+        font-family: "Open Sans";
+        font-size: 18px;
+        width: 100%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        cursor: pointer;
+      }
+
+      #pris {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      hr {
+        height: 30px;
+        rotate: 180deg;
+        border: 0.5px solid var(--purelyBlue);
+        margin-left: 15px;
+        margin-right: 15px;
+      }
+
+      h3 {
+        font-weight: 300;
+      }
+
+      #beskrivelse p {
+        margin-left: 15px;
+        margin-top: 10px;
+        font-size: 15px;
+        margin-right: 15px;
+        width: 90%;
+      }
+      #beskrivelse h4 {
+        font-weight: 500;
+        margin-top: 20px;
+        margin-left: 15px;
+      }
+
+      #size {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 20px;
+      }
+
+      #size button {
+        background-color: var(--purelyWhite);
+        border: 1px solid var(--darkBrown);
+        padding: 5px;
+        font-weight: 300;
+        font-family: "Open Sans";
+        font-size: 18px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-bottom: 20px;
+      }
+      /* tablet format (over 600px)*/
+      @media (min-width: 600px) {
+      }
+
+      /* desktop format (over 900px)*/
+      @media (min-width: 900px) {
+      }
+
+      @media (min-width: 1200px) {
+      }
+    </style>
+
+    <script>
+      function myFunction(smallImg) {
+        var fullImg = document.getElementById("stor");
+        if (
+          fullImg instanceof HTMLImageElement &&
+          smallImg instanceof HTMLImageElement
+        ) {
+          var smallImgSrc = smallImg.src;
+          fullImg.src = smallImgSrc;
+        }
+      }
+
+      var smallProductImgs = document.querySelectorAll(
+        ".small-product-img img"
+      );
+      smallProductImgs.forEach(function (img) {
+        img.addEventListener("click", function () {
+          myFunction(img);
+        });
+      });
+    </script>
+  </body>
 </html>
-
-<style>
-  /* Mobile first */
-
-  /* tablet format (over 600px)*/
-  @media (min-width: 600px) {
-  }
-
-  /* desktop format (over 900px)*/
-  @media (min-width: 900px) {
-  }
-
-  @media (min-width: 1200px) {
-  }
-</style>
