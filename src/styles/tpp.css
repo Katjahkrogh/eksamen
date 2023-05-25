@@ -1,4 +1,39 @@
 .tekst {
   margin: 0 15px;
-  color: green;
+}
+/* -- link med pil -- */
+.link-container {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+.link {
+  margin-right: 15px;
+  width: max-content;
+  align-self: flex-end;
+}
+
+.link-tekst {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 2px;
+}
+.link-tekst p {
+  color: var(--purelyBlue);
+}
+.pil {
+  width: 16px;
+}
+
+.underline {
+  border: 1.5px solid var(--purelyBlue);
+  width: 100%;
+  border-radius: 1.5px;
+  margin-bottom: 25px;
+}
+
+.pil-right {
+  transform: rotate(-90deg);
 }
