@@ -4,60 +4,62 @@ import "../styles/tpp.css";
 const { id, illustration, title1, title2, title3, title4, text, p1, p2, p3, p4, img1, img2, img3, img4 } = Astro.props;
 ---
 
-<div id="tpp-card">
-  <div class="svg-container">
-    <img src={illustration} alt="" class="illu" />
-  </div>
-  <h3 class="overskrift">{title1}</h3>
-  <p class="paragraf">
-    {text}
-  </p>
-  <div class="link" id="link-knap">
-    <div class="link-tekst">
-      <p id="read-more">Læs mere</p><p id="luk" class="hide">luk</p>
-      <img src="../svgfiles/pil.svg" alt="" class="pil" id="blaa-pil" />
+<!-- En dejlig container så at have det hele i gør det nemmere med querySelectorerne -->
+<div class="card-container">
+  <div id="tpp-card">
+    <div class="svg-container">
+      <img src={illustration} alt="" class="illu" />
     </div>
-    <hr class="underline" />
-  </div>
-</div>
-<div class="hide" id="open-menu">
-  <div class="flex-indhold">
-    <!-- Sæt indhold in her  -->
-    <img src={img1} alt="" class="img1" />
-    <p class="tekst">{p1}</p>
-    <div class="billede-med-streg right">
-      <img src={img2} alt="" class="img2" />
-      <div class="streg"></div>
-    </div>
-    <div class="tekst-felt">
-      <h2>{title2}</h2>
-      <p class="tekst">{p2}</p>
-    </div>
-    <div class="billede-med-streg left">
-      <img src={img3} alt="" class="img2" />
-      <div class="streg"></div>
-    </div>
-
-    <div class="tekst-felt" id="p3-test">
-      <h2>{title3}</h2>
-      <div set:html={p3} />
-    </div>
-
-    <img src={img4} alt="" class="img4" />
-    <div class="tekst-felt">
-      <h2>{title4}</h2>
-      <p class="tekst">{p4}</p>
-    </div>
-    <div class="link" id="link-knap-luk">
+    <h3 class="overskrift">{title1}</h3>
+    <p class="paragraf">
+      {text}
+    </p>
+    <div class="link" id="link-knap">
       <div class="link-tekst">
-        <p>luk</p>
-        <img src="../svgfiles/pil.svg" alt="" class="pil" id="pil-op" />
+        <p id="read-more">Læs mere</p><p id="luk" class="hide">luk</p>
+        <img src="../svgfiles/pil.svg" alt="" class="pil" id="blaa-pil" />
       </div>
       <hr class="underline" />
     </div>
   </div>
-</div>
+  <div class="hide" id="open-menu">
+    <div class="flex-indhold">
+      <!-- Sæt indhold in her  -->
+      <img src={img1} alt="" class="img1" />
+      <p class="tekst">{p1}</p>
+      <div class="billede-med-streg right">
+        <img src={img2} alt="" class="img2" />
+        <div class="streg"></div>
+      </div>
+      <div class="tekst-felt">
+        <h2>{title2}</h2>
+        <p class="tekst">{p2}</p>
+      </div>
+      <div class="billede-med-streg left">
+        <img src={img3} alt="" class="img2" />
+        <div class="streg"></div>
+      </div>
 
+      <div class="tekst-felt" id="p3-test">
+        <h2>{title3}</h2>
+        <div set:html={p3} />
+      </div>
+
+      <img src={img4} alt="" class="img4" />
+      <div class="tekst-felt">
+        <h2>{title4}</h2>
+        <p class="tekst">{p4}</p>
+      </div>
+      <div class="link" id="link-knap-luk">
+        <div class="link-tekst">
+          <p>luk</p>
+          <img src="../svgfiles/pil.svg" alt="" class="pil" id="pil-op" />
+        </div>
+        <hr class="underline" />
+      </div>
+    </div>
+  </div>
+</div>
 <style>
   #tpp-card {
     background-color: var(--purelyWhite);
@@ -211,36 +213,27 @@ const { id, illustration, title1, title2, title3, title4, text, p1, p2, p3, p4, 
   .hide {
     display: none;
   }
+  /* Husk pointer på det der kan klikkes på */
+  #link-knap-luk,
+  #link-knap {
+    cursor: pointer;
+  }
 </style>
 
 <script>
-  const readMoreButton = document.getElementById("link-knap");
-  const openMenu = document.getElementById("open-menu");
-  const blaaPil = document.getElementById("blaa-pil");
-  const lukTekst = document.getElementById("luk");
-  const readMore = document.getElementById("read-more");
-  const lukKnap = document.getElementById("link-knap-luk");
-
-  readMoreButton.addEventListener("click", () => {
-    if (openMenu.classList.contains("hide")) {
-      openMenu.classList.remove("hide");
-      blaaPil.classList.add("rotate");
-      lukTekst.classList.remove("hide");
-      readMore.classList.add("hide");
-    } else {
-      openMenu.classList.add("hide");
-      blaaPil.classList.remove("rotate");
-      lukTekst.classList.add("hide");
-      readMore.classList.remove("hide");
-    }
+  document.querySelectorAll(".card-container").forEach((card) => {
+    console.log("CARD", card);
+    card.querySelector("#link-knap").addEventListener("click", () => {
+      card.querySelector("#open-menu").classList.toggle("hide");
+      card.querySelector("#luk").classList.toggle("hide");
+      card.querySelector("#blaa-pil").classList.toggle("rotate");
+      card.querySelector("#read-more").classList.toggle("hide");
+    });
+    card.querySelector("#link-knap-luk").addEventListener("click", () => {
+      card.querySelector("#open-menu").classList.toggle("hide");
+      card.querySelector("#luk").classList.toggle("hide");
+      card.querySelector("#blaa-pil").classList.toggle("rotate");
+      card.querySelector("#read-more").classList.toggle("hide");
+    });
   });
-
-  // lukKnap.addEventListener("click", () => {
-  //   if (!openMenu.classList.contains("hide")) {
-  //     openMenu.classList.add("hide");
-  //     blaaPil.classList.remove("rotate");
-  //     lukTekst.classList.add("hide");
-  //     readMore.classList.remove("hide");
-  //   }
-  // });
 </script>

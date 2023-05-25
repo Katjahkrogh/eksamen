@@ -3,6 +3,7 @@ import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import Hero from "../components/Hero.astro";
 import Tppcard from "../components/Tppcard.astro";
+import Tppcard2 from "../components/Tppcard2.astro";
 import "../styles/style.css";
 const url = "https://bwzhyxrwqgaljabpwzkv.supabase.co/rest/v1/Purely_Promise";
 const options = {
@@ -30,10 +31,9 @@ console.log("hej med dig");
     </header>
     <main>
       <div class="card-holder">
-        <!-- <TppcardCopy /> -->
         {
           data.map((promise) => (
-            <Tppcard
+            <Tppcard2
               id={promise.id}
               illustration={`../svgfiles/${promise.card_illu}`}
               title1={promise.card_title}
