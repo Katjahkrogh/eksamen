@@ -5,9 +5,7 @@ const { id, illustration, title1, title2, title3, title4, text, p1, p2, p3, p4, 
 
 <div id="tpp-card">
   <div class="svg-container">
-    {illustration}
-    <p>svg her</p>
-    <!-- plads til illustration her -->
+    <img src={illustration} alt="" class="illu" />
   </div>
   <h3 class="overskrift">{title1}</h3>
   <p class="paragraf">
@@ -25,27 +23,29 @@ const { id, illustration, title1, title2, title3, title4, text, p1, p2, p3, p4, 
   <div class="flex-indhold">
     <!-- Sæt indhold in her  -->
     <img src={img1} alt="" class="img1" />
-    {p1}
+    <p class="tekst">{p1}</p>
     <div class="billede-med-streg right">
       <img src={img2} alt="" class="img2" />
       <div class="streg"></div>
     </div>
     <div class="tekst-felt">
       <h2>{title2}</h2>
-      {p2}
+      <p class="tekst">{p2}</p>
     </div>
     <div class="billede-med-streg left">
       <img src={img3} alt="" class="img2" />
       <div class="streg"></div>
     </div>
-    <div class="tekst-felt">
+
+    <div class="tekst-felt" id="p3-test">
       <h2>{title3}</h2>
-      {p3}
+      <div set:html={p3} />
     </div>
+
     <img src={img4} alt="" class="img4" />
     <div class="tekst-felt">
       <h2>{title4}</h2>
-      {p4}
+      <p class="tekst">{p4}</p>
     </div>
     <div class="link" id="link-knap-luk">
       <div class="link-tekst">
@@ -75,13 +75,15 @@ const { id, illustration, title1, title2, title3, title4, text, p1, p2, p3, p4, 
     width: 126px;
     height: 112px;
     margin-top: 42px;
-    background-color: aquamarine;
     display: flex;
     justify-content: center;
     align-items: center;
     align-self: center;
   }
 
+  .illu {
+    height: 100%;
+  }
   .paragraf,
   .overskrift {
     text-align: center;
@@ -241,4 +243,6 @@ const { id, illustration, title1, title2, title3, title4, text, p1, p2, p3, p4, 
   //     readMore.classList.remove("hide");
   //   }
   // });
+
+  // document.getElementById("p3-test").innerHTML = ;
 </script>

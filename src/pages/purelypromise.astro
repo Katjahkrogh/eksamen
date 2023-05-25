@@ -35,7 +35,7 @@ console.log("hej med dig");
           data.map((promise) => (
             <Tppcard
               id={promise.id}
-              illustration={promise.card_illu}
+              illustration={`../svgfiles/${promise.card_illu}`}
               title1={promise.card_title}
               title2={promise.title_2}
               title3={promise.title_3}
@@ -82,3 +82,5 @@ console.log("hej med dig");
   @media (min-width: 1200px) {
   }
 </style>
+
+<script></script>
