@@ -10,7 +10,20 @@
     </div>
   </div>
   <hr />
-  <div class="open-menu hide" id="ingredienser-open"></div>
+  <div class="open-menu hide" id="ingredienser-open">
+    <h4>(produktnavn) indeholder (INCI)</h4>
+    <div class="grid">
+      <p>Aqua</p>
+      <p>Vand, demineraliseret</p>
+      <p>Disodium laureth sulfosuccinate</p>
+      <p>Mild anionisk detergent. Vaskeaktivt stof baseret på organisk ravsyre. Mindre hudirriterende end traditionelle, sulfatholdige sæber såsom natrium lauryl sulfat og natrium laureth sulfat. Bionedbrydelig</p>
+      <p>Coco-glucoside</p>
+      <p>Mild nonionisk detergent baseret på kokosnødolie.Velegnet til sensitiv hud. Bionedbrydelig.</p>
+    </div>
+    <p id="obs">
+      *Vær opmærksom på, at der i sjældne tilfælde, kan forekomme mindre forskelle mellem den indholdsfortegnelse du ser her, og indholdsdeklarationen på produktet. Tag altid udgangspunkt i den deklaration der står på det fysiske produkt.
+    </p>
+  </div>
 
   <div class="info" id="brug">
     <h4>Brug</h4>
@@ -20,7 +33,9 @@
     </div>
   </div>
   <hr />
-  <div class="open-menu hide" id="brug-open"></div>
+  <div class="open-menu hide" id="brug-open">
+    <p>Fordel en lille mængde i vådt hår. <br />Masser det ind i håret for at skabe et blødt skum. Skyl grundigt efter. <br />Afslut med Conditioner nr. 1 eller 2 efter behov.</p>
+  </div>
 
   <div class="info" id="certificering">
     <h4>Certificering</h4>
@@ -30,7 +45,9 @@
     </div>
   </div>
   <hr />
-  <div class="open-menu hide" id="certificering-open"></div>
+  <div class="open-menu hide" id="certificering-open">
+    <img src="" alt="" class="certificering-logo" />
+  </div>
 
   <div class="info" id="levering">
     <h4>Levering</h4>
@@ -39,7 +56,18 @@
       <div class="lodret" id="lodret-levering"></div>
     </div>
   </div>
-  <div class="open-menu hide" id="levering-open"></div>
+  <div class="open-menu hide" id="levering-open">
+    <div id="levering">
+      <div class="flex">
+        <img src="../images/delivery.webp" alt="" class="levering-img" />
+        <p>Levering fra kun 29 kr. til pakkeshop</p>
+      </div>
+      <div class="flex">
+        <img src="../images/return.webp" alt="" class="bytte-img" />
+        <p>Vi bytter med et smil hvis du har fået noget forkert</p>
+      </div>
+    </div>
+  </div>
 </div>
 
 <style>
@@ -77,15 +105,77 @@
     border: 0.5px solid var(--purelyBlue);
   }
 
-  /* boks der kan åbne og lukke */
-
-  .open-menu {
-    background-color: lightblue;
-    height: 200px;
-  }
-
   .hide {
     display: none;
+  }
+
+  /* boks der kan åbne og lukke */
+  .open-menu {
+    background-color: var(--lightOcean);
+    height: fit-content;
+    padding: 19px 15px 38px;
+  }
+
+  .open-menu h4 {
+    padding: 19px 0;
+  }
+
+  .open-menu p {
+    font-size: 15px;
+  }
+
+  /* ingredienser */
+  .open-menu .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 26px;
+    padding: 19px 0;
+  }
+
+  .open-menu .grid p:nth-child(odd) {
+    font-weight: 600;
+  }
+
+  #obs {
+    font-size: 12px;
+    margin: 0 15px;
+  }
+
+  /* Brug */
+
+  /* Certificering */
+
+  .certificering-logo {
+    height: 55px;
+    object-fit: cover;
+  }
+
+  /* Levering */
+  #levering {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+  .open-menu .flex {
+    display: flex;
+    justify-content: space-between;
+    width: 280px;
+  }
+
+  .open-menu .flex img {
+    height: 50px;
+  }
+  .bytte-img {
+    object-fit: cover;
+    width: 65px;
+  }
+
+  .levering-img {
+    padding: 0 7.5px;
+  }
+  .open-menu .flex p {
+    width: 180px;
   }
 </style>
 
