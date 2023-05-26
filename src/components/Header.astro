@@ -4,7 +4,9 @@ import "../styles/style.css";
 
 <header>
   <nav>
-    <div id="logo"><a href="/"><img src="../images/logo-hvid.png" alt="logo" /></a></div>
+    <div id="logo">
+      <a href="/"><img src="../images/logo-hvid.png" alt="logo" /></a>
+    </div>
     <div class="burger-menu">
       <div class="burger"></div>
       <div class="burger"></div>
@@ -19,8 +21,12 @@ import "../styles/style.css";
         <li><a href="vidensbank">Vidensbank</a></li>
       </ul>
       <div id="socials">
-        <a href="#"><img src="../svgfiles/instagram-logo.svg" alt="Instagram logo" /></a>
-        <a href="#"><img src="../svgfiles/facebook-logo.svg" alt="Facebook logo" /></a>
+        <a href="#"
+          ><img src="../svgfiles/instagram-logo.svg" alt="Instagram logo" /></a
+        >
+        <a href="#"
+          ><img src="../svgfiles/facebook-logo.svg" alt="Facebook logo" /></a
+        >
         <a href="#"><img src="../svgfiles/mail-logo.svg" alt="Mail logo" /></a>
       </div>
     </div>
@@ -122,10 +128,6 @@ import "../styles/style.css";
     text-align: center;
   }
 
-  .content {
-    display: none;
-  }
-
   /* Media queries */
   /* tablet format (over 600px)*/
   @media (min-width: 600px) {
@@ -142,24 +144,14 @@ import "../styles/style.css";
 <script>
   const burgerMenu = document.querySelector(".burger-menu");
   const menu = document.querySelector(".menu");
-  const body = document.querySelector("body");
 
   burgerMenu.addEventListener("click", function () {
     burgerMenu.classList.toggle("active");
     menu.classList.toggle("active");
-    body.classList.toggle("active");
-    toggleBurgerIcon();
   });
 
   menu.addEventListener("click", function () {
     burgerMenu.classList.remove("active");
     menu.classList.remove("active");
-    body.classList.remove("active");
-    toggleBurgerIcon();
   });
-
-  function toggleBurgerIcon() {
-    const burgerIcons = burgerMenu.querySelectorAll(".burger");
-    burgerIcons.forEach((burger) => burger.classList.toggle(".cross"));
-  }
 </script>
