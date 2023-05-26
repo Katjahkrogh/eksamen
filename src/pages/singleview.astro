@@ -24,12 +24,28 @@ import Seher from "../components/Seher.astro";
       </div>
       <div class="product">
         <div class="small-product-img" id="lille">
-          <img src="../products/Shampoo_5_1L_hand_108314-e1666970307658-1024x1024.jpg" alt="Billede 1" onclick="myFunction(this)" />
-          <img src="../products/purely_shampoo_5_1l.jpg" alt="Billede 2" onclick="myFunction(this)" />
-          <img src="../products/210319_PurelyProfessional-2101657-e1666969576175-1024x1024.jpg" alt="Billede 3" onclick="myFunction(this)" />
+          <img
+            src="../products/Shampoo_5_1L_hand_108314-e1666970307658-1024x1024.jpg"
+            alt="Billede 1"
+            onclick="myFunction(this)"
+          />
+          <img
+            src="../products/purely_shampoo_5_1l.jpg"
+            alt="Billede 2"
+            onclick="myFunction(this)"
+          />
+          <img
+            src="../products/210319_PurelyProfessional-2101657-e1666969576175-1024x1024.jpg"
+            alt="Billede 3"
+            onclick="myFunction(this)"
+          />
         </div>
         <div class="img-container">
-          <img src="../products/Shampoo_5_1L_hand_108314-e1666970307658-1024x1024.jpg" alt="Billede 1" id="stor" />
+          <img
+            src="../products/Shampoo_5_1L_hand_108314-e1666970307658-1024x1024.jpg"
+            alt="Billede 1"
+            id="stor"
+          />
         </div>
       </div>
       <div id="titler">
@@ -45,6 +61,16 @@ import Seher from "../components/Seher.astro";
         <hr />
         <h3>179 kr.</h3>
       </div>
+      <div id="review">
+        <div id="star">
+          <img src="../svgfiles/star.svg" alt="" />
+          <img src="../svgfiles/star.svg" alt="" />
+          <img src="../svgfiles/star.svg" alt="" />
+          <img src="../svgfiles/star.svg" alt="" />
+          <img src="../svgfiles/star.svg" alt="" />
+        </div>
+        <p>7 anmeldelser</p>
+      </div>
       <div id="beskrivelse">
         <h4>Størrelse</h4>
         <div id="size">
@@ -55,8 +81,10 @@ import Seher from "../components/Seher.astro";
         <div>
           <h4>Beskrivelse</h4>
           <p>
-            Er dit hår kraftigt, kruset og svært at kontrollere? Så er Shampoo 0 den shampoo, du leder efter. Her får du en sulfatfri shampoo, der indeholder de mildeste vaskeaktive stoffer, så den vasker rent samtidig med, at den bevarer hårets
-            naturlige struktur og skællag.
+            Er dit hår kraftigt, kruset og svært at kontrollere? Så er Shampoo 0
+            den shampoo, du leder efter. Her får du en sulfatfri shampoo, der
+            indeholder de mildeste vaskeaktive stoffer, så den vasker rent
+            samtidig med, at den bevarer hårets naturlige struktur og skællag.
           </p>
         </div>
         <Seher />
@@ -155,6 +183,25 @@ import Seher from "../components/Seher.astro";
         font-weight: 300;
       }
 
+      #review {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+      }
+      #review p {
+        text-align: center;
+        margin-left: 10px;
+        font-size: 12px;
+      }
+      #star {
+        justify-content: space-evenly;
+        max-width: 300px;
+      }
+
+      #star img {
+        width: 20px;
+      }
+
       #beskrivelse p {
         margin-left: 15px;
         margin-top: 10px;
@@ -164,7 +211,7 @@ import Seher from "../components/Seher.astro";
       }
       #beskrivelse h4 {
         font-weight: 500;
-        margin-top: 20px;
+        margin-top: 30px;
         margin-left: 15px;
       }
 
@@ -183,7 +230,6 @@ import Seher from "../components/Seher.astro";
         font-size: 18px;
         border-radius: 5px;
         cursor: pointer;
-        margin-bottom: 20px;
       }
       /* tablet format (over 600px)*/
       @media (min-width: 600px) {
@@ -200,13 +246,18 @@ import Seher from "../components/Seher.astro";
     <script>
       function myFunction(smallImg) {
         var fullImg = document.getElementById("stor");
-        if (fullImg instanceof HTMLImageElement && smallImg instanceof HTMLImageElement) {
+        if (
+          fullImg instanceof HTMLImageElement &&
+          smallImg instanceof HTMLImageElement
+        ) {
           var smallImgSrc = smallImg.src;
           fullImg.src = smallImgSrc;
         }
       }
 
-      var smallProductImgs = document.querySelectorAll(".small-product-img img");
+      var smallProductImgs = document.querySelectorAll(
+        ".small-product-img img"
+      );
       smallProductImgs.forEach(function (img) {
         img.addEventListener("click", function () {
           myFunction(img);
