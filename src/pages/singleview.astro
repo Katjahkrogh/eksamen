@@ -24,6 +24,13 @@ import Information from "../components/Information.astro";
         <a href="produkt"><img src="../svgfiles/lang-pil-blue.svg" alt="" /></a>
       </div>
       <div class="product">
+        <div class="img-container">
+          <img
+            src="../products/Shampoo_5_1L_hand_108314-e1666970307658-1024x1024.jpg"
+            alt="Billede 1"
+            id="stor"
+          />
+        </div>
         <div class="small-product-img" id="lille">
           <img
             src="../products/Shampoo_5_1L_hand_108314-e1666970307658-1024x1024.jpg"
@@ -39,13 +46,6 @@ import Information from "../components/Information.astro";
             src="../products/210319_PurelyProfessional-2101657-e1666969576175-1024x1024.jpg"
             alt="Billede 3"
             onclick="myFunction(this)"
-          />
-        </div>
-        <div class="img-container">
-          <img
-            src="../products/Shampoo_5_1L_hand_108314-e1666970307658-1024x1024.jpg"
-            alt="Billede 1"
-            id="stor"
           />
         </div>
       </div>
@@ -106,11 +106,9 @@ import Information from "../components/Information.astro";
     }
 
     .small-product-img img {
-      height: 84px;
+      width: 110px;
       cursor: pointer;
       opacity: 0.5;
-      display: flex;
-      flex-direction: column;
       object-fit: cover;
     }
 
@@ -119,22 +117,23 @@ import Information from "../components/Information.astro";
     }
 
     .small-product-img {
-      float: left;
+      display: flex;
+      justify-content: space-between;
+      margin-left: 15px;
+      margin-right: 15px;
     }
     .img-container img {
-      height: 253px;
+      width: 100%;
       object-fit: cover;
       border: 1px solid var(--purelyBlue);
     }
 
     .img-container {
-      float: right;
+      margin-left: 15px;
+      margin-right: 15px;
     }
 
     .product {
-      display: flex;
-      justify-content: center;
-      align-items: center;
       margin-top: 15px;
     }
 

@@ -2,45 +2,44 @@
 ---
 
 <div class="info-box">
-  <div class="info">
+  <div class="info" id="ingredienser">
     <h4>Ingredienser</h4>
     <div class="kryds">
       <div class="vandret"></div>
-      <div class="lodret"></div>
+      <div class="lodret" id="lodret-ingredienser"></div>
     </div>
   </div>
   <hr />
-  <div class="open-menu"></div>
+  <div class="open-menu hide" id="ingredienser-open"></div>
 
-  <div class="info">
+  <div class="info" id="brug">
     <h4>Brug</h4>
     <div class="kryds">
       <div class="vandret"></div>
-      <div class="lodret"></div>
+      <div class="lodret" id="lodret-brug"></div>
     </div>
   </div>
   <hr />
-  <div class="open-menu"></div>
+  <div class="open-menu hide" id="brug-open"></div>
 
-  <div class="info">
+  <div class="info" id="certificering">
     <h4>Certificering</h4>
     <div class="kryds">
       <div class="vandret"></div>
-      <div class="lodret"></div>
+      <div class="lodret" id="lodret-certificering"></div>
     </div>
   </div>
   <hr />
-  <div class="open-menu"></div>
+  <div class="open-menu hide" id="certificering-open"></div>
 
-  <div class="info">
+  <div class="info" id="levering">
     <h4>Levering</h4>
     <div class="kryds">
       <div class="vandret"></div>
-      <div class="lodret"></div>
+      <div class="lodret" id="lodret-levering"></div>
     </div>
   </div>
-  <hr />
-  <div class="open-menu"></div>
+  <div class="open-menu hide" id="levering-open"></div>
 </div>
 
 <style>
@@ -54,6 +53,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px;
+    cursor: pointer;
   }
   .kryds {
     width: 18px;
@@ -72,6 +72,55 @@
     rotate: 90deg;
     transition: transform 0.3s;
   }
+
+  hr {
+    border: 0.5px solid var(--purelyBlue);
+  }
+
+  /* boks der kan åbne og lukke */
+
+  .open-menu {
+    background-color: lightblue;
+    height: 200px;
+  }
+
+  .hide {
+    display: none;
+  }
 </style>
 
-<script></script>
+<script>
+  const ingredienserKnap = document.getElementById("ingredienser");
+  const openIngredisenser = document.getElementById("ingredienser-open");
+  const lodretIngredienser = document.getElementById("lodret-ingredienser");
+
+  const brugKnap = document.getElementById("brug");
+  const openBrug = document.getElementById("brug-open");
+  const lodretBrug = document.getElementById("lodret-brug");
+
+  const certificeringKnap = document.getElementById("certificering");
+  const openCertificering = document.getElementById("certificering-open");
+  const lodretCertificering = document.getElementById("lodret-certificering");
+
+  const leveringKnap = document.getElementById("levering");
+  const openLevering = document.getElementById("levering-open");
+  const lodretLevering = document.getElementById("lodret-levering");
+
+  ingredienserKnap.addEventListener("click", () => {
+    openIngredisenser.classList.toggle("hide");
+    lodretIngredienser.classList.toggle("hide");
+  });
+
+  brugKnap.addEventListener("click", () => {
+    openBrug.classList.toggle("hide");
+    lodretBrug.classList.toggle("hide");
+  });
+  certificeringKnap.addEventListener("click", () => {
+    openCertificering.classList.toggle("hide");
+    lodretCertificering.classList.toggle("hide");
+  });
+  leveringKnap.addEventListener("click", () => {
+    openLevering.classList.toggle("hide");
+    lodretLevering.classList.toggle("hide");
+  });
+</script>
