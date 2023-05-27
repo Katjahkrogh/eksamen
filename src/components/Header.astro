@@ -2,8 +2,8 @@
 import "../styles/style.css";
 ---
 
-<header>
-  <nav>
+<header id="header">
+  <nav id="nav">
     <div id="logo">
       <a href="/"><img src="../images/logo-hvid.png" alt="logo" /></a>
     </div>
@@ -36,6 +36,14 @@ import "../styles/style.css";
 <style>
   /* mobileview */
 
+  #header {
+    background-color: var(--darkSand);
+    padding: 25px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+  }
   #socials {
     display: flex;
     gap: 28px;
@@ -50,11 +58,7 @@ import "../styles/style.css";
   #logo img {
     width: 60px;
     height: 48px;
-  }
-  header {
-    background-color: var(--darkSand);
-    padding: 25px;
-    position: relative;
+    vertical-align: middle;
   }
 
   .burger-menu {
@@ -131,13 +135,50 @@ import "../styles/style.css";
   /* Media queries */
   /* tablet format (over 600px)*/
   @media (min-width: 600px) {
+    #nav {
+      display: flex;
+      align-items: center;
+    }
+
+    #logo {
+      margin-right: auto;
+    }
+    .burger-menu {
+      display: none;
+    }
+
+    #socials {
+      display: none;
+    }
+
+    .menu {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    a {
+      font-size: 20px;
+      color: var(--purelyWhite);
+      font-family: Open Sans, sans-serif;
+    }
+
+    li a {
+      margin-left: 30px;
+    }
   }
 
   /* desktop format (over 900px)*/
   @media (min-width: 900px) {
+    .menu li {
+      display: inline-block;
+      margin-left: 10px;
+    }
   }
 
   @media (min-width: 1200px) {
+    #header {
+      padding: 20px;
+    }
   }
 </style>
 
