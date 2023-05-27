@@ -134,7 +134,7 @@ import "../styles/style.css";
 
   /* Media queries */
   /* tablet format (over 600px)*/
-  @media (min-width: 600px) {
+  @media (min-width: 800px) {
     #header {
       transition: background-color 0.8s ease;
     }
@@ -148,7 +148,7 @@ import "../styles/style.css";
     }
 
     #logo img {
-      width: 80px;
+      width: 60px;
       height: auto;
     }
     .burger-menu {
@@ -164,8 +164,13 @@ import "../styles/style.css";
       justify-content: flex-end;
     }
 
+    .menu li {
+      display: inline-block;
+      margin-left: 10px;
+    }
+
     a {
-      font-size: 20px;
+      font-size: 15px;
       color: var(--purelyWhite);
       font-family: Open Sans, sans-serif;
     }
@@ -181,12 +186,19 @@ import "../styles/style.css";
       display: inline-block;
       margin-left: 10px;
     }
+
+    a {
+      font-size: 20px;
+    }
+
+    #logo img {
+      width: 80px;
+      height: auto;
+    }
   }
 
   @media (min-width: 1200px) {
-    #header {
-      padding: 20px;
-    }
+
   }
 </style>
 
@@ -206,16 +218,17 @@ import "../styles/style.css";
   });
 
   window.addEventListener("scroll", function () {
-    // Tjek om skærmstørrelsen er over 600px
-    if (window.innerWidth > 600) {
+    // Tjek om skærmstørrelsen er over 700px
+    if (window.innerWidth > 800) {
       // Tjek om der er scrollet ned
       if (window.scrollY > 0) {
         // Hvis der er scrollet ned, tilføj baggrundsfarven til header
         header.style.backgroundColor = "var(--darkSand)";
       } else {
-        // Hvis ikke der er scrollet ned, sæt headerens baggrundsfarve til transparent
         header.style.backgroundColor = "transparent";
       }
+    } else {
+      header.style.backgroundColor = "var(--darkSand)"; // Konstant baggrundsfarve under 600px
     }
   });
 </script>
