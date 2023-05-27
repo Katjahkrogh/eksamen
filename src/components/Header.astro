@@ -135,6 +135,9 @@ import "../styles/style.css";
   /* Media queries */
   /* tablet format (over 600px)*/
   @media (min-width: 600px) {
+    #header {
+      transition: background-color 0.8s ease;
+    }
     #nav {
       display: flex;
       align-items: center;
@@ -142,6 +145,11 @@ import "../styles/style.css";
 
     #logo {
       margin-right: auto;
+    }
+
+    #logo img {
+      width: 80px;
+      height: auto;
     }
     .burger-menu {
       display: none;
@@ -183,6 +191,7 @@ import "../styles/style.css";
 </style>
 
 <script>
+  const header = document.getElementById("header");
   const burgerMenu = document.querySelector(".burger-menu");
   const menu = document.querySelector(".menu");
 
@@ -194,5 +203,19 @@ import "../styles/style.css";
   menu.addEventListener("click", function () {
     burgerMenu.classList.remove("active");
     menu.classList.remove("active");
+  });
+
+  window.addEventListener("scroll", function () {
+    // Tjek om skærmstørrelsen er over 600px
+    if (window.innerWidth > 600) {
+      // Tjek om der er scrollet ned
+      if (window.scrollY > 0) {
+        // Hvis der er scrollet ned, tilføj baggrundsfarven til header
+        header.style.backgroundColor = "var(--darkSand)";
+      } else {
+        // Hvis ikke der er scrollet ned, sæt headerens baggrundsfarve til transparent
+        header.style.backgroundColor = "transparent";
+      }
+    }
   });
 </script>
