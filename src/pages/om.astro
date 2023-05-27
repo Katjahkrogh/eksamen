@@ -17,7 +17,7 @@ import Thepurelypromisebanner from "../components/Thepurelypromisebanner.astro";
   <body>
     <header>
       <Header />
-      <Hero />
+      <!-- <Hero /> -->
     </header>
     <main>
       <div id="founders">
@@ -42,7 +42,7 @@ import Thepurelypromisebanner from "../components/Thepurelypromisebanner.astro";
         <h2>Prisvenlig</h2>
         <h2>luksus</h2>
       </div>
-      <p>
+      <p class="p-small">
         Vores vison har siden starten været at skabe hår- og hudpleje til dig,
         der ønsker prisvenlige, luksuriøse og effektive produkter uden parfume
         og anden unødvendig kemi.
@@ -51,13 +51,15 @@ import Thepurelypromisebanner from "../components/Thepurelypromisebanner.astro";
         <img src="../images/IMG_6902-kopi.jpg" alt="Produkt i vand" />
       </div>
       <h2 id="passion">Passion</h2>
-      <p>
+      <p class="p-small">
         For os har Purely Professional altid været et projekt af passion. Vi har
         prøvet os frem drevet af nysgerrighed, stædighed og lysten til at
         fremstille produkter, vi selv drømte om at bruge.
       </p>
       <div id="vaerdier">
-        <img src="../images/img-olie.png" alt="" />
+        <div id="vaerdier-img">
+          <img src="../images/img-olie.png" alt="" />
+        </div>
         <br />
         <br />
         <h2>Værdier</h2>
@@ -86,6 +88,7 @@ import Thepurelypromisebanner from "../components/Thepurelypromisebanner.astro";
           <hr class="underline" />
         </div>
       </div>
+      <hr id="hr-bottom" />
       <img
         src="../images/210318_PurelyProfessional_3_100865.jpg"
         alt="Purely model"
@@ -166,7 +169,16 @@ import Thepurelypromisebanner from "../components/Thepurelypromisebanner.astro";
   }
 
   #vaerdier img {
-    width: 347px;
+    display: none;
+  }
+
+  #vaerdier-img {
+    max-width: 100%;
+    height: 220px;
+    background-image: url("../images/genbrugsflasker.jpg");
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2%;
   }
 
   #vaerdier h2 {
@@ -226,12 +238,210 @@ import Thepurelypromisebanner from "../components/Thepurelypromisebanner.astro";
 
   /* tablet format (over 600px)*/
   @media (min-width: 600px) {
+    #founders img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-top: 38px;
+    }
+
+    #founders {
+      justify-content: space-evenly;
+    }
+
+    #founders p {
+      font-size: 15px;
+      margin-top: 10px;
+    }
+
+    p {
+      margin-left: 5%;
+      margin-top: 2%;
+      line-height: 2em;
+    }
+
+    #luksus {
+      margin-left: 5%;
+      margin-top: 5%;
+      gap: 0.5em;
+    }
+
+    .p-small {
+      margin-top: 15px;
+    }
+
+    #passion {
+      margin-left: 5%;
+      margin-top: 5%;
+    }
+
+    #vand {
+      width: 550px;
+      height: auto;
+      margin-left: 5%;
+    }
+
+    #vaerdier {
+      margin-left: 5%;
+      margin-right: 5%;
+      margin-top: 10%;
+    }
+
+    #vaerdier h2 {
+      margin-left: 2%;
+    }
+
+    #vaerdier p {
+      margin-left: 2%;
+      margin-right: 2%;
+    }
+    #vaerdier img {
+      display: none;
+    }
+
+    #vaerdier-img {
+      max-width: 100%;
+      height: 250px;
+      background-image: url("../images/genbrugsflasker.jpg");
+      margin-left: 2%;
+      margin-right: 2%;
+      margin-top: 2%;
+    }
+
+    #vaerdier2 {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+
+    #vaerdier2 p {
+      margin-left: 2%;
+      margin-right: 2%;
+    }
+
+    .link {
+      margin-right: 2%;
+    }
+
+    #hr-bottom {
+      margin-left: 5%;
+      border: 1.5px solid var(--purelyWhite);
+      width: 100%;
+      margin-top: 2%;
+    }
+    #model {
+      width: 550px;
+      height: auto;
+      margin-left: 5%;
+      margin-top: 2%;
+      margin-right: 5%;
+    }
+
+    #blaa {
+      margin-top: 5%;
+      margin-left: 5%;
+    }
+
+    #bottom-p {
+      margin-right: 5%;
+    }
   }
 
   /* desktop format (over 900px)*/
   @media (min-width: 900px) {
+    #founders img {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      margin-top: 38px;
+    }
+
+    p {
+      margin-left: 5%;
+      margin-top: 38px;
+      line-height: 2em;
+    }
+
+    .p-small {
+      max-width: 420px;
+      margin-top: 15px;
+    }
+
+    #luksus {
+      display: flex;
+    }
+
+    #vand {
+      float: right;
+      width: 450px;
+      height: auto;
+      margin-top: -20%;
+    }
+
+    #vaerdier-img {
+      max-width: 100%;
+      height: 300px;
+      background-image: url("../images/genbrugsflasker.jpg");
+      margin-left: 2%;
+      margin-right: 2%;
+      margin-top: 2%;
+    }
+
+    #model {
+      float: left;
+      width: 450px;
+      height: auto;
+      /* margin-left: 5%; */
+      margin-top: 2%;
+      margin-right: 5%;
+    }
   }
 
   @media (min-width: 1200px) {
+    #founders img {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      margin-top: 38px;
+    }
+
+    p {
+      margin-left: 5%;
+      margin-top: 38px;
+      line-height: 2em;
+    }
+
+    #luksus {
+      display: flex;
+    }
+
+    .p-small {
+      max-width: 600px;
+      margin-top: 15px;
+    }
+
+    #vand {
+      float: right;
+      width: 540px;
+      height: auto;
+      margin-top: -15%;
+    }
+
+    #vaerdier-img {
+      max-width: 100%;
+      height: 400px;
+      background-image: url("../images/genbrugsflasker.jpg");
+      margin-left: 2%;
+      margin-right: 2%;
+      margin-top: 2%;
+    }
+
+    #model {
+      float: left;
+      width: 540px;
+      height: auto;
+      /* margin-left: 5%; */
+      margin-top: 2%;
+      margin-right: 5%;
+    }
   }
 </style>
