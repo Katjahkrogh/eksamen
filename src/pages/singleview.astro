@@ -5,6 +5,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Seher from "../components/Seher.astro";
 import Information from "../components/Information.astro";
+const { img1, img2, img3, img4, produktnavn, beskrivelse } = Astro.props;
 ---
 
 <html lang="en">
@@ -25,34 +26,18 @@ import Information from "../components/Information.astro";
       </div>
       <div class="product">
         <div class="img-container">
-          <img
-            src="../products/Shampoo_5_1L_hand_108314-e1666970307658-1024x1024.jpg"
-            alt="Billede 1"
-            id="stor"
-          />
+          <img src={img1} alt="Billede 1" id="stor" />
         </div>
         <div class="small-product-img" id="lille">
-          <img
-            src="../products/Shampoo_5_1L_hand_108314-e1666970307658-1024x1024.jpg"
-            alt="Billede 1"
-            onclick="myFunction(this)"
-          />
-          <img
-            src="../products/purely_shampoo_5_1l.jpg"
-            alt="Billede 2"
-            onclick="myFunction(this)"
-          />
-          <img
-            src="../products/210319_PurelyProfessional-2101657-e1666969576175-1024x1024.jpg"
-            alt="Billede 3"
-            onclick="myFunction(this)"
-          />
+          <img src={img2} alt="Billede 1" onclick="myFunction(this)" />
+          <img src={img3} alt="Billede 2" onclick="myFunction(this)" />
+          <img src={img4} alt="Billede 3" onclick="myFunction(this)" />
         </div>
       </div>
       <div id="titler">
         <h4>Purely Professional</h4>
         <br />
-        <h2 title="title">Shampoo 5</h2>
+        <h2 title="title">{produktnavn}</h2>
       </div>
       <div id="knap-container">
         <button id="knap">Føj til kurv</button>
@@ -82,10 +67,7 @@ import Information from "../components/Information.astro";
         <div>
           <h4>Beskrivelse</h4>
           <p>
-            Er dit hår kraftigt, kruset og svært at kontrollere? Så er Shampoo 0
-            den shampoo, du leder efter. Her får du en sulfatfri shampoo, der
-            indeholder de mildeste vaskeaktive stoffer, så den vasker rent
-            samtidig med, at den bevarer hårets naturlige struktur og skællag.
+            {beskrivelse}
           </p>
         </div>
       </div>
@@ -248,10 +230,7 @@ import Information from "../components/Information.astro";
   <script>
     function myFunction(smallImg) {
       var fullImg = document.getElementById("stor");
-      if (
-        fullImg instanceof HTMLImageElement &&
-        smallImg instanceof HTMLImageElement
-      ) {
+      if (fullImg instanceof HTMLImageElement && smallImg instanceof HTMLImageElement) {
         var smallImgSrc = smallImg.src;
         fullImg.src = smallImgSrc;
       }
