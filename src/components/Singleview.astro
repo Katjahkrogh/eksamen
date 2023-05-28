@@ -7,55 +7,58 @@ const { img1, img2, img3, produktnavn, beskrivelse, pris, størrelse, indhold, b
 
 <main>
   <div class="under-header"></div>
-  <div id="pil">
-    <a href="../../produkt"><img src="../svgfiles/lang-pil-blue.svg" alt="" /></a>
-  </div>
-  <div class="product">
-    <div class="img-container">
-      <img src={img1} alt="Billede 1" id="stor" />
-    </div>
-    <div class="small-product-img" id="lille">
-      <img src={img1} alt="Billede 1" onclick="myFunction(this)" />
-      <img src={img2} alt="Billede 2" onclick="myFunction(this)" />
-      <img src={img3} alt="Billede 3" onclick="myFunction(this)" />
-    </div>
-  </div>
-  <div id="titler">
-    <h4>Purely Professional</h4>
-    <br />
-    <h2>{produktnavn}</h2>
-  </div>
-  <div id="knap-container">
-    <button id="knap">Føj til kurv</button>
-  </div>
-  <div id="pris">
-    <h3>{størrelse}</h3>
-    <hr />
-    <h3>{pris}</h3>
-  </div>
-  <div id="review">
-    <div id="star">
-      <img src="../svgfiles/star.svg" alt="" />
-      <img src="../svgfiles/star.svg" alt="" />
-      <img src="../svgfiles/star.svg" alt="" />
-      <img src="../svgfiles/star.svg" alt="" />
-      <img src="../svgfiles/star.svg" alt="" />
-    </div>
-    <p>7 anmeldelser</p>
-  </div>
-  <div id="beskrivelse">
-    <h4>Størrelse</h4>
-    <div id="size">
-      <button>60 ml</button>
-      <button>300 ml</button>
-      <button>1000 ml</button>
-    </div>
-    <div>
-      <h4>Beskrivelse</h4>
-      <p>
-        {beskrivelse}
-      </p>
-    </div>
+  <div id="pil"><a href="../../produkt"><img src="../svgfiles/lang-pil-blue.svg" alt="" /></a></div>
+  <div class="bredformat">
+    <article id="produkt-billeder">
+      <div class="product">
+        <img src={img1} alt="Billede 1" id="stor" />
+
+        <div class="small-product-img" id="lille">
+          <img src={img1} alt="Billede 1" onclick="myFunction(this)" />
+          <img src={img2} alt="Billede 2" onclick="myFunction(this)" />
+          <img src={img3} alt="Billede 3" onclick="myFunction(this)" />
+        </div>
+      </div>
+    </article>
+    <article id="om-produktet">
+      <div id="titler">
+        <h4>Purely Professional</h4>
+        <br />
+        <h2>{produktnavn}</h2>
+      </div>
+      <div id="knap-container">
+        <button id="knap">Føj til kurv</button>
+      </div>
+      <div id="pris">
+        <h3>{størrelse}</h3>
+        <hr />
+        <h3>{pris}</h3>
+      </div>
+      <div id="review">
+        <div id="star">
+          <img src="../svgfiles/star.svg" alt="" />
+          <img src="../svgfiles/star.svg" alt="" />
+          <img src="../svgfiles/star.svg" alt="" />
+          <img src="../svgfiles/star.svg" alt="" />
+          <img src="../svgfiles/star.svg" alt="" />
+        </div>
+        <p>7 anmeldelser</p>
+      </div>
+      <div id="beskrivelse">
+        <h4>Størrelse</h4>
+        <div id="size">
+          <button>60 ml</button>
+          <button>300 ml</button>
+          <button>1000 ml</button>
+        </div>
+        <div>
+          <h4>Beskrivelse</h4>
+          <p>
+            {beskrivelse}
+          </p>
+        </div>
+      </div>
+    </article>
   </div>
   <Seher />
   <Information {produktnavn} {brug} {indhold} />
@@ -65,6 +68,8 @@ const { img1, img2, img3, produktnavn, beskrivelse, pris, størrelse, indhold, b
 
   .under-header {
     height: 98px;
+    width: 100vw;
+    background-color: var(--darkSand);
   }
   #pil img {
     width: 25px;
@@ -74,8 +79,24 @@ const { img1, img2, img3, produktnavn, beskrivelse, pris, størrelse, indhold, b
     cursor: pointer;
   }
 
+  .product {
+    width: 100vw;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 15px;
+  }
+
+  #stor {
+    width: 100%;
+    object-fit: cover;
+    border: 1px solid var(--purelyBlue);
+  }
+  .small-product-img {
+    width: 100%;
+    display: flex;
+  }
   .small-product-img img {
-    width: 110px;
+    width: 33.3333333%;
     cursor: pointer;
     opacity: 0.5;
     object-fit: cover;
@@ -83,27 +104,6 @@ const { img1, img2, img3, produktnavn, beskrivelse, pris, størrelse, indhold, b
 
   .small-product-img img:hover {
     opacity: 1;
-  }
-
-  .small-product-img {
-    display: flex;
-    justify-content: space-between;
-    margin-left: 15px;
-    margin-right: 15px;
-  }
-  .img-container img {
-    width: 100%;
-    object-fit: cover;
-    border: 1px solid var(--purelyBlue);
-  }
-
-  .img-container {
-    margin-left: 15px;
-    margin-right: 15px;
-  }
-
-  .product {
-    margin-top: 15px;
   }
 
   #titler {
@@ -204,10 +204,31 @@ const { img1, img2, img3, produktnavn, beskrivelse, pris, størrelse, indhold, b
   }
   /* tablet format (over 600px)*/
   @media (min-width: 600px) {
-  }
+    .bredformat {
+      display: flex;
+      justify-content: center;
+    }
 
+    #om-produktet {
+      max-width: 400px;
+    }
+    .product {
+      width: 50vw;
+    }
+  }
+  @media (min-width: 800px) {
+    .under-header {
+      height: 114px;
+    }
+  }
   /* desktop format (over 900px)*/
   @media (min-width: 900px) {
+    .under-header {
+      height: 132px;
+    }
+    .product {
+      max-width: 600px;
+    }
   }
 
   @media (min-width: 1200px) {
