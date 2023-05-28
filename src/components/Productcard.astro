@@ -1,19 +1,16 @@
 ---
 import "../styles/style.css";
+const { img1, produktnavn, pris, link } = Astro.props;
 ---
 
 <section id="product-card">
-  <a href="singleview"
-    ><img
-      src="../products/Shampoo_1_1L_hand_108265-e1676897701559-1024x1024.jpg"
-      alt=""
-      title="produkt-img"
-    /></a
-  >
-  <div id="tekst">
-    <h4 title="navn">Shampoo 0</h4>
-    <p title="pris">179,00 kr.</p>
-  </div>
+  <a href={link}
+    ><img src={img1} alt="" title="produkt-img" />
+    <div id="tekst">
+      <h4 title="navn">{produktnavn}</h4>
+      <p title="pris">{pris}</p>
+    </div>
+  </a>
   <button id="knap">Føj til kurv</button>
 </section>
 

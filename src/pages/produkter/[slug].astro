@@ -1,0 +1,55 @@
+---
+import "../../styles/style.css";
+import Singleview from "../../components/Singleview.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+
+export async function getStaticPaths() {
+  const url = "https://bwzhyxrwqgaljabpwzkv.supabase.co/rest/v1/Purely_produkterne";
+  const options = {
+    headers: {
+      apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ3emh5eHJ3cWdhbGphYnB3emt2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg3ODU1MzksImV4cCI6MTk5NDM2MTUzOX0.zKU7b6CyWwRwF95benSn0okCyoH-QtV96NdDXIKqslM",
+    },
+  };
+
+  const response = await fetch(url, options);
+  const data = await response.json();
+
+  return data.map((produkt) => {
+    return {
+      params: { slug: produkt.id },
+      props: { produkt },
+    };
+  });
+}
+
+const { produkt } = Astro.props;
+---
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{produkt.produkt_navn}</title>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <Singleview
+        produktnavn={produkt.produkt_navn}
+        link={"/produkter/" + produkt.id}
+        img1={`../images/shampoo/${produkt.billede_1}`}
+        img2={`../images/shampoo/${produkt.billede_2}`}
+        img3={`../images/shampoo/${produkt.billede_3}`}
+        beskrivelse={produkt.produkt_beskrivelse}
+        brug={produkt.brug}
+        pris={produkt.pris}
+        indhold={produkt.indhold}
+        størrelse={produkt.produkt_size}
+      />
+    </main>
+    <Footer />
+  </body>
+</html>

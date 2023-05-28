@@ -4,6 +4,20 @@ import Hero from "../components/Hero.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import "../styles/style.css";
+
+const url = "https://bwzhyxrwqgaljabpwzkv.supabase.co/rest/v1/Purely_produkterne";
+const options = {
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ3emh5eHJ3cWdhbGphYnB3emt2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg3ODU1MzksImV4cCI6MTk5NDM2MTUzOX0.zKU7b6CyWwRwF95benSn0okCyoH-QtV96NdDXIKqslM",
+  },
+};
+const response = await fetch(url, options);
+const data = await response.json();
+
+//
+// curl 'https://bwzhyxrwqgaljabpwzkv.supabase.co/rest/v1/Purely_produkterne?select=id' \
+// -H "apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ3emh5eHJ3cWdhbGphYnB3emt2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg3ODU1MzksImV4cCI6MTk5NDM2MTUzOX0.zKU7b6CyWwRwF95benSn0okCyoH-QtV96NdDXIKqslM" \
+// -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ3emh5eHJ3cWdhbGphYnB3emt2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg3ODU1MzksImV4cCI6MTk5NDM2MTUzOX0.zKU7b6CyWwRwF95benSn0okCyoH-QtV96NdDXIKqslM"
 ---
 
 <html lang="en">
@@ -29,18 +43,12 @@ import "../styles/style.css";
             <br />
           </div>
           <div>
-            <img
-              src="../images/210319_PurelyProfessional-2101847-e1662119504658.jpg"
-              alt=""
-            />
+            <img src="../images/210319_PurelyProfessional-2101847-e1662119504658.jpg" alt="" />
             <p>Fint hår</p>
             <br />
           </div>
           <div>
-            <img
-              src="../images/Texturepaste_123320-e1662120018541.jpg"
-              alt=""
-            />
+            <img src="../images/Texturepaste_123320-e1662120018541.jpg" alt="" />
             <p>Kraftigt hår</p>
             <br />
           </div>
@@ -50,10 +58,7 @@ import "../styles/style.css";
             <br />
           </div>
           <div>
-            <img
-              src="../images/210319_PurelyProfessional101374-e1662120101448.jpg"
-              alt=""
-            />
+            <img src="../images/210319_PurelyProfessional101374-e1662120101448.jpg" alt="" />
             <p>Hovedbunds-<br />problemer & skæl</p>
           </div>
           <div>
@@ -63,12 +68,29 @@ import "../styles/style.css";
         </div>
       </section>
       <section id="cards">
+        {
+          data.map((produkt) => (
+            <Productcard
+              produktnavn={produkt.produkt_navn}
+              link={"/produkter/" + produkt.id}
+              img1={`../images/shampoo/${produkt.billede_1}`}
+              img2={`../images/shampoo/${produkt.billede_2}`}
+              img3={`../images/shampoo/${produkt.billede_3}`}
+              img4={`../images/shampoo/${produkt.billede_4}`}
+              beskrivelse={produkt.produkt_beskrivelse}
+              brug={produkt.brug}
+              pris={produkt.pris}
+              indhold={produkt.indhold}
+              størrelse={produkt.produkt_size}
+            />
+          ))
+        }
+        <!-- <Productcard />
         <Productcard />
         <Productcard />
         <Productcard />
         <Productcard />
-        <Productcard />
-        <Productcard />
+        <Productcard /> -->
       </section>
     </main>
     <Footer />

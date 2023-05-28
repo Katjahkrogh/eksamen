@@ -1,0 +1,228 @@
+---
+import "../styles/style.css";
+import Seher from "../components/Seher.astro";
+import Information from "../components/Information.astro";
+const { img1, img2, img3, produktnavn, beskrivelse, pris, størrelse } = Astro.props;
+---
+
+<main>
+  <div id="pil">
+    <a href="produkt"><img src="../svgfiles/lang-pil-blue.svg" alt="" /></a>
+  </div>
+  <div class="product">
+    <div class="img-container">
+      <img src={img1} alt="Billede 1" id="stor" />
+    </div>
+    <div class="small-product-img" id="lille">
+      <img src={img1} alt="Billede 1" onclick="myFunction(this)" />
+      <img src={img2} alt="Billede 2" onclick="myFunction(this)" />
+      <img src={img3} alt="Billede 3" onclick="myFunction(this)" />
+    </div>
+  </div>
+  <div id="titler">
+    <h4>Purely Professional</h4>
+    <br />
+    <h2>{produktnavn}</h2>
+  </div>
+  <div id="knap-container">
+    <button id="knap">Føj til kurv</button>
+  </div>
+  <div id="pris">
+    <h3>{størrelse}</h3>
+    <hr />
+    <h3>{pris}</h3>
+  </div>
+  <div id="review">
+    <div id="star">
+      <img src="../svgfiles/star.svg" alt="" />
+      <img src="../svgfiles/star.svg" alt="" />
+      <img src="../svgfiles/star.svg" alt="" />
+      <img src="../svgfiles/star.svg" alt="" />
+      <img src="../svgfiles/star.svg" alt="" />
+    </div>
+    <p>7 anmeldelser</p>
+  </div>
+  <div id="beskrivelse">
+    <h4>Størrelse</h4>
+    <div id="size">
+      <button>60 ml</button>
+      <button>300 ml</button>
+      <button>1000 ml</button>
+    </div>
+    <div>
+      <h4>Beskrivelse</h4>
+      <p>
+        {beskrivelse}
+      </p>
+    </div>
+  </div>
+  <Seher />
+  <Information />
+</main>
+
+<style>
+  /* Mobile first */
+  #pil img {
+    width: 25px;
+    rotate: 180deg;
+    margin-left: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+
+  .small-product-img img {
+    width: 110px;
+    cursor: pointer;
+    opacity: 0.5;
+    object-fit: cover;
+  }
+
+  .small-product-img img:hover {
+    opacity: 1;
+  }
+
+  .small-product-img {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .img-container img {
+    width: 100%;
+    object-fit: cover;
+    border: 1px solid var(--purelyBlue);
+  }
+
+  .img-container {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .product {
+    margin-top: 15px;
+  }
+
+  #titler {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  #titler h4 {
+    font-weight: 300;
+  }
+  #knap-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #knap {
+    color: var(--purelyWhite);
+    background-color: var(--darkSand);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-weight: 400;
+    font-family: "Open Sans";
+    font-size: 18px;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    cursor: pointer;
+  }
+
+  #pris {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  hr {
+    height: 30px;
+    rotate: 180deg;
+    border: 0.5px solid var(--purelyBlue);
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  h3 {
+    font-weight: 300;
+  }
+
+  #review {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  #review p {
+    text-align: center;
+    margin-left: 10px;
+    font-size: 12px;
+  }
+  #star {
+    justify-content: space-evenly;
+    max-width: 300px;
+  }
+
+  #star img {
+    width: 20px;
+  }
+
+  #beskrivelse p {
+    margin-left: 15px;
+    margin-top: 10px;
+    font-size: 15px;
+    margin-right: 15px;
+    width: 90%;
+  }
+  #beskrivelse h4 {
+    font-weight: 500;
+    margin-top: 30px;
+    margin-left: 15px;
+  }
+
+  #size {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+  }
+
+  #size button {
+    background-color: var(--purelyWhite);
+    border: 1px solid var(--darkBrown);
+    padding: 5px;
+    font-weight: 300;
+    font-family: "Open Sans";
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  /* tablet format (over 600px)*/
+  @media (min-width: 600px) {
+  }
+
+  /* desktop format (over 900px)*/
+  @media (min-width: 900px) {
+  }
+
+  @media (min-width: 1200px) {
+  }
+</style>
+
+<script>
+  function myFunction(smallImg) {
+    var fullImg = document.getElementById("stor");
+    if (fullImg instanceof HTMLImageElement && smallImg instanceof HTMLImageElement) {
+      var smallImgSrc = smallImg.src;
+      fullImg.src = smallImgSrc;
+    }
+  }
+
+  var smallProductImgs = document.querySelectorAll(".small-product-img img");
+  smallProductImgs.forEach(function (img) {
+    img.addEventListener("click", function () {
+      myFunction(img);
+    });
+  });
+</script>
