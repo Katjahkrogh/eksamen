@@ -18,7 +18,8 @@ import "../styles/info.css";
     <p id="obs">
       *Vær opmærksom på, at der i sjældne tilfælde, kan forekomme mindre forskelle mellem den indholdsfortegnelse du ser her, og indholdsdeklarationen på produktet. Tag altid udgangspunkt i den deklaration der står på det fysiske produkt.
     </p>
-  </div><hr />
+  </div>
+  <hr />
 
   <div class="info" id="brug">
     <h4>Brug</h4>
@@ -75,8 +76,8 @@ import "../styles/info.css";
 <style>
   .info-box {
     background-color: var(--lightOcean);
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin: 30px 0;
+    width: 100%;
   }
   .info {
     display: flex;
@@ -149,9 +150,12 @@ import "../styles/info.css";
   /* Brug */
 
   /* Certificering */
+  #certificering-open {
+  }
   .certificering-indhold {
     display: flex;
-    justify-content: space-around;
+    gap: 30px;
+    max-width: 300px;
   }
   .certificering-logo {
     height: 55px;
@@ -184,6 +188,31 @@ import "../styles/info.css";
   }
   .open-menu .flex p {
     width: 180px;
+  }
+
+  @media (min-width: 600px) {
+    .open-menu {
+      max-width: 500px;
+    }
+
+    #levering-indhold {
+      align-items: flex-start;
+    }
+  }
+  @media (min-width: 800px) {
+    .info {
+      padding: 30px;
+    }
+    .open-menu {
+      max-width: 500px;
+      padding: 23px 15px 38px 30px;
+    }
+  }
+  /* desktop format (over 900px)*/
+  @media (min-width: 900px) {
+  }
+
+  @media (min-width: 1200px) {
   }
 </style>
 
