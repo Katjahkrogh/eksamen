@@ -1,4 +1,5 @@
 ---
+const { brug, produktnavn, indhold } = Astro.props;
 ---
 
 <div class="info-box">
@@ -9,21 +10,14 @@
       <div class="lodret" id="lodret-ingredienser"></div>
     </div>
   </div>
-  <hr />
+
   <div class="open-menu hide" id="ingredienser-open">
-    <h4>(produktnavn) indeholder (INCI)</h4>
-    <div class="grid">
-      <p>Aqua</p>
-      <p>Vand, demineraliseret</p>
-      <p>Disodium laureth sulfosuccinate</p>
-      <p>Mild anionisk detergent. Vaskeaktivt stof baseret på organisk ravsyre. Mindre hudirriterende end traditionelle, sulfatholdige sæber såsom natrium lauryl sulfat og natrium laureth sulfat. Bionedbrydelig</p>
-      <p>Coco-glucoside</p>
-      <p>Mild nonionisk detergent baseret på kokosnødolie.Velegnet til sensitiv hud. Bionedbrydelig.</p>
-    </div>
+    <h4>{produktnavn} indeholder (INCI)</h4>
+    <div class="grid" set:html={indhold} />
     <p id="obs">
       *Vær opmærksom på, at der i sjældne tilfælde, kan forekomme mindre forskelle mellem den indholdsfortegnelse du ser her, og indholdsdeklarationen på produktet. Tag altid udgangspunkt i den deklaration der står på det fysiske produkt.
     </p>
-  </div>
+  </div><hr />
 
   <div class="info" id="brug">
     <h4>Brug</h4>
@@ -32,10 +26,11 @@
       <div class="lodret" id="lodret-brug"></div>
     </div>
   </div>
-  <hr />
+
   <div class="open-menu hide" id="brug-open">
-    <p>Fordel en lille mængde i vådt hår. <br />Masser det ind i håret for at skabe et blødt skum. Skyl grundigt efter. <br />Afslut med Conditioner nr. 1 eller 2 efter behov.</p>
+    <p>{brug}</p>
   </div>
+  <hr />
 
   <div class="info" id="certificering">
     <h4>Certificering</h4>
@@ -44,10 +39,15 @@
       <div class="lodret" id="lodret-certificering"></div>
     </div>
   </div>
-  <hr />
+
   <div class="open-menu hide" id="certificering-open">
-    <img src="" alt="" class="certificering-logo" />
+    <div class="certificering-indhold">
+      <img src="../svgfiles/kolbe.png" alt="" class="certificering-logo" />
+      <img src="../svgfiles/vegan.svg" alt="" class="certificering-logo" />
+      <img src="../svgfiles/cruelty-free.svg" alt="" class="certificering-logo" />
+    </div>
   </div>
+  <hr />
 
   <div class="info" id="levering">
     <h4>Levering</h4>
@@ -57,7 +57,7 @@
     </div>
   </div>
   <div class="open-menu hide" id="levering-open">
-    <div id="levering">
+    <div id="levering-indhold">
       <div class="flex">
         <img src="../images/delivery.webp" alt="" class="levering-img" />
         <p>Levering fra kun 29 kr. til pakkeshop</p>
@@ -68,6 +68,7 @@
       </div>
     </div>
   </div>
+  <hr />
 </div>
 
 <style>
@@ -113,11 +114,13 @@
   .open-menu {
     background-color: var(--lightOcean);
     height: fit-content;
-    padding: 19px 15px 38px;
+    padding: 23px 15px 38px;
   }
 
   .open-menu h4 {
-    padding: 19px 0;
+    padding: 0 0 19px 0;
+    font-size: 18px;
+    color: var(--purelyBlue);
   }
 
   .open-menu p {
@@ -134,6 +137,7 @@
 
   .open-menu .grid p:nth-child(odd) {
     font-weight: 600;
+    color: var(--purelyBlue);
   }
 
   #obs {
@@ -144,14 +148,17 @@
   /* Brug */
 
   /* Certificering */
-
+  .certificering-indhold {
+    display: flex;
+    justify-content: space-around;
+  }
   .certificering-logo {
     height: 55px;
     object-fit: cover;
   }
 
   /* Levering */
-  #levering {
+  #levering-indhold {
     display: flex;
     flex-direction: column;
     gap: 30px;
