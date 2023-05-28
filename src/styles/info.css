@@ -5,3 +5,10 @@
 .open-menu p {
   font-size: 15px;
 }
+
+@media (min-width: 1500px) {
+  .open-menu p {
+    font-size: 25px;
+    line-height: 34px;
+  }
+}

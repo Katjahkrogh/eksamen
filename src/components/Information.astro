@@ -117,6 +117,7 @@ import "../styles/info.css";
     background-color: var(--lightOcean);
     height: fit-content;
     padding: 23px 15px 38px;
+    max-width: 500px;
   }
 
   .open-menu h4 {
@@ -167,7 +168,7 @@ import "../styles/info.css";
     display: flex;
     flex-direction: column;
     gap: 30px;
-    align-items: center;
+    align-items: flex-start;
   }
   .open-menu .flex {
     display: flex;
@@ -191,13 +192,6 @@ import "../styles/info.css";
   }
 
   @media (min-width: 600px) {
-    .open-menu {
-      max-width: 500px;
-    }
-
-    #levering-indhold {
-      align-items: flex-start;
-    }
   }
   @media (min-width: 800px) {
     .info {
@@ -212,7 +206,37 @@ import "../styles/info.css";
   @media (min-width: 900px) {
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: 1500px) {
+    .open-menu {
+      max-width: 700px;
+    }
+    .certificering-indhold {
+      max-width: fit-content;
+      gap: 50px;
+    }
+    .certificering-logo {
+      height: 100px;
+    }
+
+    .open-menu .flex img {
+      height: 100px;
+    }
+    .bytte-img {
+      object-fit: cover;
+      width: 125px;
+    }
+
+    .open-menu h4 {
+      font-size: 30px;
+    }
+
+    .open-menu p {
+      font-size: 25px;
+    }
+
+    #obs {
+      font-size: 18px;
+    }
   }
 </style>
 
