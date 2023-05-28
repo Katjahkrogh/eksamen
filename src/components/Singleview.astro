@@ -6,6 +6,7 @@ const { img1, img2, img3, produktnavn, beskrivelse, pris, størrelse } = Astro.p
 ---
 
 <main>
+  <div class="under-header"></div>
   <div id="pil">
     <a href="../../produkt"><img src="../svgfiles/lang-pil-blue.svg" alt="" /></a>
   </div>
@@ -62,6 +63,10 @@ const { img1, img2, img3, produktnavn, beskrivelse, pris, størrelse } = Astro.p
 
 <style>
   /* Mobile first */
+
+  .under-header {
+    height: 98px;
+  }
   #pil img {
     width: 25px;
     rotate: 180deg;
