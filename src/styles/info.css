@@ -1,0 +1,7 @@
+.open-menu .grid p:nth-child(odd) {
+  font-weight: 600;
+  color: var(--purelyBlue);
+}
+.open-menu p {
+  font-size: 15px;
+}

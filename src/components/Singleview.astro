@@ -2,7 +2,7 @@
 import "../styles/style.css";
 import Seher from "../components/Seher.astro";
 import Information from "../components/Information.astro";
-const { img1, img2, img3, produktnavn, beskrivelse, pris, størrelse } = Astro.props;
+const { img1, img2, img3, produktnavn, beskrivelse, pris, størrelse, indhold, brug } = Astro.props;
 ---
 
 <main>
@@ -58,9 +58,8 @@ const { img1, img2, img3, produktnavn, beskrivelse, pris, størrelse } = Astro.p
     </div>
   </div>
   <Seher />
-  <Information />
+  <Information {produktnavn} {brug} {indhold} />
 </main>
-
 <style>
   /* Mobile first */
 
