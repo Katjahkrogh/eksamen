@@ -4,44 +4,70 @@ import "../styles/style.css";
 
 <section id="kategorier">
   <h2>Shop via kategori</h2>
+  <hr class="hr1" />
   <div class="flex-layout">
     <a href="#">
       <div class="kategori-cirkel">
-        <img src="../images/210318_PurelyProfessional_3_100865.jpg" alt="" class="kategori-img" />
+        <img
+          src="../images/210318_PurelyProfessional_3_100865.jpg"
+          alt=""
+          class="kategori-img"
+        />
         <div><p class="kategori-tekst">Hudpleje</p></div>
       </div>
     </a>
     <a href="#">
       <div class="kategori-cirkel">
-        <img src="../images/210319_PurelyProfessional-2102444-e1666964250729.jpg" alt="" class="kategori-img" />
+        <img
+          src="../images/210319_PurelyProfessional-2102444-e1666964250729.jpg"
+          alt=""
+          class="kategori-img"
+        />
         <div><p class="kategori-tekst">Shampoo</p></div>
       </div>
     </a>
     <a href="#">
       <div class="kategori-cirkel">
-        <img src="../images/210318_PurelyProfessional-2100554-1-e1675419248356.jpg" alt="" class="kategori-img" />
+        <img
+          src="../images/210318_PurelyProfessional-2100554-1-e1675419248356.jpg"
+          alt=""
+          class="kategori-img"
+        />
         <div><p class="kategori-tekst">Hårpleje</p></div>
       </div>
     </a>
     <a href="#">
       <div class="kategori-cirkel">
-        <img src="../images/210318_PurelyProfessional-2100251.jpg" alt="" class="kategori-img" />
+        <img
+          src="../images/210318_PurelyProfessional-2100251.jpg"
+          alt=""
+          class="kategori-img"
+        />
         <div><p class="kategori-tekst">Ansigtspleje</p></div>
       </div>
     </a>
     <a href="#">
       <div class="kategori-cirkel">
-        <img src="../images/210319_PurelyProfessional-2102361-e1675348761705.jpg" alt="" class="kategori-img" />
+        <img
+          src="../images/210319_PurelyProfessional-2102361-e1675348761705.jpg"
+          alt=""
+          class="kategori-img"
+        />
         <div><p class="kategori-tekst">Styling</p></div>
       </div>
     </a>
     <a href="#">
       <div class="kategori-cirkel">
-        <img src="../images/Toilettaske_hand_108343-e1675418310920.jpg" alt="" class="kategori-img" />
+        <img
+          src="../images/Toilettaske_hand_108343-e1675418310920.jpg"
+          alt=""
+          class="kategori-img"
+        />
         <div><p class="kategori-tekst">Tilbehør</p></div>
       </div>
     </a>
   </div>
+  <hr class="hr2" />
 </section>
 
 <style>
@@ -52,6 +78,21 @@ import "../styles/style.css";
   }
   h2 {
     margin-left: 30px;
+  }
+
+  .hr1 {
+    max-width: 85%;
+    border: 1px solid var(--darkOcean);
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .hr2 {
+    max-width: 85%;
+    margin-left: 15%;
+    border: 1px solid var(--darkOcean);
+    margin-top: 30px;
+    margin-bottom: 10px;
   }
   .flex-layout {
     display: flex;
@@ -112,13 +153,78 @@ import "../styles/style.css";
   }
   /* Media queries */
   /* tablet format (over 600px)*/
-  @media (min-width: 600px) {
+  @media (min-width: 700px) {
+    .flex-layout {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin: 30px;
+      place-items: center;
+    }
+
+    .kategori-cirkel {
+      width: 300px;
+      height: 300px;
+    }
+
+    .kategori-img {
+      width: 300px;
+      height: 300px;
+    }
+
+    .kategori-tekst {
+      font-size: 45px;
+    }
+
+    .hr1 {
+      max-width: 60%;
+    }
+
+    .hr2 {
+      max-width: 55%;
+      margin-left: 45%;
+    }
   }
 
   /* desktop format (over 900px)*/
   @media (min-width: 900px) {
+    .flex-layout {
+      margin: 30px;
+    }
+
+    .kategori-cirkel {
+      width: 380px;
+      height: 380px;
+    }
+
+    .kategori-img {
+      width: 380px;
+      height: 380px;
+    }
+
+    .kategori-tekst {
+      font-size: 50px;
+    }
   }
 
   @media (min-width: 1200px) {
+    .flex-layout {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin: 30px;
+    }
+
+    .kategori-cirkel {
+      width: 350px;
+      height: 350px;
+    }
+
+    .kategori-img {
+      width: 350px;
+      height: 350px;
+    }
+
+    .kategori-tekst {
+      font-size: 50px;
+    }
   }
 </style>
