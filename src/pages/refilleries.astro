@@ -16,8 +16,7 @@ import Footer from "../components/Footer.astro";
 	</head>
 	<body>
     <Header/>
-    <!-- <Hero /> -->
-    <div id="storediv">
+    <Hero img="../images/hero/refill.webp" tekst="Med Purely Refillery kan du udnytte dine brugte emballagers fulde potentiale og genfylde dine tomme emballager." navn="Refilleries" />    <div id="storediv">
     <div id="hvader">
       <h3>Hvad er det?</h3>
       <p>Refillery er et tilbud til dig, der gerne vil vise vores omverden lidt mere omtanke. Plastik er et fantastisk materiale, der kan holde rigtigt længe, og det vil vi gerne udnytte ved at tilbyde genfyldning af vores shampoo og conditioners.</p>
@@ -227,9 +226,7 @@ import Footer from "../components/Footer.astro";
 </div>
 </div>
 </div>
-<div id="howto_div">
-  <h3>Sådan bruger du Purely Refillery </h3>
-</div>
+
 <Footer/>
 	</body>
 </html>
@@ -421,6 +418,7 @@ margin-top: 65px;
     gap: 22px;
     display: grid;
     grid-template-columns: repeat(7,1fr);
+    margin-bottom: 180px;
 }
 #opfyldningsmuligheder{
   display: flex;
@@ -445,10 +443,62 @@ margin-top: 65px;
   /* tablet format (over 600px)*/
   @media (min-width: 600px) {
     #hvader{
-      margin-left: 15%;
-      margin-right: 15%;
+      margin-right: 30%;
     }
+    #storediv{
+      margin-left: 30px;
+    }
+
+    #hrunder{
+      width: 430px;
+    }
+ 
+    /* Hvad kan jeg genopfylde */
+    #hvor{
+      display: flex;
+    flex-direction: column;
+    gap: 3em;
+    margin-top: 65px;
+    /* margin-right: 30px; */
+    /* margin-left: 30px; */
+    align-items: center;
+    }
+    #hvor_div{
+      margin-top: 65px;
+    margin-left: 30px;
+    margin-bottom: 38px;
+    }
+    #opfyldningsmuligheder{
+      display: flex;
+    flex-direction: row;
+    margin-bottom: 40px;
+    gap: 50px;
+    margin-left: 30px;
+    }
+       /* hvad koster det */
+       #produkt{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       }
+       #hvadkosterdet{
+        margin-top: 65px;
+        margin-bottom: 38px;
+        margin-left: 30px;
+       }
+
+       /* hvor */
+
+       #hvor_carddiv{
+        overflow-x: scroll;
+    gap: 22px;
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    margin-bottom: 180px;
+    margin-left: 30px;
+       }
   }
+
 
   /* desktop format (over 900px)*/
   @media (min-width: 900px) {
@@ -587,8 +637,13 @@ margin-top: 65px;
     #storediv{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-left: 90px;
+    margin-left: 200px;
     }
+    #plast img{
+    height: 400px;
+    width: 400px;
+    margin-top: 3em;
+  }
     /* hvad kan jeg genopfylde */
     #hvor{
     align-items: flex-start;
@@ -613,6 +668,23 @@ margin-top: 65px;
     gap: 26px;
     padding-top: 30px;
     justify-content: space-evenly;
+    padding-bottom: 20px;
+    }
+    .done_div{
+    height: 50px;
+    width: 50px;
+    background-color: var(--lightSand);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+      }
+    
+    .done_div img{
+    height: 25px;
+    width: 30px;
+    }
     }
 
     /* hvad koster det */
@@ -703,5 +775,14 @@ margin-top: 65px;
     gap: 118px;
     margin-left: 200px;
     }
-  }
+    #hrunder{
+      width: 100%;
+    }
+    #genopfyldning h7{
+      font-size: 20px;
+    }
+    #genopfyldning h6{
+      font-size: 20px;
+    }
+  
 </style>

@@ -206,6 +206,14 @@ import Footer from "../components/Footer.astro";
         <h3>Purely Hacks</h3>
       </div>
     </div>
+    <div class="inspi_div">
+      <div class="inspi_billede"> 
+        <img src= "../images/210319_PurelyProfessional-22018.jpg" alt=""/>
+      </div>
+      <div class="inspi_tekst">
+        <h3>Purely Hacks</h3>
+      </div>
+    </div>
   </div>
   <Footer/>
 	</body>
@@ -422,7 +430,7 @@ import Footer from "../components/Footer.astro";
   background-color: var(--purelyGrey);
   overflow-x: scroll;
   display: grid;
-  grid-template-columns: repeat(3,2fr);
+  grid-template-columns: repeat(4,2fr);
   margin-top: 56px;
   gap: 26px;
   margin-bottom: 56px;
@@ -462,6 +470,12 @@ import Footer from "../components/Footer.astro";
   }
  /* tablet format (over 600px)*/
   @media (min-width: 600px) {
+
+    #indholdsstoffer_div{
+      display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
 
   }
 
@@ -609,6 +623,8 @@ import Footer from "../components/Footer.astro";
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: max-content;
+    padding-top: 115px;
+    padding-bottom: 119px;
     }
     #divudenomdiv{
     display: flex;
@@ -628,12 +644,110 @@ import Footer from "../components/Footer.astro";
     border-color: transparent;
     }
     /* leksikon */
+      #leksikon_billede{
+    height: 400px;
+    width: 600px;
+    background-image: url(../images/genbrugsplast-scaled-1.jpg);
+    background-size: cover;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 90px
+      }
+    
+    #babyhaender{
+    width: 600px;
+    height: 431px;
+    padding-left: 0;
+    margin-top: 30px;
+    margin-bottom: 112px;
+    margin-top: 0;
+    object-fit: cover;
+}
+
+/* miljø */
+  .miljo_billede img{
+    width: 340px;
+    height: 367px;
+    border-radius: 180px;
+    margin-top: 133px;
+}
+
+#miljo_storediv h2{
+    margin-top: 108px;
+    margin-left: 85px;
+}
+#scroll_div{
+  overflow-x: scroll;
+    gap: 22px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-top: 42px;
+    gap: 26px;
+    padding-bottom: 70px;
+}
+
+/* find hårtype */
+#finhaertype{
+  display: flex;
+}
 
     
-  }
+
 
   #denhele{
   background-color: var(--mediumOcean);
+}
+/* lær om hudpleje  */
+#denstorelear{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 101px;
+}
+#learomhudplejeimg1{
+  width: 482px;
+    height: 536px;
+    background-image: url(../images/210318_purelyprofessional\ 2100469.JPG);
+    background-size: cover;
+    margin-top: 26px;
+    margin-left: 7px;
+    margin-bottom: 15px;
+}
+#learomhudplejeimg2{
+  width: 482px;
+    height: 536px;
+    background-image: url(../images/210318_PurelyProfessional_3_100865.jpg);
+    background-size: cover;
+    margin-top: 26px;
+    margin-left: 7px;
+    margin-bottom: 15px;
+}
+#learomhudpleje h2{
+  padding-top: 75px;
+  margin-left: 85px;
+}
+.link-tekst{
+  display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 2px;
+    padding-bottom: 75px;
+    padding-right: 10px;
+}
+
+/* inspiration */
+#inspiration{
+  background-color: var(--purelyGrey);
+    overflow-x: scroll;
+    margin-top: 56px;
+    gap: 33px;
+    display: flex;
+    margin-bottom: 56px;
+    justify-content: space-evenly;
+    margin-top: 81px;
+
+}
 }
 .vidensbank_button:hover{
       background-color: var(--mediumOcean);
