@@ -4,7 +4,6 @@ import Hero from "../components/Hero.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Thepurelypromisebanner from "../components/Thepurelypromisebanner.astro";
-import Mainlayout from "../layouts/Mainlayout.astro";
 ---
 
 <html lang="en">
@@ -15,7 +14,10 @@ import Mainlayout from "../layouts/Mainlayout.astro";
     <meta name="generator" content={Astro.generator} />
     <title>Om Purely</title>
   </head>
+
   <body>
+    <Header />
+    <Hero img="../images/hero/dame_med_v-hals.webp" tekst="Purely Professional er et dansk familieejet brand med mere end 10 års erfaring inden for skønhedspleje. " navn="Vi er Purely " />
     <main>
       <div id="founders">
         <div>
@@ -75,330 +77,330 @@ import Mainlayout from "../layouts/Mainlayout.astro";
     </main>
     <Footer />
   </body>
-</html>
 
-<style>
-  /* Mobile first */
-  main {
-    background-color: var(--lightSand);
-    overflow: hidden;
-  }
+  <style>
+    /* Mobile first */
+    main {
+      background-color: var(--lightSand);
+      overflow: hidden;
+    }
 
-  #founders img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
-    margin-top: 25px;
-  }
-
-  #founders {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-left: 15px;
-    margin-right: 15px;
-  }
-
-  #founders p {
-    text-align: center;
-    font-weight: 300;
-    font-size: 15px;
-    margin-top: -2px;
-  }
-
-  p {
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-top: 25px;
-  }
-
-  #luksus {
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-top: 30px;
-  }
-
-  #vand img {
-    max-width: 100%;
-    margin-top: 50px;
-  }
-
-  #passion {
-    margin-left: 15px;
-    margin-top: 30px;
-  }
-
-  #vaerdier {
-    background-color: var(--mediumSand);
-    margin-left: 15px;
-    margin-right: 15px;
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-    flex-direction: column;
-  }
-
-  #vaerdier-img {
-    margin-left: 2%;
-    margin-right: 2%;
-    margin-top: 2%;
-  }
-
-  #vaerdier-img img {
-    width: 100%;
-    object-fit: cover;
-    height: 220px;
-  }
-
-  #vaerdier h2 {
-    margin-left: 15px;
-  }
-
-  #vaerdier2 {
-    background-color: var(--mediumSand);
-    margin-left: 15px;
-    margin-right: 15px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-
-  .link {
-    align-self: flex-end;
-    margin-right: 15px;
-  }
-  .link-tekst {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 0 2px;
-  }
-  .link-tekst a {
-    text-decoration: none;
-    color: var(--darkBrown);
-  }
-  .pil {
-    width: 16px;
-    rotate: -90deg;
-  }
-  .underline {
-    border: 1.5px solid var(--purelyBlue);
-    width: 100%;
-    border-radius: 1.5px;
-    margin-bottom: 25px;
-  }
-
-  #model {
-    width: 390px;
-    height: 393px;
-    margin-top: 15px;
-  }
-
-  #blaa {
-    margin-left: 15px;
-    color: var(--purelyBlue);
-    margin-top: 30px;
-  }
-
-  #bottom-p {
-    margin-bottom: 70px;
-  }
-
-  /* tablet format (over 600px)*/
-  @media (min-width: 600px) {
     #founders img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      margin-top: 38px;
+      width: 100px;
+      height: 100px;
+      border-radius: 50px;
+      margin-top: 25px;
     }
 
     #founders {
-      justify-content: space-evenly;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-left: 15px;
+      margin-right: 15px;
     }
 
     #founders p {
+      text-align: center;
+      font-weight: 300;
       font-size: 15px;
-      margin-top: 10px;
+      margin-top: -2px;
     }
 
     p {
-      margin-left: 5%;
-      margin-top: 2%;
-      line-height: 2em;
+      margin-left: 15px;
+      margin-right: 15px;
+      margin-top: 25px;
     }
 
     #luksus {
-      margin-left: 5%;
-      margin-top: 5%;
-      gap: 0.5em;
+      margin-left: 15px;
+      margin-right: 15px;
+      margin-top: 30px;
     }
 
-    .p-small {
-      margin-top: 15px;
+    #vand img {
+      max-width: 100%;
+      margin-top: 50px;
     }
 
     #passion {
-      margin-left: 5%;
-      margin-top: 5%;
-    }
-
-    #vand {
-      width: 550px;
-      height: auto;
-      margin-left: 5%;
+      margin-left: 15px;
+      margin-top: 30px;
     }
 
     #vaerdier {
-      margin-left: 5%;
-      margin-right: 5%;
-      margin-top: 10%;
+      background-color: var(--mediumSand);
+      margin-left: 15px;
+      margin-right: 15px;
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      flex-direction: column;
+    }
+
+    #vaerdier-img {
+      margin-left: 2%;
+      margin-right: 2%;
+      margin-top: 2%;
     }
 
     #vaerdier-img img {
       width: 100%;
       object-fit: cover;
-      height: 250px;
+      height: 220px;
     }
 
     #vaerdier h2 {
-      margin-left: 2%;
-    }
-
-    #vaerdier p {
-      margin-left: 2%;
-      margin-right: 2%;
+      margin-left: 15px;
     }
 
     #vaerdier2 {
-      margin-left: 5%;
-      margin-right: 5%;
-    }
-
-    #vaerdier2 p {
-      margin-left: 2%;
-      margin-right: 2%;
+      background-color: var(--mediumSand);
+      margin-left: 15px;
+      margin-right: 15px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
     }
 
     .link {
-      margin-right: 2%;
+      align-self: flex-end;
+      margin-right: 15px;
+    }
+    .link-tekst {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 0 2px;
+    }
+    .link-tekst a {
+      text-decoration: none;
+      color: var(--darkBrown);
+    }
+    .pil {
+      width: 16px;
+      rotate: -90deg;
+    }
+    .underline {
+      border: 1.5px solid var(--purelyBlue);
+      width: 100%;
+      border-radius: 1.5px;
+      margin-bottom: 25px;
     }
 
-    #hr-bottom {
-      margin-left: 5%;
-      border: 1.5px solid var(--purelyWhite);
-      width: 100%;
-      margin-top: 2%;
-    }
     #model {
-      width: 550px;
-      height: auto;
-      margin-left: 5%;
-      margin-top: 2%;
-      margin-right: 5%;
+      width: 390px;
+      height: 393px;
+      margin-top: 15px;
     }
 
     #blaa {
-      margin-top: 5%;
-      margin-left: 5%;
+      margin-left: 15px;
+      color: var(--purelyBlue);
+      margin-top: 30px;
     }
 
     #bottom-p {
-      margin-right: 5%;
-    }
-  }
-
-  /* desktop format (over 900px)*/
-  @media (min-width: 900px) {
-    #founders img {
-      width: 250px;
-      height: 250px;
-      border-radius: 50%;
-      margin-top: 38px;
+      margin-bottom: 70px;
     }
 
-    p {
-      margin-left: 5%;
-      margin-top: 38px;
-      line-height: 2em;
+    /* tablet format (over 600px)*/
+    @media (min-width: 600px) {
+      #founders img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-top: 38px;
+      }
+
+      #founders {
+        justify-content: space-evenly;
+      }
+
+      #founders p {
+        font-size: 15px;
+        margin-top: 10px;
+      }
+
+      p {
+        margin-left: 5%;
+        margin-top: 2%;
+        line-height: 2em;
+      }
+
+      #luksus {
+        margin-left: 5%;
+        margin-top: 5%;
+        gap: 0.5em;
+      }
+
+      .p-small {
+        margin-top: 15px;
+      }
+
+      #passion {
+        margin-left: 5%;
+        margin-top: 5%;
+      }
+
+      #vand {
+        width: 550px;
+        height: auto;
+        margin-left: 5%;
+      }
+
+      #vaerdier {
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 10%;
+      }
+
+      #vaerdier-img img {
+        width: 100%;
+        object-fit: cover;
+        height: 250px;
+      }
+
+      #vaerdier h2 {
+        margin-left: 2%;
+      }
+
+      #vaerdier p {
+        margin-left: 2%;
+        margin-right: 2%;
+      }
+
+      #vaerdier2 {
+        margin-left: 5%;
+        margin-right: 5%;
+      }
+
+      #vaerdier2 p {
+        margin-left: 2%;
+        margin-right: 2%;
+      }
+
+      .link {
+        margin-right: 2%;
+      }
+
+      #hr-bottom {
+        margin-left: 5%;
+        border: 1.5px solid var(--purelyWhite);
+        width: 100%;
+        margin-top: 2%;
+      }
+      #model {
+        width: 550px;
+        height: auto;
+        margin-left: 5%;
+        margin-top: 2%;
+        margin-right: 5%;
+      }
+
+      #blaa {
+        margin-top: 5%;
+        margin-left: 5%;
+      }
+
+      #bottom-p {
+        margin-right: 5%;
+      }
     }
 
-    .p-small {
-      max-width: 420px;
-      margin-top: 15px;
+    /* desktop format (over 900px)*/
+    @media (min-width: 900px) {
+      #founders img {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        margin-top: 38px;
+      }
+
+      p {
+        margin-left: 5%;
+        margin-top: 38px;
+        line-height: 2em;
+      }
+
+      .p-small {
+        max-width: 420px;
+        margin-top: 15px;
+      }
+
+      #luksus {
+        display: flex;
+      }
+
+      #vand {
+        float: right;
+        width: 450px;
+        height: auto;
+        margin-top: -20%;
+      }
+
+      #vaerdier-img img {
+        width: 100%;
+        object-fit: cover;
+        height: 300px;
+      }
+
+      #model {
+        float: left;
+        width: 450px;
+        height: auto;
+        /* margin-left: 5%; */
+        margin-top: 2%;
+        margin-right: 5%;
+      }
     }
 
-    #luksus {
-      display: flex;
-    }
+    @media (min-width: 1200px) {
+      #founders img {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        margin-top: 38px;
+      }
 
-    #vand {
-      float: right;
-      width: 450px;
-      height: auto;
-      margin-top: -20%;
-    }
+      p {
+        margin-left: 5%;
+        margin-top: 38px;
+        line-height: 2em;
+      }
 
-    #vaerdier-img img {
-      width: 100%;
-      object-fit: cover;
-      height: 300px;
-    }
+      #luksus {
+        display: flex;
+      }
 
-    #model {
-      float: left;
-      width: 450px;
-      height: auto;
-      /* margin-left: 5%; */
-      margin-top: 2%;
-      margin-right: 5%;
-    }
-  }
+      .p-small {
+        max-width: 600px;
+        margin-top: 15px;
+      }
 
-  @media (min-width: 1200px) {
-    #founders img {
-      width: 300px;
-      height: 300px;
-      border-radius: 50%;
-      margin-top: 38px;
-    }
+      #vand {
+        float: right;
+        width: 540px;
+        height: auto;
+        margin-top: -15%;
+      }
 
-    p {
-      margin-left: 5%;
-      margin-top: 38px;
-      line-height: 2em;
-    }
+      #vaerdier-img img {
+        width: 100%;
+        object-fit: cover;
+        height: 400px;
+      }
 
-    #luksus {
-      display: flex;
+      #model {
+        float: left;
+        width: 540px;
+        height: auto;
+        /* margin-left: 5%; */
+        margin-top: 2%;
+        margin-right: 5%;
+      }
     }
-
-    .p-small {
-      max-width: 600px;
-      margin-top: 15px;
-    }
-
-    #vand {
-      float: right;
-      width: 540px;
-      height: auto;
-      margin-top: -15%;
-    }
-
-    #vaerdier-img img {
-      width: 100%;
-      object-fit: cover;
-      height: 400px;
-    }
-
-    #model {
-      float: left;
-      width: 540px;
-      height: auto;
-      /* margin-left: 5%; */
-      margin-top: 2%;
-      margin-right: 5%;
-    }
-  }
-</style>
+  </style>
+</html>
