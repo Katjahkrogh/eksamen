@@ -18,16 +18,19 @@ const { img1, produktnavn, pris, link } = Astro.props;
   /* mobileview */
 
   #product-card {
-    background-color: var(--purelyWhite);
-    max-width: fit-content;
+    background-color: var(--purelyWhiteSeeThrough);
+    width: 170px;
+    height: 330px;
     display: flex;
     flex-direction: column;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
   }
   img {
-    width: 160px;
-    height: 160px;
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
   }
 
   #tekst {
@@ -38,12 +41,14 @@ const { img1, produktnavn, pris, link } = Astro.props;
   }
   h4 {
     font-weight: 300;
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 21.79px;
   }
 
   p {
-    font-size: 13px;
     font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
   }
 
   #knap {
@@ -54,7 +59,6 @@ const { img1, produktnavn, pris, link } = Astro.props;
     font-weight: 400;
     font-family: "Open Sans";
     border-radius: 5px;
-    align-items: center;
     margin-left: 5px;
     margin-right: 5px;
     margin-bottom: 5px;
