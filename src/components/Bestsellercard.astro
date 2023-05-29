@@ -50,28 +50,6 @@ import "../styles/style.css";
   <div class="container">
     <div class="img-wrapper">
       <img
-        src="../products/210319_PurelyProfessional-2101657-e1666969576175-1024x1024.jpg"
-        alt=""
-        class="product-img"
-      />
-      <img
-        src="../products/purely_shampoo_5_300ml.jpg"
-        alt=""
-        class="hover-img"
-      />
-      <div class="overlay">
-        <p>Mod skæl</p>
-        <img src="../svgfiles/skael.svg" alt="hårtype" />
-      </div>
-    </div>
-  </div>
-  <h3>Shampoo 5</h3>
-  <h4>189 kr.</h4>
-</section>
-<section class="bestseller-card">
-  <div class="container">
-    <div class="img-wrapper">
-      <img
         src="../products/210318_PurelyProfessional_3_101197-819x1024.jpg"
         alt=""
         class="product-img"
@@ -89,11 +67,36 @@ import "../styles/style.css";
   <h3>Baby Shampoo</h3>
   <h4>99 kr.</h4>
 </section>
+<section class="bestseller-card">
+  <div class="container">
+    <div class="img-wrapper">
+      <img
+        src="../products/210319_PurelyProfessional-2101753-e1666967288792-1024x1024.jpg"
+        alt=""
+        class="product-img"
+      />
+      <img
+        src="../products/purely_shampoo_4_300ml.jpg"
+        alt=""
+        class="hover-img"
+      />
+      <div class="overlay">
+        <p>Mod skæl</p>
+        <img src="../svgfiles/skael.svg" alt="hårtype" />
+      </div>
+    </div>
+  </div>
+  <h3>Shampoo 4</h3>
+  <h4>179 kr.</h4>
+</section>
 
 <style>
   /* mobileview */
   .bestseller-card {
     width: 323px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
   .product-img,
   .hover-img {
@@ -104,9 +107,14 @@ import "../styles/style.css";
     width: 323px;
     object-fit: cover;
     transition: opacity 0.3s ease;
+    border-radius: 5px 5px 0px 0px;
   }
   h3 {
-    margin: 12px 0px 4px 0px;
+    margin: 12px 0px 4px 5px;
+  }
+
+  h4 {
+    margin: 2px 0px 5px 5px;
   }
 
   /* Tekst oven på produktbillede */
