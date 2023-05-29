@@ -3,7 +3,6 @@ import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import Hero from "../components/Hero.astro";
 import Tppcard from "../components/Tppcard.astro";
-import Tppcard2 from "../components/Tppcard2.astro";
 import "../styles/style.css";
 const url = "https://bwzhyxrwqgaljabpwzkv.supabase.co/rest/v1/Purely_Promise";
 const options = {
@@ -48,6 +47,7 @@ const data = await response.json();
               img2={`../images/${promise.img_2}`}
               img3={`../images/${promise.img_3}`}
               img4={`../images/${promise.img_4}`}
+              bredbillede={`../images/${promise.bredformat_img}`}
             />
           ))
         }
@@ -77,6 +77,9 @@ const data = await response.json();
   }
   /* desktop format (over 900px)*/
   @media (min-width: 900px) {
+    .card-holder {
+      align-items: normal;
+    }
   }
   @media (min-width: 1200px) {
   }

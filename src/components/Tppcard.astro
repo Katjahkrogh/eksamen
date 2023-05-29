@@ -1,7 +1,7 @@
 ---
 import "../styles/style.css";
 import "../styles/tpp.css";
-const { id, illustration, title1, title2, title3, title4, text, p1, p2, p3, p4, img1, img2, img3, img4 } = Astro.props;
+const { id, illustration, title1, title2, title3, title4, text, p1, p2, p3, p4, img1, img2, img3, img4, bredbillede } = Astro.props;
 ---
 
 <!-- En dejlig container så at have det hele i gør det nemmere med querySelectorerne -->
@@ -22,34 +22,36 @@ const { id, illustration, title1, title2, title3, title4, text, p1, p2, p3, p4, 
       <hr class="underline" />
     </div>
   </div>
+  <img src={bredbillede} alt="" class="bredformat-img" />
   <div class="hide" id="open-menu">
     <div class="flex-indhold">
       <!-- Sæt indhold in her  -->
       <img src={img1} alt="" class="img1" />
-      <p class="tekst">{p1}</p>
-      <div class="billede-med-streg right">
+      <p class="tekst text-felt1">{p1}</p>
+      <div class="billede-med-streg right img2-container">
         <img src={img2} alt="" class="img2" />
         <div class="streg"></div>
       </div>
-      <div class="tekst-felt">
+      <div class="tekst-felt text-felt2">
         <h2>{title2}</h2>
-        <p class="tekst">{p2}</p>
+        <p class="tekst" set:html={p2} />
       </div>
-      <div class="billede-med-streg left">
+      <div class="billede-med-streg left img3-container">
         <img src={img3} alt="" class="img2" />
         <div class="streg"></div>
       </div>
 
-      <div class="tekst-felt" id="p3-test">
+      <div class="tekst-felt text-felt3" id="p3-test">
         <h2>{title3}</h2>
         <div set:html={p3} />
       </div>
 
-      <img src={img4} alt="" class="img4" />
-      <div class="tekst-felt">
+      <img src={img4} alt="" class="img4 img4-container" />
+      <div class="tekst-felt text-felt4">
         <h2>{title4}</h2>
-        <p class="tekst">{p4}</p>
+        <p class="tekst" set:html={p4} />
       </div>
+      <!-- <div class="center"> -->
       <div class="link" id="link-knap-luk">
         <div class="link-tekst">
           <p>luk</p>
@@ -57,6 +59,7 @@ const { id, illustration, title1, title2, title3, title4, text, p1, p2, p3, p4, 
         </div>
         <hr class="underline" />
       </div>
+      <!-- </div> -->
     </div>
   </div>
 </div>
@@ -72,6 +75,9 @@ const { id, illustration, title1, title2, title3, title4, text, p1, p2, p3, p4, 
     position: relative;
     height: 414px;
     margin-bottom: 26px;
+  }
+  .bredformat-img {
+    display: none;
   }
 
   .svg-container {
@@ -156,7 +162,7 @@ const { id, illustration, title1, title2, title3, title4, text, p1, p2, p3, p4, 
   }
 
   .right .streg {
-    left: -10px;
+    right: 10px;
   }
 
   .left .streg {
@@ -187,6 +193,114 @@ const { id, illustration, title1, title2, title3, title4, text, p1, p2, p3, p4, 
   #link-knap-luk,
   #link-knap {
     cursor: pointer;
+  }
+
+  /* tablet format (over 600px)*/
+  @media (min-width: 600px) {
+  }
+  /* desktop format (over 900px)*/
+  @media (min-width: 900px) {
+    .illu {
+      height: 130px;
+    }
+    #tpp-card {
+      width: 360px;
+      height: 500px;
+      gap: 38px;
+      padding: 38px 0 0 0;
+      margin-left: 10vw;
+      margin-right: 10vw;
+      margin-bottom: 65px;
+      z-index: 1;
+    }
+
+    .card-container {
+      position: relative;
+      margin-top: 100px;
+    }
+    .card-container:nth-child(odd) {
+      align-self: flex-start;
+    }
+    .card-container:nth-child(even) {
+      align-self: flex-end;
+    }
+
+    #open-menu {
+      margin-left: 10vw;
+      margin-top: -165px;
+      width: 80vw;
+      border-radius: 5px;
+    }
+
+    #open-menu:nth-child(even) {
+    }
+    .flex-indhold {
+      padding-top: 120px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .tekst-felt {
+      grid-column: span 2;
+    }
+    .text-felt1 {
+      grid-area: 1/2/2/4;
+    }
+    .img1 {
+      display: none;
+    }
+
+    .tekst-felt2 {
+      grid-area: 2/1/3/2;
+    }
+    .img2-container {
+      grid-area: 2/3/3/4;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .tekst-felt3 {
+      grid-area: 3/2/4/4;
+    }
+    .img3-container {
+      grid-area: 3/1/4/2;
+    }
+    .tekst-felt4 {
+      grid-area: 4/1/5/3;
+    }
+    .img4-container {
+      grid-area: 4/3/5/4;
+    }
+
+    #link-knap-luk {
+      grid-area: 5/3/6/4;
+      justify-content: flex-end;
+    }
+    .link {
+      margin-left: calc(100% - 15px - 56px);
+    }
+
+    .bredformat-img {
+      display: block;
+      width: 500px;
+      height: 500px;
+      position: absolute;
+      z-index: -1;
+      margin-left: 10vw;
+      margin-right: 10vw;
+      border-radius: 5px;
+    }
+
+    .card-container:nth-child(odd) .bredformat-img {
+      top: -100px;
+      left: 250px;
+    }
+
+    .card-container:nth-child(even) .bredformat-img {
+      top: -100px;
+      right: 250px;
+    }
+  }
+  @media (min-width: 1200px) {
   }
 </style>
 
