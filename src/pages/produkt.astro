@@ -140,13 +140,11 @@ const data = await response.json();
     /* cards */
     #cards {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       justify-items: center;
       margin-top: 20px;
       margin-bottom: 30px;
-      row-gap: 20px;
-      margin-left: 10px;
-      margin-right: 10px;
+      row-gap: 26px;
     }
 
     /* tablet format (over 600px)*/
@@ -155,9 +153,15 @@ const data = await response.json();
 
     /* desktop format (over 900px)*/
     @media (min-width: 900px) {
+      #cards {
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      }
     }
 
     @media (min-width: 1200px) {
+      #cards {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      }
     }
   </style>
 </html>

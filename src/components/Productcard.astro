@@ -70,9 +70,39 @@ const { img1, produktnavn, pris, link } = Astro.props;
   }
 
   /* desktop format (over 900px)*/
-  @media (min-width: 900px) {
+  @media (min-width: 800px) {
+    #product-card {
+      width: 190px;
+    }
   }
 
+  @media (min-width: 900px) {
+    #product-card {
+      width: 220px;
+    }
+  }
   @media (min-width: 1200px) {
+    img {
+      height: 280px;
+    }
+    #product-card {
+      width: 280px;
+      height: 400px;
+    }
+
+    h4 {
+      font-size: 20px;
+      line-height: 28px;
+      margin-left: 10px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 20px;
+      margin-left: 10px;
+    }
+    #knap {
+      font-size: 20px;
+      margin: 0 10px 10px;
+    }
   }
 </style>
