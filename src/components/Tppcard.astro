@@ -34,7 +34,7 @@ const { id, illustration, title1, title2, title3, title4, text, p1, p2, p3, p4, 
       </div>
       <div class="tekst-felt text-felt2">
         <h2>{title2}</h2>
-        <p class="tekst">{p2}</p>
+        <p class="tekst" set:html={p2} />
       </div>
       <div class="billede-med-streg left img3-container">
         <img src={img3} alt="" class="img2" />
@@ -49,7 +49,7 @@ const { id, illustration, title1, title2, title3, title4, text, p1, p2, p3, p4, 
       <img src={img4} alt="" class="img4 img4-container" />
       <div class="tekst-felt text-felt4">
         <h2>{title4}</h2>
-        <p class="tekst">{p4}</p>
+        <p class="tekst" set:html={p4} />
       </div>
       <!-- <div class="center"> -->
       <div class="link" id="link-knap-luk">
@@ -162,7 +162,7 @@ const { id, illustration, title1, title2, title3, title4, text, p1, p2, p3, p4, 
   }
 
   .right .streg {
-    left: -10px;
+    right: 10px;
   }
 
   .left .streg {
@@ -232,6 +232,8 @@ const { id, illustration, title1, title2, title3, title4, text, p1, p2, p3, p4, 
       border-radius: 5px;
     }
 
+    #open-menu:nth-child(even) {
+    }
     .flex-indhold {
       padding-top: 120px;
       display: grid;
@@ -252,6 +254,8 @@ const { id, illustration, title1, title2, title3, title4, text, p1, p2, p3, p4, 
     }
     .img2-container {
       grid-area: 2/3/3/4;
+      display: flex;
+      justify-content: flex-end;
     }
 
     .tekst-felt3 {
