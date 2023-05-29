@@ -14,12 +14,19 @@ import "../styles/style.css";
     </div>
     <div class="menu">
       <ul>
-        <li><a href="produkt">Shop</a></li>
-        <li><a href="purelypromise">The Purely Promise</a></li>
-        <li><a href="refilleries">Refilleries</a></li>
-        <li><a href="om">Om Purely</a></li>
-        <li><a href="vidensbank">Vidensbank</a></li>
+        <li><a href="produkt" class="underline-effect">Shop</a></li>
+        <li>
+          <a href="purelypromise" class="underline-effect">The Purely Promise</a
+          >
+        </li>
+        <li><a href="refilleries" class="underline-effect">Refilleries</a></li>
+        <li><a href="om" class="underline-effect">Om Purely</a></li>
+        <li><a href="vidensbank" class="underline-effect">Vidensbank</a></li>
       </ul>
+      <div id="icons">
+        <img src="../svgfiles/soegefelt.svg" alt="søgefelt" id="soeg" />
+        <img src="../svgfiles/kurv.svg" alt="kurv" />
+      </div>
       <div id="socials">
         <a href="#"
           ><img src="../svgfiles/instagram-logo.svg" alt="Instagram logo" /></a
@@ -71,12 +78,37 @@ import "../styles/style.css";
     align-items: center;
   }
 
+  .underline-effect {
+    display: inline-block;
+    position: relative;
+  }
+
+  .underline-effect::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--purelyWhite);
+    transition: width 0.5s ease-out;
+  }
+
+  .underline-effect:hover::before {
+    width: 100%;
+    left: 0;
+    right: auto;
+  }
   .menu li {
     list-style: none;
   }
 
+  #icons {
+    display: none;
+  }
+
   li a {
-    line-height: 3em;
+    margin: 15px 0;
   }
 
   a {
@@ -84,6 +116,7 @@ import "../styles/style.css";
     color: var(--purelyWhite);
     font-family: Open Sans, sans-serif;
   }
+
   .burger-menu {
     position: absolute;
     top: 35px;
@@ -120,11 +153,12 @@ import "../styles/style.css";
     flex-direction: column;
     position: fixed;
     right: 0;
-    height: fit-content;
     width: 100%;
     z-index: 9999;
     background-color: var(--darkSand);
     position: sticky;
+    gap: 30px;
+    height: 100vh;
   }
 
   ul {
@@ -140,6 +174,9 @@ import "../styles/style.css";
     #nav {
       display: flex;
       align-items: center;
+    }
+    #icons img {
+      max-height: 20px;
     }
 
     #logo {
@@ -166,6 +203,7 @@ import "../styles/style.css";
     .menu li {
       display: inline-block;
       margin-left: 10px;
+      margin-right: 20px;
     }
 
     a {
@@ -175,14 +213,40 @@ import "../styles/style.css";
     }
 
     li a {
-      margin-left: 30px;
+      margin-left: 10px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    #icons {
+      display: block;
     }
   }
 
   /* desktop format (over 900px)*/
   @media (min-width: 900px) {
     .menu li {
-      display: inline-block;
+      margin-right: 30px;
+    }
+
+    a {
+      font-size: 16px;
+    }
+
+    #logo img {
+      width: 80px;
+      height: auto;
+    }
+
+    #icons img {
+      max-height: 22px;
+      margin-left: 5px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    #icons img {
+      max-height: 24px;
       margin-left: 10px;
     }
 
@@ -190,14 +254,9 @@ import "../styles/style.css";
       font-size: 20px;
     }
 
-    #logo img {
-      width: 80px;
-      height: auto;
+    .menu li {
+      margin-right: 40px;
     }
-  }
-
-  @media (min-width: 1200px) {
-
   }
 </style>
 
