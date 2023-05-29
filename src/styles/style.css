@@ -24,6 +24,7 @@
   --purelyGrey: #b0b7b6;
   /* Hvid */
   --purelyWhite: #ffffff;
+  --purelyWhiteSeeThrough: rgba(255, 255, 255, 0.7);
   /* Bruges istedet for sort til typografier */
   --darkBrown: #311e02;
 }
