@@ -15,46 +15,52 @@ import Footer from "../components/Footer.astro";
 	</head>
 	<body>
     <Header/>
-    <Hero/>
+    <!-- <Hero/> -->
+    <div id="divudenomdiv">
     <div id="navigation_vidensbank">
           <button class="vidensbank_button">Indholdsstoffer</button>
           <button class="vidensbank_button">Purely og miljø</button>
           <button class="vidensbank_button">Guides</button>
           <button class="vidensbank_button">Inspiration</button>
       </div>
+    </div>
      <div id="indholdsstoffer_div">
+      <div id="indhold_storediv">
       <div id="leksikon_div">
       <h2>Indholdsstoffer</h2>
       <div>
-      <p>Nysgerrig på vores ingredienser?</p>
-      <p> Læs mere om dem på vores leksikon</p>
+      <p><strong>N</strong>ysgerrig på vores ingredienser?</p>
+      <p> Læs mere om dem på vores <strong> leksikon </strong></p>
+    </div>
+    <div class="link">
+      <div class="link-tekst" id="pil1">
+        <a href="#">Leksikon</a>
+        <img src="../svgfiles/pil.svg" alt="" class="pil" >
+      </div>
     </div>
       </div>
       <div id="leksikon_billede">
-
       </div>
-      <div class="link">
-        <div class="link-tekst">
-          <a href="#">Leksikon</a>
-          <img src="../svgfiles/pil.svg" alt="" class="pil">
-        </div>
-          <!-- <hr class="underline"> -->
       </div>
+     
+      <div id="citat_storediv">
       <div id="citat">
         <h3>”Hvis jeres produkter er så rene, hvorfor har I så ikke nogen mærker på?”</h3>
+        <div class="link">
+          <div class="link-tekst">
+            <a href="#">Få svar her</a>
+            <img src="../svgfiles/pil.svg" alt="" class="pil">
+          </div>
+       </div>
       </div>
       <div>
         <img src="../images/210319_PurelyProfessional-22018.jpg" alt="" id="babyhaender">
 
       </div>
-      <div class="link">
-        <div class="link-tekst">
-          <a href="#">Få svar her</a>
-          <img src="../svgfiles/pil.svg" alt="" class="pil">
-        </div>
-     </div>
     </div>
 
+    
+    </div>
      <div id="miljo_storediv">
       <h2>Purely og miljø</h2>
       <div id="scroll_div">
@@ -83,6 +89,7 @@ import Footer from "../components/Footer.astro";
       </div>
     </div>
      </div>
+     <div id="denhele">
      <div id="finhaertype">
       <h2>Find din hårpleje til din hårtype</h2>
       <div id="haertypehelediv">
@@ -137,20 +144,21 @@ import Footer from "../components/Footer.astro";
                     <h3>Hovedbunds problemer og skæl</h3>
                   </div>
                 </div>
-              </div>
-
-              <div class="link">
-                <div class="link-tekst">
-                  <a href="#">Guides til hårpleje</a>
-                  <img src="../svgfiles/pil.svg" alt="" class="pil">
-                </div>
-             </div>
+              </div>    
+          </div>
+     <div class="link">
+      <div class="link-tekst">
+        <a href="#">Guides til hårpleje</a>
+        <img src="../svgfiles/pil.svg" alt="" class="pil">
+      </div>
      </div>
-
+   </div>
      <div id="learomhudpleje">
       <h2>Lær om hudpleje</h2>
+
+      <div id="denstorelear">
       <div id="learomhudpleje_div">
-        <div id="learomhudplejeimg1"></div>
+       <div id="learomhudplejeimg1"></div>
 
       <div class="link">
         <div class="link-tekst">
@@ -158,6 +166,8 @@ import Footer from "../components/Footer.astro";
           <img src="../svgfiles/pil.svg" alt="" class="pil">
         </div>
      </div>
+    </div>
+    <div>
      <div id="learomhudplejeimg2"></div>
      <div class="link">
       <div class="link-tekst">
@@ -165,6 +175,7 @@ import Footer from "../components/Footer.astro";
         <img src="../svgfiles/pil.svg" alt="" class="pil">
       </div>
    </div>
+  </div>
     </div>
      </div>
   <div id="inspiration">
@@ -451,12 +462,181 @@ import Footer from "../components/Footer.astro";
   }
  /* tablet format (over 600px)*/
   @media (min-width: 600px) {
+
   }
 
   /* desktop format (over 900px)*/
   @media (min-width: 900px) {
-  }
+
+    #navigation_vidensbank{
+    display: flex; 
+    gap: 33px;
+    padding-top: 47px;
+    padding-bottom: 47px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    }
+    /* Inholdsstoffer */
+    #indhold_storediv{
+      display: flex;
+    gap: 49px;
+    justify-content: center;
+    padding-top: 100px;
+}
+#citat_storediv{
+  display: flex;
+  flex-direction: row-reverse;
+  /* margin-right: 140px; */
+  gap: 80px;
+  align-items: center;
+  justify-content: center;
+}
+#pil1{
+  margin-top: 100px;
+  text-decoration: none;
+}
+.link-tekst a{
+  text-decoration: transparent;
+}
+.link-tekst:hover{
+  text-decoration: underline 2px var(--purelyBlue);
+  text-underline-offset: 8px;
+  transition: transform 0.25s ease-out;
+}
+#pil1:hover{
+  text-decoration: underline 2px var(--purelyBlue);
+  text-underline-offset: 8px;
+  transition: transform 0.25s ease-out;
+}
+
+#leksikon_billede{
+  height: 400px;
+    width: 460px;
+    background-image: url(../images/genbrugsplast-scaled-1.jpg);
+    background-size: cover;
+    margin-left: 0; 
+    margin-right: 0; 
+    margin-top: 0; 
+    margin-bottom: 90px;
+}
+.link-tekst{
+  display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 2px;
+    padding-bottom: 33px;
+    padding-right: 10px;
+}
+#babyhaender{
+    width: 450px;
+    height: 460px;
+    padding-left: 0;
+    margin-top: 30px;
+    margin-bottom: 26px;
+    margin-top: 0; 
+}
+#citat{
+  width: 360px;
+    /* padding-left: 26px; */
+    padding-top: 46px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 200px;
+    margin-right: 40px;
+
+}
+
+#citat{
+  width: 360px;
+    /* padding-top: 46px; */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    margin-right: 40px;
+}
+/* Purely og miljø */
+
+#finhaertype{
+  background-color: var(--mediumOcean);
+  margin-top: 110px;
+}
+#miljo_storediv{
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+#miljo_billede{
+  width: 250px;
+  height: 220px;
+  border-radius: 100px;
+}
+.miljo_div{
+  margin-left: 15px;
+  gap: 27px;
+}
+
+/* Find din hårtype */
+#finhaertype{
+  background-color: var(--mediumOcean);
+    margin-top: 110px;
+}
+
+/* .haertype_billede{
+    width: 230px;
+    height: 317px;
+
+} */
+#denstorelear{
+  display: flex;
+    justify-content: space-around;
+}
+#learomhudpleje h2{
+  padding-top: 25px;
+    margin-left: 50px;
+}
+}
+
+
+  
 
   @media (min-width: 1200px) {
+    /* navigation  */
+    #navigation_vidensbank{
+    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: max-content;
+    }
+    #divudenomdiv{
+    display: flex;
+    justify-content: center;
+    }
+    .vidensbank_button{
+    width: 500px;
+    height: 90px;
+    background-color: var(--darkSand);
+    color: var(--purelyWhite);
+    font-size: 20px;
+    font-family: "Open Sans";
+    font-weight: 600;
+    line-height: 27px;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+    border-radius: 10px;
+    border-color: transparent;
+    }
+    /* leksikon */
+
+    
   }
+
+  #denhele{
+  background-color: var(--mediumOcean);
+}
+.vidensbank_button:hover{
+      background-color: var(--mediumOcean);
+      cursor: pointer;
+    }
 </style>
