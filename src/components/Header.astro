@@ -5,7 +5,7 @@ import "../styles/style.css";
 <header id="header">
   <nav id="nav">
     <div id="logo">
-      <a href="/"><img src="../images/logo-hvid.webp" alt="logo" /></a>
+      <a href="/"><img src="../svgfiles/purely-logo-white.svg" alt="logo" /></a>
     </div>
     <div class="burger-menu">
       <div class="burger"></div>
@@ -239,6 +239,11 @@ import "../styles/style.css";
     }
   }
 
+  @media (min-width: 1000px) {
+    a {
+      font-size: 18px;
+    }
+  }
   @media (min-width: 1200px) {
     #icons img {
       max-height: 24px;
@@ -251,6 +256,12 @@ import "../styles/style.css";
 
     .menu li {
       margin-right: 40px;
+    }
+  }
+
+  @media (min-width: 1500px) {
+    a {
+      font-size: 22px;
     }
   }
 </style>
