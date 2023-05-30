@@ -376,6 +376,9 @@ import "../styles/style.css";
   shopKnap.addEventListener("click", function () {
     openKategori.classList.toggle("hide");
     hvidPil.classList.toggle("rotate");
+    if (window.innerWidth > 800) {
+      header.style.backgroundColor = "var(--darkSand)";
+    }
   });
 
   // menu.addEventListener("click", function () {
@@ -386,9 +389,6 @@ import "../styles/style.css";
   window.addEventListener("scroll", function () {
     // Tjek om skærmstørrelsen er over 800px
     if (window.innerWidth > 800) {
-      menu.addEventListener("mouseover", function () {
-        header.style.backgroundColor = "var(--darkSand)";
-      });
       // Tjek om der er scrollet ned
       if (window.scrollY > 0) {
         // Hvis der er scrollet ned, tilføj baggrundsfarven til header
