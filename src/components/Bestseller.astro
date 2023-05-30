@@ -38,22 +38,70 @@ import Bestsellercard from "../components/Bestsellercard.astro";
     display: flex;
     gap: 22px;
     overflow-x: scroll;
-    padding: 77px 0 0 30px;
+    padding: 77px 0 0 38px;
     margin-right: 15px;
   }
 
   /* Media queries */
+
+  @media (min-width: 500px) {
+    .carousel {
+      padding-left: 50px;
+    }
+  }
   /* tablet format (over 600px)*/
   @media (min-width: 600px) {
+    .bestsellercircle {
+      width: 120px;
+    }
   }
 
   /* desktop format (over 900px)*/
   @media (min-width: 900px) {
+    .bestsellercircle {
+      width: 150px;
+    }
+    .carousel {
+      padding-left: 68px;
+    }
+    .bestsellercircle {
+      margin-left: 10px;
+    }
   }
 
   @media (min-width: 1200px) {
+    .bestsellercircle {
+      width: 180px;
+    }
     .carousel {
+      margin-left: 60px;
+      padding-top: 100px;
+      padding-left: 0;
+    }
+    .bestsellercircle {
+      margin-left: 12px;
+    }
+    /* .carousel {
       justify-content: space-evenly;
+    } */
+  }
+  @media (min-width: 1500px) {
+    .carousel {
+      gap: 2%;
+      max-width: 1500px;
+    }
+    #bestseller {
+      padding-left: calc((100vw - 1500px) / 2);
+      padding-right: calc((100vw - 1500px) / 2);
+    }
+  }
+  @media (min-width: 1600px) {
+    .carousel {
+      justify-content: space-around;
+      margin: 0;
+    }
+    .bestsellercircle {
+      margin-left: -40px;
     }
   }
 </style>
