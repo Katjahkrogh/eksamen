@@ -2,19 +2,71 @@
 import "../styles/style.css";
 ---
 
-<div id="raad-card">
-  <img src="../images/Nyhjemmesidebillede-5-scaled.webp" alt="" class="card-img" />
-  <h2 class="overskrift">Overskrift</h2>
-  <p class="paragraf">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+<div class="raad-card">
+  <img
+    src="../images/Signe_123789-e1662120053667.webp"
+    alt=""
+    class="card-img"
+  />
+  <h4 class="overskrift">Vælg de rigtige produkter til din hårtype</h4>
+  <p class="paragraf">
+    Vi har sammensat seks plejeprogrammer tilpasset forskellige hårtyper, så du
+    let kan finde frem til de produkter, der er rigtige for dig og blive klogere
+    på dit hårs behov.
+  </p>
+  <img src="../svgfiles/lang-pil.svg" alt="" class="pil" />
+</div>
+<div class="raad-card2">
+  <img src="../images/hero/frederikke_haender.webp" alt="" class="card-img" />
+  <h4 class="overskrift">Guide til en enkel ansigtsplejerutine</h4>
+  <p class="paragraf">
+    Når det kommer til din ansigtspleje, kan du nå rigtigt langt med enkle
+    løsninger. Vi guider dig til en enkel hudpleje rutine - step by step.
+  </p>
+  <img src="../svgfiles/lang-pil.svg" alt="" class="pil" />
+</div>
+<div class="raad-card">
+  <img src="../images/haand-med-creme.webp" alt="" class="card-img" />
+  <h4 class="overskrift">Fokus på håndpleje</h4>
+  <br />
+  <p class="paragraf">
+    Oplever du problemer med tør hud og irritation på hænder og håndled? Bliv
+    klogere på hvordan du bedst beskytter og behandler dine hænder med den
+    korrekte håndpleje.
+  </p>
+  <img src="../svgfiles/lang-pil.svg" alt="" class="pil" />
+</div>
+<div class="raad-card2">
+  <img
+    src="../images/210319_PurelyProfessional101374-e1662120101448.webp"
+    alt=""
+    class="card-img"
+  />
+  <h4 class="overskrift">Bliv klogere på hovedbundsproblemer</h4>
+  <p class="paragraf">
+    Når hovedbunden klør, er irriteret og øm, eller skæller er det vigtigt at få
+    den i balance igen. Det vigtigste skridt er først og fremmest at finde frem
+    til årsagen til dine hovedbundsproblemer.
+  </p>
   <img src="../svgfiles/lang-pil.svg" alt="" class="pil" />
 </div>
 
 <style>
   /* mobileview */
-  #raad-card {
+  .raad-card {
     width: 310px;
     height: 510px;
     background-color: var(--mediumOcean);
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .raad-card2 {
+    width: 310px;
+    height: 510px;
+    background-color: var(--darkOcean);
     border-radius: 5px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     display: flex;
@@ -45,6 +97,7 @@ import "../styles/style.css";
     width: 30px;
     margin-right: 15px;
     align-self: flex-end;
+    margin-top: -5%;
   }
 
   /* Media queries */
