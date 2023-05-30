@@ -1,11 +1,11 @@
 ---
 ---
 
-<section id="bestseller-card">
+<section class="bestseller-card">
   <div class="container">
     <div class="img-wrapper">
-      <img src="../products/210318_PurelyProfessional-299844-e1678279419699-1024x1024.webp" alt="" class="product-img" />
-      <img src="../products/purely_shampoo_0_300ml.webp" alt="" class="hover-img" />
+      <img src="../images/shampoo/shampoo_0_haand.webp" alt="" class="product-img" />
+      <img src="../images/shampoo/shampoo_0_produktbillede.webp" alt="" class="hover-img" />
       <div class="overlay">
         <p>Til krøllet hår</p>
         <img src="../svgfiles/krollet.svg" alt="hårtype" />
@@ -15,11 +15,55 @@
   <h3>Shampoo 0</h3>
   <h4>179 kr.</h4>
 </section>
+<section class="bestseller-card">
+  <div class="container">
+    <div class="img-wrapper">
+      <img src="../images/shampoo/shampoo_1_haand.webp" alt="" class="product-img" />
+      <img src="../images/shampoo/shampoo_1_produktbillede.webp" alt="" class="hover-img" />
+      <div class="overlay">
+        <p>Til fint hår</p>
+        <img src="../svgfiles/fint.svg" alt="hårtype" />
+      </div>
+    </div>
+  </div>
+  <h3>Shampoo 1</h3>
+  <h4>179 kr.</h4>
+</section>
+<section class="bestseller-card">
+  <div class="container">
+    <div class="img-wrapper">
+      <img src="../images/shampoo/Bayby_shampoo_hand.webp" alt="" class="product-img" />
+      <img src="../images/shampoo/baby_shampoo_produktbillede.webp" alt="" class="hover-img" />
+      <div class="overlay">
+        <p>Til småbørn</p>
+      </div>
+    </div>
+  </div>
+  <h3>Baby Shampoo</h3>
+  <h4>99 kr.</h4>
+</section>
+<section class="bestseller-card">
+  <div class="container">
+    <div class="img-wrapper">
+      <img src="../images/shampoo/shampoo_4_haand.webp" alt="" class="product-img" />
+      <img src="../images/shampoo/shampoo_4_produktbillede.webp" alt="" class="hover-img" />
+      <div class="overlay">
+        <p>Mod skæl</p>
+        <img src="../svgfiles/skael.svg" alt="hårtype" />
+      </div>
+    </div>
+  </div>
+  <h3>Shampoo 4</h3>
+  <h4>179 kr.</h4>
+</section>
 
 <style>
   /* mobileview */
-  #bestseller-card {
+  .bestseller-card {
     width: 323px;
+    background-color: var(--purelyWhiteSeeThrough);
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
   .product-img,
   .hover-img {
@@ -30,8 +74,10 @@
     width: 323px;
     object-fit: cover;
     transition: opacity 0.3s ease;
+    border-radius: 5px 5px 0px 0px;
+    border: 1px solid var(--purelyWhiteSeeThrough);
   }
-  h3 {
+  h4 {
     margin: 12px 0px 4px 0px;
   }
 

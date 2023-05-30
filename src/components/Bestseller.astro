@@ -5,11 +5,7 @@ import Bestsellercard from "../components/Bestsellercard.astro";
 
 <section id="bestseller">
   <a href="#">
-    <img
-      src="../svgfiles/bestsellercircle.svg"
-      alt="bestseller"
-      class="bestsellercircle"
-    />
+    <img src="../svgfiles/bestsellercircle.svg" alt="bestseller" class="bestsellercircle" />
     <div class="carousel">
       <Bestsellercard />
     </div>
@@ -20,7 +16,8 @@ import Bestsellercard from "../components/Bestsellercard.astro";
   /* mobileview */
   #bestseller {
     background-color: var(--darkOcean);
-    height: 620px;
+    height: fit-content;
+    padding-bottom: 30px;
   }
   .bestsellercircle {
     position: absolute;
