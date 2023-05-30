@@ -206,6 +206,11 @@ import Thepurelypromisebanner from "../components/Thepurelypromisebanner.astro";
       margin-bottom: 70px;
     }
 
+    @media (min-width: 400px) {
+      #founders {
+        justify-content: space-around;
+      }
+    }
     /* tablet format (over 600px)*/
     @media (min-width: 600px) {
       #founders img {
@@ -217,6 +222,7 @@ import Thepurelypromisebanner from "../components/Thepurelypromisebanner.astro";
 
       #founders {
         justify-content: space-evenly;
+        max-width: 700px;
       }
 
       #founders p {
@@ -312,13 +318,6 @@ import Thepurelypromisebanner from "../components/Thepurelypromisebanner.astro";
 
     /* desktop format (over 900px)*/
     @media (min-width: 900px) {
-      #founders img {
-        width: 250px;
-        height: 250px;
-        border-radius: 50%;
-        margin-top: 38px;
-      }
-
       p {
         margin-left: 5%;
         margin-top: 38px;
@@ -358,13 +357,10 @@ import Thepurelypromisebanner from "../components/Thepurelypromisebanner.astro";
     }
 
     @media (min-width: 1200px) {
-      #founders img {
-        width: 300px;
-        height: 300px;
-        border-radius: 50%;
-        margin-top: 38px;
+      .link-tekst {
+        font-size: 20px;
+        line-height: 27px;
       }
-
       p {
         margin-left: 5%;
         margin-top: 38px;
