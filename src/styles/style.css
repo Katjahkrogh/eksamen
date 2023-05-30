@@ -119,7 +119,7 @@ a {
   }
 
   h2 {
-    font-size: 42px;
+    font-size: 35px;
     line-height: 56px;
   }
 
@@ -132,8 +132,12 @@ a {
     line-height: 44px;
   }
 
+  h5 {
+    font-size: 25px;
+    line-height: 32px;
+  }
   p {
-    font-size: 30px;
-    line-height: 42px;
+    font-size: 25px;
+    line-height: 32px;
   }
 }
