@@ -35,7 +35,7 @@ const data = await response.json();
     </header>
     <main>
       <section id="type">
-        <h3>Vælg din hårtype</h3>
+        <h2>Vælg din hårtype</h2>
         <div id="flex">
           <div>
             <img src="../images/Emilie_123437-e1662119971912.webp" alt="" />
@@ -67,32 +67,35 @@ const data = await response.json();
           </div>
         </div>
       </section>
-      <section id="cards">
-        {
-          data.map((produkt) => (
-            <Productcard
-              id={produkt.id}
-              produktnavn={produkt.produkt_navn}
-              link={"/produkter/" + produkt.id}
-              img1={`../images/shampoo/${produkt.billede_1}`}
-              img2={`../images/shampoo/${produkt.billede_2}`}
-              img3={`../images/shampoo/${produkt.billede_3}`}
-              img4={`../images/shampoo/${produkt.billede_4}`}
-              beskrivelse={produkt.produkt_beskrivelse}
-              brug={produkt.brug}
-              pris={produkt.pris}
-              indhold={produkt.indhold}
-              størrelse={produkt.produkt_size}
-            />
-          ))
-        }
-        <!-- <Productcard />
+
+      <div class="center">
+        <section id="cards">
+          {
+            data.map((produkt) => (
+              <Productcard
+                id={produkt.id}
+                produktnavn={produkt.produkt_navn}
+                link={"/produkter/" + produkt.id}
+                img1={`../images/shampoo/${produkt.billede_1}`}
+                img2={`../images/shampoo/${produkt.billede_2}`}
+                img3={`../images/shampoo/${produkt.billede_3}`}
+                img4={`../images/shampoo/${produkt.billede_4}`}
+                beskrivelse={produkt.produkt_beskrivelse}
+                brug={produkt.brug}
+                pris={produkt.pris}
+                indhold={produkt.indhold}
+                størrelse={produkt.produkt_size}
+              />
+            ))
+          }
+          <!-- <Productcard />
         <Productcard />
         <Productcard />
         <Productcard />
         <Productcard />
         <Productcard /> -->
-      </section>
+        </section>
+      </div>
     </main>
     <Footer />
   </body>
@@ -102,23 +105,30 @@ const data = await response.json();
     body {
       background-color: var(--lightSand);
     }
+
     #type {
       background-color: var(--darkOcean);
       padding-top: 5px;
+      width: 100vw;
     }
 
-    h3 {
+    h2 {
       color: var(--purelyWhite);
       text-align: center;
-      margin-top: 5%;
+      margin-top: 30px;
       font-weight: 300;
     }
 
     #flex {
+      display: flex;
       overflow: scroll;
       align-items: center;
       justify-content: space-between;
-      display: flex;
+    }
+    #flex div {
+      width: 120px;
+      margin-left: 15px;
+      margin-right: 15px;
     }
 
     #type img {
@@ -126,23 +136,24 @@ const data = await response.json();
       height: 120px;
       border-radius: 100px;
       margin-top: 25px;
-      margin-left: 15px;
-      margin-right: 15px;
     }
 
     #type p {
       font-size: 15px;
       text-align: center;
       font-weight: 400;
+      line-height: 18px;
+      padding-bottom: 10px;
       color: var(--purelyWhite);
     }
 
     /* cards */
+
     #cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       justify-items: center;
-      margin-top: 20px;
+      margin-top: 26px;
       margin-bottom: 30px;
       row-gap: 26px;
     }
@@ -155,12 +166,48 @@ const data = await response.json();
     @media (min-width: 900px) {
       #cards {
         grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        row-gap: 38px;
+        margin-top: 38px;
+      }
+
+      #flex div {
+        width: 200px;
+      }
+      #type img {
+        width: 200px;
+        height: 200px;
+      }
+
+      #type p {
+        font-size: 20px;
+        line-height: 24px;
       }
     }
 
     @media (min-width: 1200px) {
       #cards {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        row-gap: 45px;
+        margin-top: 45px;
+      }
+    }
+
+    @media (min-width: 1500px) {
+      .center {
+        display: flex;
+        justify-content: center;
+      }
+      #cards {
+        max-width: 1500px;
+      }
+      #flex {
+        max-width: 1500px;
+      }
+
+      #type {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
     }
   </style>
