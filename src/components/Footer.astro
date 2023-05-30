@@ -3,27 +3,57 @@ import "../styles/style.css";
 ---
 
 <footer id="footer">
-  <div class="kontakt">
-    <h5>Kontakt os</h5>
-    <div class="some-links">
-      <a href="https://www.instagram.com/purelyprofessional/" target="_blank"><img src="../svgfiles/instagram-logo.svg" alt="Instagram link" class="some-logo" /></a>
-      <a href="https://www.facebook.com/PurelyProfessionalDK/?locale=da_DK" target="_blank"><img src="../svgfiles/facebook-logo.svg" alt="Facebook link" class="some-logo" /></a>
-      <a href="mailto:kundeservice@purelyprofessional.dk" target="_blank"><img src="../svgfiles/mail-logo.svg" alt="Mail link" class="some-logo" /></a>
+  <div id="grid">
+    <div class="kontakt">
+      <h5>Kontakt os</h5>
+      <p class="adresse">Tlf.: 4440 4668</p>
+      <p class="adresse">
+        Malmøgade 2 kld. th <br />
+        2100 København Ø
+      </p>
+
+      <div class="some-links">
+        <a href="https://www.instagram.com/purelyprofessional/" target="_blank"
+          ><img
+            src="../svgfiles/instagram-logo-hvid.svg"
+            alt="Instagram link"
+            class="some-logo"
+          /></a
+        >
+        <a
+          href="https://www.facebook.com/PurelyProfessionalDK/?locale=da_DK"
+          target="_blank"
+          ><img
+            src="../svgfiles/facebook-logo-hvid.svg"
+            alt="Facebook link"
+            class="some-logo"
+          /></a
+        >
+        <a href="mailto:kundeservice@purelyprofessional.dk" target="_blank"
+          ><img
+            src="../svgfiles/mail-logo-hvid.svg"
+            alt="Mail link"
+            class="some-logo"
+          /></a
+        >
+      </div>
     </div>
-  </div>
-
-  <p class="adresse">
-    Malmøgade 2 kld. th <br />
-    2100 København Ø
-  </p>
-
-  <div class="betaling">
-    <h5>Betalingsmuligheder</h5>
-    <div class="betalingsmuligheder">
-      <img src="../images/applepay.webp" alt="" class="betal-logo" />
-      <img src="../images/dankortlogo.webp" alt="" class="betal-logo" />
-      <img src="../images/visalogo.webp" alt="" class="betal-logo" />
-      <img src="../images/mastercardlogo.webp" alt="" class="betal-logo" />
+    <br />
+    <div class="betaling">
+      <h5>Betalingsmuligheder</h5>
+      <div class="betalingsmuligheder">
+        <img src="../images/applepay.webp" alt="" class="betal-logo" />
+        <img src="../images/dankortlogo.webp" alt="" class="betal-logo" />
+        <img src="../images/visalogo.webp" alt="" class="betal-logo" />
+        <img src="../images/mastercardlogo.webp" alt="" class="betal-logo" />
+      </div>
+    </div>
+    <br />
+    <div class="levering">
+      <h5>Levering</h5>
+      <p class="adresse">
+        LEVERING FRA 29 DKK MED GLS FRI FRAGT TIL PAKKESHOP VED KØB OVER 600 DKK
+      </p>
     </div>
   </div>
 
@@ -34,27 +64,27 @@ import "../styles/style.css";
     <li><a href="om">Om Purely</a></li>
     <li><a href="vidensbank">Vidensbank</a></li>
   </ul>
-
   <p class="copyright">@2023 Purely Professional</p>
 </footer>
 
 <style>
   /* mobileview */
   #footer {
-    height: 635px;
+    height: fit-content;
     background-color: var(--darkSand);
     padding: 65px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 50px;
+    gap: 30px;
   }
   .kontakt,
-  .betaling {
+  .betaling,
+  .levering {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 20px;
   }
   .some-links {
     display: flex;
@@ -65,10 +95,16 @@ import "../styles/style.css";
     width: 40px;
   }
 
+  h5 {
+    color: var(--purelyWhite);
+  }
+
   .adresse {
     font-size: 15px;
     line-height: 20px;
     text-align: center;
+    color: var(--purelyWhite);
+    max-width: 300px;
   }
 
   .betalingsmuligheder {
@@ -105,21 +141,90 @@ import "../styles/style.css";
   a {
     color: var(--darkBrown);
   }
+
   .copyright {
     color: var(--purelyWhite);
     width: 100vw;
     text-align: center;
+    font-size: 15px;
+    margin-bottom: -10%;
   }
 
   /* Media queries */
   /* tablet format (over 600px)*/
   @media (min-width: 600px) {
+    .copyright {
+      margin-bottom: -5%;
+    }
   }
 
   /* desktop format (over 900px)*/
-  @media (min-width: 900px) {
+  @media (min-width: 800px) {
+    #footer {
+      padding: 20px;
+      align-items: left;
+    }
+    #grid {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: left;
+      gap: 30px;
+      margin-top: 20px;
+      text-align: left;
+    }
+    h5 {
+      text-align: left;
+    }
+    .adresse {
+      text-align: left;
+      max-width: 200px;
+    }
+
+    .kontakt {
+      text-align: left;
+      align-items: left;
+      text-align: left;
+    }
+    .betaling {
+      text-align: center;
+      align-items: center;
+      text-align: left;
+    }
+
+    .levering {
+      text-align: right;
+      align-items: right;
+      text-align: left;
+    }
+
+    .copyright {
+      margin-bottom: 0%;
+    }
   }
 
   @media (min-width: 1200px) {
+    #grid {
+      gap: 100px;
+    }
+
+    h5 {
+      font-size: 20px;
+    }
+
+    .adresse {
+      font-size: 15px;
+      line-height: 1.2em;
+      max-width: 300px;
+    }
+
+    .navigation {
+      font-size: 20px;
+      gap: 6em;
+    }
+
+    .copyright {
+      font-size: 15px;
+    }
   }
 </style>
