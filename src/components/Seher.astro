@@ -1,12 +1,12 @@
 ---
-import Sehercard from "../components/Sehercard.astro";
+import Bestsellercard from "./Bestsellercard.astro";
 ---
 
 <section id="bestseller">
   <a href="#">
     <h2>Se også her</h2>
     <div class="carousel">
-      <Sehercard />
+      <Bestsellercard />
     </div>
   </a>
 </section>
@@ -30,5 +30,16 @@ import Sehercard from "../components/Sehercard.astro";
     gap: 22px;
     overflow-x: scroll;
     padding: 30px 0 0 30px;
+  }
+
+  @media (min-width: 1500px) {
+    .carousel {
+      max-width: 1500px;
+      justify-content: space-around;
+    }
+    #bestseller {
+      padding-left: calc((100vw - 1500px) / 2);
+      padding-right: calc((100vw - 1500px) / 2);
+    }
   }
 </style>
