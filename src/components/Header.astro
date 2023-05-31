@@ -13,24 +13,38 @@ import "../styles/style.css";
       <div class="burger"></div>
     </div>
     <div class="menu">
-      <ul>
-        <li><a href="produkt" class="underline-effect">Shop</a></li>
-        <li>
-          <a href="purelypromise" class="underline-effect">The Purely Promise</a>
+      <ul id="shop-container">
+        <li id="shop">
+          <p>Shop</p>
+          <img src="../svgfiles/pil-white.svg" alt="" class="hvid-pil" />
         </li>
-        <li><a href="refilleries" class="underline-effect">Refilleries</a></li>
-        <li><a href="om" class="underline-effect">Om Purely</a></li>
-        <li><a href="vidensbank" class="underline-effect">Vidensbank</a></li>
+        <div class="shop-kat hide">
+          <a href="produkt" class="underline-effect">Shampoo</a>
+          <a href="produkt" class="underline-effect">hårpleje</a>
+          <a href="produkt" class="underline-effect">styling</a>
+          <a href="produkt" class="underline-effect">ansigtspleje</a>
+          <a href="produkt" class="underline-effect">kropspleje</a>
+          <a href="produkt" class="underline-effect">plejesæt</a>
+          <a href="produkt" class="underline-effect">tilbehør</a>
+          <a href="produkt" class="underline-effect">testere</a>
+        </div>
       </ul>
-      <div id="icons">
-        <img src="../svgfiles/soegefelt.svg" alt="søgefelt" id="soeg" />
-        <img src="../svgfiles/kurv.svg" alt="kurv" />
-      </div>
+
+      <li>
+        <a href="purelypromise" class="underline-effect">The Purely Promise</a>
+      </li>
+      <li><a href="refilleries" class="underline-effect">Refilleries</a></li>
+      <li><a href="om" class="underline-effect">Om Purely</a></li>
+      <li><a href="vidensbank" class="underline-effect">Vidensbank</a></li>
       <div id="socials">
         <a href="#"><img src="../svgfiles/instagram-logo.svg" alt="Instagram logo" /></a>
         <a href="#"><img src="../svgfiles/facebook-logo.svg" alt="Facebook logo" /></a>
         <a href="#"><img src="../svgfiles/mail-logo.svg" alt="Mail logo" /></a>
       </div>
+    </div>
+    <div id="icons">
+      <img src="../svgfiles/soegefelt.svg" alt="søgefelt" id="soeg" />
+      <img src="../svgfiles/kurv.svg" alt="kurv" />
     </div>
   </nav>
 </header>
@@ -46,11 +60,16 @@ import "../styles/style.css";
     width: 100%;
     z-index: 999;
   }
+
+  .hvid-pil {
+    height: 14px;
+    margin-left: 10px;
+  }
   #socials {
     display: flex;
     gap: 28px;
     align-items: center;
-    margin-top: 15%;
+    margin-top: 30px;
   }
 
   #socials img {
@@ -58,7 +77,7 @@ import "../styles/style.css";
   }
 
   #logo img {
-    width: 60px;
+    width: 100%;
     height: 48px;
     vertical-align: middle;
   }
@@ -69,7 +88,6 @@ import "../styles/style.css";
 
   .menu {
     display: flex;
-    justify-content: center;
     align-items: center;
   }
 
@@ -102,15 +120,21 @@ import "../styles/style.css";
     display: none;
   }
 
-  li a {
-    margin: 15px 0;
+  li a,
+  li p {
+    margin: 10px 0;
   }
 
-  a {
+  a,
+  li p {
     font-size: 1.8rem;
     color: var(--purelyWhite);
     font-family: Open Sans, sans-serif;
+    font-weight: 400;
+    cursor: pointer;
   }
+
+  /* Burger menu */
 
   .burger-menu {
     position: absolute;
@@ -152,20 +176,66 @@ import "../styles/style.css";
     z-index: 9999;
     background-color: var(--darkSand);
     position: sticky;
-    gap: 30px;
     height: 100vh;
+    margin-top: 20px;
   }
 
   ul {
     text-align: center;
   }
+  /* shop kategproier menu åben */
+  #shop-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #shop {
+    display: flex;
+    align-items: baseline;
+  }
+
+  #shop:hover {
+    opacity: 80%;
+  }
+  .shop-kat {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 5px 0 20px;
+  }
+  .shop-kat a {
+    font-size: 18px;
+    letter-spacing: 2px;
+    line-height: 20px;
+    color: var(--darkBrown);
+    text-transform: uppercase;
+    text-decoration: underline;
+  }
+  .shop-kat a:hover {
+    color: var(--purelyWhite);
+  }
+  .hide {
+    display: none;
+  }
+
+  .rotate {
+    transform: rotate(180deg);
+    transition: 0.5s ease;
+  }
 
   /* Media queries */
   /* tablet format (over 600px)*/
   @media (min-width: 800px) {
+    .hvid-pil {
+      margin-left: 5px;
+      height: 9px;
+    }
     #header {
+      background-color: transparent;
       transition: background-color 0.8s ease;
     }
+
     #nav {
       display: flex;
       align-items: center;
@@ -178,10 +248,6 @@ import "../styles/style.css";
       margin-right: auto;
     }
 
-    #logo img {
-      width: 60px;
-      height: auto;
-    }
     .burger-menu {
       display: none;
     }
@@ -193,6 +259,7 @@ import "../styles/style.css";
     .menu {
       display: flex;
       justify-content: flex-end;
+      position: relative;
     }
 
     .menu li {
@@ -201,7 +268,8 @@ import "../styles/style.css";
       margin-right: 20px;
     }
 
-    a {
+    a,
+    li p {
       font-size: 15px;
       color: var(--purelyWhite);
       font-family: Open Sans, sans-serif;
@@ -216,6 +284,25 @@ import "../styles/style.css";
     #icons {
       display: block;
     }
+    /* shop kategproier menu åben */
+    #shop-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .shop-kat {
+      background-color: var(--darkSand);
+      position: absolute;
+      top: calc(100% + 20px);
+      width: 300px;
+      padding: 0 20px 20px 20px;
+    }
+    .shop-kat a {
+      font-size: 13px;
+    }
+    .shop-kat a:hover {
+      color: var(--purelyWhite);
+    }
   }
 
   /* desktop format (over 900px)*/
@@ -224,13 +311,13 @@ import "../styles/style.css";
       margin-right: 30px;
     }
 
-    a {
+    a,
+    li p {
       font-size: 16px;
     }
 
     #logo img {
-      width: 80px;
-      height: auto;
+      height: 52px;
     }
 
     #icons img {
@@ -245,12 +332,19 @@ import "../styles/style.css";
     }
   }
   @media (min-width: 1200px) {
+    .hvid-pil {
+      height: 10px;
+    }
     #icons img {
       max-height: 24px;
       margin-left: 10px;
     }
 
-    a {
+    #logo img {
+      height: 60px;
+    }
+    a,
+    li p {
       font-size: 20px;
     }
 
@@ -270,19 +364,30 @@ import "../styles/style.css";
   const header = document.getElementById("header");
   const burgerMenu = document.querySelector(".burger-menu");
   const menu = document.querySelector(".menu");
+  const shopKnap = document.getElementById("shop");
+  const openKategori = document.querySelector(".shop-kat");
+  const hvidPil = document.querySelector(".hvid-pil");
 
   burgerMenu.addEventListener("click", function () {
     burgerMenu.classList.toggle("active");
     menu.classList.toggle("active");
   });
 
-  menu.addEventListener("click", function () {
-    burgerMenu.classList.remove("active");
-    menu.classList.remove("active");
+  shopKnap.addEventListener("click", function () {
+    openKategori.classList.toggle("hide");
+    hvidPil.classList.toggle("rotate");
+    if (window.innerWidth > 800) {
+      header.style.backgroundColor = "var(--darkSand)";
+    }
   });
 
+  // menu.addEventListener("click", function () {
+  //   burgerMenu.classList.remove("active");
+  //   menu.classList.remove("active");
+  // });
+
   window.addEventListener("scroll", function () {
-    // Tjek om skærmstørrelsen er over 700px
+    // Tjek om skærmstørrelsen er over 800px
     if (window.innerWidth > 800) {
       // Tjek om der er scrollet ned
       if (window.scrollY > 0) {

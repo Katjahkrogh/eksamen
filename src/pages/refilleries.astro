@@ -3,701 +3,689 @@ import "../styles/style.css";
 import Hero from "../components/Hero.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Refilleries</title>
-	</head>
-	<body>
-    <Header/>
-    <Hero img="../images/hero/refill.webp" tekst="Med Purely Refillery kan du udnytte dine brugte emballagers fulde potentiale og genfylde dine tomme emballager." navn="Refilleries" />    <div id="storediv">
-    <div id="hvader">
-      <h3>Hvad er det?</h3>
-      <p>Refillery er et tilbud til dig, der gerne vil vise vores omverden lidt mere omtanke. Plastik er et fantastisk materiale, der kan holde rigtigt længe, og det vil vi gerne udnytte ved at tilbyde genfyldning af vores shampoo og conditioners.</p>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Refilleries</title>
+  </head>
+  <body>
+    <Header />
+    <Hero img="../images/hero/refill.webp" tekst="Med Purely Refillery kan du udnytte dine brugte emballagers fulde potentiale og genfylde dine tomme emballager." navn="Refilleries" />
+    <div id="storediv">
+      <div id="hvader">
+        <h3>Hvad er det?</h3>
+        <p>
+          Refillery er et tilbud til dig, der gerne vil vise vores omverden lidt mere omtanke. Plastik er et fantastisk materiale, der kan holde rigtigt længe, og det vil vi gerne udnytte ved at tilbyde genfyldning af vores shampoo og conditioners.
+        </p>
       </div>
       <div id="plast">
-      <img src="../images/genbrugsplast-scaled-1.jpg" alt="" />   
-    </div>
+        <img src="../images/genbrugsplast-scaled-1.webp" alt="" />
+      </div>
     </div>
     <div id="hvor">
-    <div id="hvadkanjeg">
-      <h3>Hvad kan jeg genopylde?</h3>
-    </div>
-    <div>
-      <img src="../images/genfyld-dine-produkter.jpg" alt=""  id="genopfyldimg"/>   
+      <div id="hvadkanjeg">
+        <h3>Hvad kan jeg genopylde?</h3>
+      </div>
+      <div>
+        <img src="../images/genfyld-dine-produkter.webp" alt="" id="genopfyldimg" />
 
-    <div id="genopfyldning">
-      <div class="genopfyldning_div">
-        <div class="done_div">
-          <img src="../images/done.svg" alt="" />   
+        <div id="genopfyldning">
+          <div class="genopfyldning_div">
+            <div class="done_div">
+              <img src="../images/done.svg" alt="" />
+            </div>
+            <div class="text_div">
+              <h7>Shampoo 0 –</h7>
+              <h6>Til krøllet hår</h6>
+            </div>
+          </div>
+          <div class="genopfyldning_div">
+            <div class="done_div">
+              <img src="../images/done.svg" alt="" />
+            </div>
+            <div class="text_div">
+              <h7>Shampoo 1 –</h7>
+              <h6>til fint og normalt hår</h6>
+            </div>
+          </div>
+          <div class="genopfyldning_div">
+            <div class="done_div">
+              <img src="../images/done.svg" alt="" />
+            </div>
+            <div class="text_div">
+              <h7>Shampoo 2 –</h7>
+              <h6>Dybtrensende</h6>
+            </div>
+          </div>
+          <div class="genopfyldning_div">
+            <div class="done_div">
+              <img src="../images/done.svg" alt="" />
+            </div>
+            <div class="text_div">
+              <h7>Shampoo 4 –</h7>
+              <h6>Mod skæl</h6>
+            </div>
+          </div>
+          <div class="genopfyldning_div">
+            <div class="done_div">
+              <img src="../images/done.svg" alt="" />
+            </div>
+            <div class="text_div">
+              <h7>Conditioner 1 –</h7>
+              <h6>Til fint hår</h6>
+            </div>
+          </div>
+          <div class="genopfyldning_div">
+            <div class="done_div">
+              <img src="../images/done.svg" alt="" />
+            </div>
+            <div class="text_div">
+              <h7>Conditioner 2 –</h7>
+              <h6>Dybtvirkende</h6>
+            </div>
+          </div>
         </div>
-        <div class="text_div">
-        <h7>Shampoo 0 – </h7>
-        <h6>Til krøllet hår</h6>
       </div>
-      </div>
-      <div class="genopfyldning_div">
-        <div class="done_div">
-          <img src="../images/done.svg" alt="" />   
+    </div>
+    <div id="hvadkosterdet">
+      <h3>Hvad koster det?</h3>
+      <hr />
+    </div>
+    <div id="produkt">
+      <div id="koster1">
+        <div class="pris1">
+          <h6>Shampoo</h6>
+          <h7>300 ml</h7>
+          <h5>159 dkk</h5>
         </div>
-        <div class="text_div">
-        <h7>Shampoo 1 – </h7>
-        <h6>til fint og normalt hår </h6>
-      </div>
-      </div>
-      <div class="genopfyldning_div">
-        <div class="done_div">
-          <img src="../images/done.svg" alt="" />   
+        <div class="pris1">
+          <h6>Shampoo</h6>
+          <h7>1000 ml</h7>
+          <h5>359 dkk</h5>
         </div>
-        <div class="text_div">
-        <h7>Shampoo 2 –  </h7>
-        <h6>Dybtrensende </h6>
       </div>
-      </div>
-      <div class="genopfyldning_div">
-        <div class="done_div">
-          <img src="../images/done.svg" alt="" />   
+      <div id="koster2">
+        <div class="pris1">
+          <h6>Conditioner</h6>
+          <h7>300 ml</h7>
+          <h5>169 dkk</h5>
         </div>
-        <div class="text_div">
-        <h7>Shampoo 4 –   </h7>
-        <h6>Mod skæl </h6>
-      </div>
-      </div>
-      <div class="genopfyldning_div">
-        <div class="done_div">
-          <img src="../images/done.svg" alt="" />   
+        <div class="pris1">
+          <h6>Conditioner</h6>
+          <h7>1000 ml</h7>
+          <h5>379 dkk</h5>
         </div>
-        <div class="text_div">
-        <h7>Conditioner 1 – </h7>
-        <h6>Til fint hår</h6>
       </div>
+      <hr id="hrunder" />
+    </div>
+    <div id="hvor_div">
+      <h3>Hvor kan jeg genopfylde?</h3>
+    </div>
+    <div id="opfyldningsmuligheder">
+      <div class="opfyldmulig">
+        <h4>Hudpleje</h4>
+        <img src="../svgfiles/hud.svg" alt="" />
       </div>
-      <div class="genopfyldning_div">
-        <div class="done_div">
-          <img src="../images/done.svg" alt="" />   
-        </div>
-        <div class="text_div">
-        <h7>Conditioner 2 –  </h7>
-        <h6>Dybtvirkende</h6>
+      <div class="opfyldmulig">
+        <h4>Hårpleje</h4>
+        <img src="../svgfiles/haar.svg" alt="" />
       </div>
+      <div class="opfyldmulig">
+        <h4>Refillery</h4>
+        <img src="../svgfiles/refill.svg" alt="" />
       </div>
     </div>
-  </div>
-  </div>
-  <div id="hvadkosterdet">
-    <h3>Hvad koster det?</h3>
-    <hr>
-  </div>
-  <div id="produkt">
-  <div id="koster1">
-    <div class="pris1">
-      <h6>Shampoo</h6>
-      <h7>300 ml</h7>
-      <h5>159 dkk</h5>
-    </div>
-    <div class="pris1">
-      <h6>Shampoo</h6>
-      <h7>1000 ml</h7>
-      <h5>359 dkk</h5>
-    </div>
-  </div>
-  <div id="koster2">
-    <div class="pris1">
-      <h6>Conditioner</h6>
-      <h7>300 ml</h7>
-      <h5>169 dkk</h5>
-    </div>
-    <div class="pris1">
-      <h6>Conditioner</h6>
-      <h7>1000 ml</h7>
-      <h5>379 dkk</h5>
-    </div>
-  </div>
-  <hr id="hrunder">
-  </div>
-  <div id="hvor_div">
-    <h3>Hvor kan jeg genopfylde?</h3>
-  </div>
-  <div id="opfyldningsmuligheder">
-    <div class="opfyldmulig"><h4>Hudpleje</h4>
-      <img src="../svgfiles/hud.svg" alt="" />   
-    </div>
-    <div class="opfyldmulig"><h4>Hårpleje</h4>
-      <img src="../svgfiles/haar.svg" alt="" />   
-    </div>
-    <div class="opfyldmulig"><h4>Refillery</h4>
-      <img src="../svgfiles/refill.svg" alt="" />   
-    </div>
-  </div>
-  <div id="hvor_carddiv">
-  <div class="hvor_card">
-    <div class="hvor_tekst">
-      <h7>Frederiksberg Centeret Apotek</h7>
-      <h6>Falkoner Alle 21, 2 sal
-      </h6>
-        <h6> 2000 Frederiksberg</h6>
-      </div>
-        <div class="hvor_img">
-          <img src="../svgfiles/hud.svg" alt="" />   
-          <img src="../svgfiles/haar.svg" alt="" />   
-          <img src="../svgfiles/refill.svg" alt="" />   
-        </div>
-  </div>
-  <div class="hvor_card">
-    <div class="hvor_tekst">
-    <h7>Apoteket Trianglen</h7>
-    <h6>Nordre Frihavnsgade 3
-     </h6>
-      <h6> 2100
-        København Ø</h6>
+    <div id="hvor_carddiv">
+      <div class="hvor_card">
+        <div class="hvor_tekst">
+          <h7>Frederiksberg Centeret Apotek</h7>
+          <h6>Falkoner Alle 21, 2 sal</h6>
+          <h6>2000 Frederiksberg</h6>
         </div>
         <div class="hvor_img">
-          <img src="../svgfiles/hud.svg" alt="" />   
-          <img src="../svgfiles/haar.svg" alt="" />   
-          <img src="../svgfiles/refill.svg" alt="" />   
+          <img src="../svgfiles/hud.svg" alt="" />
+          <img src="../svgfiles/haar.svg" alt="" />
+          <img src="../svgfiles/refill.svg" alt="" />
         </div>
-</div>
-<div class="hvor_card">
-  <div class="hvor_tekst">
-  <h7>Østerbro Apotek</h7>
-  <h6>Østerbrogade 105, Østerbrogade 101
-   </h6>
-    <h6> 2100
-      København Ø</h6>
       </div>
-      <div class="hvor_img">
-        <img src="../svgfiles/hud.svg" alt="" />   
-        <img src="../svgfiles/haar.svg" alt="" />   
-        <img src="../svgfiles/refill.svg" alt="" />   
+      <div class="hvor_card">
+        <div class="hvor_tekst">
+          <h7>Apoteket Trianglen</h7>
+          <h6>Nordre Frihavnsgade 3</h6>
+          <h6>2100 København Ø</h6>
+        </div>
+        <div class="hvor_img">
+          <img src="../svgfiles/hud.svg" alt="" />
+          <img src="../svgfiles/haar.svg" alt="" />
+          <img src="../svgfiles/refill.svg" alt="" />
+        </div>
       </div>
-</div>
-<div class="hvor_card">
-  <div class="hvor_tekst">
-  <h7>Amagerbro Apotek </h7>
-  <h6>Reberbanegade 3
-  </h6>
-    <h6> 2300 København S</h6>
-    </div>
-    <div class="hvor_img">
-      <img src="../svgfiles/haar.svg" alt="" />   
-      <img src="../svgfiles/refill.svg" alt="" />   
-    </div>
-</div>
-<div class="hvor_card">
-  <div class="hvor_tekst">
-  <h7>Waterfront Apotek </h7>
-  <h6>Philip Heymans Alle 17, st. 1
-   </h6>
-    <h6> 2900 Hellerup</h6>
-  </div>
-    <div class="hvor_img">
-      <img src="../svgfiles/haar.svg" alt="" />   
-      <img src="../svgfiles/refill.svg" alt="" />   
-    </div>
-</div>
-<div class="hvor_card">
-  <div class="hvor_tekst">
-  <h7>Kvægtorvets Apotek
-  </h7>
-  <h6>Kvægtorvet 8
-   </h6>
-    <h6> 4700 Næstved</h6>
-    </div>
-      <div class="hvor_img">
-        <img src="../svgfiles/haar.svg" alt="" />   
-        <img src="../svgfiles/refill.svg" alt="" />   
+      <div class="hvor_card">
+        <div class="hvor_tekst">
+          <h7>Østerbro Apotek</h7>
+          <h6>Østerbrogade 105, Østerbrogade 101</h6>
+          <h6>2100 København Ø</h6>
+        </div>
+        <div class="hvor_img">
+          <img src="../svgfiles/hud.svg" alt="" />
+          <img src="../svgfiles/haar.svg" alt="" />
+          <img src="../svgfiles/refill.svg" alt="" />
+        </div>
       </div>
-</div>
-<div class="hvor_card">
-  <div class="hvor_tekst">
-  <h7>Raa</h7>
-  <h6>Badstuegade 17, st. th.</h6>
-    <h6> 8000 Aarhus</h6>
-  </div>
-    <div class="hvor_img">
-      <img src="../svgfiles/refill.svg" alt="" />   
+      <div class="hvor_card">
+        <div class="hvor_tekst">
+          <h7>Amagerbro Apotek</h7>
+          <h6>Reberbanegade 3</h6>
+          <h6>2300 København S</h6>
+        </div>
+        <div class="hvor_img">
+          <img src="../svgfiles/haar.svg" alt="" />
+          <img src="../svgfiles/refill.svg" alt="" />
+        </div>
+      </div>
+      <div class="hvor_card">
+        <div class="hvor_tekst">
+          <h7>Waterfront Apotek</h7>
+          <h6>Philip Heymans Alle 17, st. 1</h6>
+          <h6>2900 Hellerup</h6>
+        </div>
+        <div class="hvor_img">
+          <img src="../svgfiles/haar.svg" alt="" />
+          <img src="../svgfiles/refill.svg" alt="" />
+        </div>
+      </div>
+      <div class="hvor_card">
+        <div class="hvor_tekst">
+          <h7>Kvægtorvets Apotek</h7>
+          <h6>Kvægtorvet 8</h6>
+          <h6>4700 Næstved</h6>
+        </div>
+        <div class="hvor_img">
+          <img src="../svgfiles/haar.svg" alt="" />
+          <img src="../svgfiles/refill.svg" alt="" />
+        </div>
+      </div>
+      <div class="hvor_card">
+        <div class="hvor_tekst">
+          <h7>Raa</h7>
+          <h6>Badstuegade 17, st. th.</h6>
+          <h6>8000 Aarhus</h6>
+        </div>
+        <div class="hvor_img">
+          <img src="../svgfiles/refill.svg" alt="" />
+        </div>
+      </div>
     </div>
-</div>
-</div>
-</div>
+  </body>
 
-<Footer/>
-	</body>
+  <Footer />
 </html>
 
 <style>
-
   /* generel */
-body{
-  background-color: var(--lightOcean);
-}
-h6{
-  color: var(--darkBrown);
-  font-family: "Open Sans";
-font-size: 16px;
-font-weight: 400;
-line-height: 22px;
-letter-spacing: 0.09em;
-}
+  body {
+    background-color: var(--lightOcean);
+  }
+  h6 {
+    color: var(--darkBrown);
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.09em;
+  }
 
-h7{
-  font-family: Open Sans;
-font-size: 16px;
-font-weight: 600;
-line-height: 22px;
-letter-spacing: 0.09em;
-text-align: left;
-color: var(--darkBrown);
-}
+  h7 {
+    font-family: Open Sans;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0.09em;
+    text-align: left;
+    color: var(--darkBrown);
+  }
 
-.text_div h6 {
-  color: var(--lightSand);
-}
-.text_div h7 {
-  color: var(--purelyWhite);
-}
-hr{
-  background-color: var(--purelyWhite);
-  border: none;
-  height: 2px;}
+  .text_div h6 {
+    color: var(--lightSand);
+  }
+  .text_div h7 {
+    color: var(--purelyWhite);
+  }
+  hr {
+    background-color: var(--purelyWhite);
+    border: none;
+    height: 2px;
+  }
 
   /* Mobile first */
-  @media (min-width: 300px){
-
-  /* hvad er  */
-  #hvader{
-    display: flex;
-    flex-direction: column;
-    gap: 3em;
-    margin-top: 65px;
-    margin-right: 15px;
-  }
-
-  #plast img{
-    height: 300px;
-    width: 300px;
-    margin-top: 3em;
-  }
-
-  /* hvad kan jeg genopfylde */
-  #genopfyldning{
-    background-color: var(--darkSand) ;
-    width: 330px;
-    height: 444px;
-    border-radius: 5px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    display: flex;
-    flex-direction: column;
-    gap: 26px;
-    padding-top: 30px;
-  }
-
-  #hvor{
-    display: flex;
-    flex-direction: column;
-    gap: 3em;
-    margin-top: 65px;
-    margin-right: 30px;
-    margin-left: 30px;
-  }
-.done_div img {
-  height: 16px;
-    width: 19px;
-}
-.done_div{
-  height: 31px;
-    width: 32px;
-    background-color: var(--lightSand);
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.genopfyldning_div{
-  display: flex;
-    gap: 37px;
-    margin-left: 27px;
-    align-items: center;
-}
-
-#hvadkanjeg h3 {
-  margin-left: -15px;
-}
-#genopfyldimg{
-   display: none;
+  @media (min-width: 300px) {
+    /* hvad er  */
+    #hvader {
+      display: flex;
+      flex-direction: column;
+      gap: 3em;
+      margin-top: 65px;
+      margin-right: 15px;
     }
 
+    #plast img {
+      height: 300px;
+      width: 300px;
+      margin-top: 3em;
+    }
 
-    #storediv{
+    /* hvad kan jeg genopfylde */
+    #genopfyldning {
+      background-color: var(--darkSand);
+      width: 330px;
+      height: 444px;
+      border-radius: 5px;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      display: flex;
+      flex-direction: column;
+      gap: 26px;
+      padding-top: 30px;
+    }
+
+    #hvor {
+      display: flex;
+      flex-direction: column;
+      gap: 3em;
+      margin-top: 65px;
+      margin-right: 30px;
+      margin-left: 30px;
+    }
+    .done_div img {
+      height: 16px;
+      width: 19px;
+    }
+    .done_div {
+      height: 31px;
+      width: 32px;
+      background-color: var(--lightSand);
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    .genopfyldning_div {
+      display: flex;
+      gap: 37px;
+      margin-left: 27px;
+      align-items: center;
+    }
+
+    #hvadkanjeg h3 {
+      margin-left: -15px;
+    }
+    #genopfyldimg {
+      display: none;
+    }
+
+    #storediv {
       margin-left: 15px;
     }
 
-  /* hvad koster det */
-#hvadkosterdet{
-margin-top: 65px; 
- margin-bottom: 38px;
-  margin-left: 15px;
-}
-  #koster1{
-    width: 390px;
-    height: 221px;
-    background-color: var(--mediumSand);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    display: flex;
-    gap: 1em;
-    padding-top: 14px;
-    padding-left: 12.65px;
-    margin-bottom: 8px;
-  }
-  #koster2{
-    width: 390px;
-    height: 221px;
-    background-color: var(--darkSand);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    display: flex;
-    gap: 1em;
-    padding-top: 14px;
-    padding-left: 12.65px;
-    margin-bottom: 89px;
-  }
+    /* hvad koster det */
+    #hvadkosterdet {
+      margin-top: 65px;
+      margin-bottom: 38px;
+      margin-left: 15px;
+    }
+    #koster1 {
+      width: 390px;
+      height: 221px;
+      background-color: var(--mediumSand);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      display: flex;
+      gap: 1em;
+      padding-top: 14px;
+      padding-left: 12.65px;
+      margin-bottom: 8px;
+    }
+    #koster2 {
+      width: 390px;
+      height: 221px;
+      background-color: var(--darkSand);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      display: flex;
+      gap: 1em;
+      padding-top: 14px;
+      padding-left: 12.65px;
+      margin-bottom: 89px;
+    }
 
-  .pris1{
-    width: 174.97px;
-    height: 193px;
-    background-color: var(--lightSand);
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  }
+    .pris1 {
+      width: 174.97px;
+      height: 193px;
+      background-color: var(--lightSand);
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
 
-  .hvor_img{
+    .hvor_img {
       width: 70px;
     }
-  /* hvor kan jeg genopfylde */
-  .hvor_card{
-    height: 150px;
-    width: 350px;
-    background-color: var(--purelyWhite);
-    opacity: 70%;
-    border-radius: 5px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 15px;
-    padding-right: 8px;
-    /* padding-top:19px; */
-    gap: 9px;
-    margin-left: 15px;
-    display: inline-block;
-    position:relative;
-    display: flex;
-    flex-direction: row;
-  
-  }
-
-  .hvor_tekst{
-    padding-top: 19px;
-  }
-#hvor_div{
-  margin-top: 65px;
-  margin-left: 15px;
-  margin-bottom: 38px
-}
-#hvor_carddiv{
-    overflow-x: scroll;
-    gap: 22px;
-    display: grid;
-    grid-template-columns: repeat(7,1fr);
-    margin-bottom: 180px;
-}
-#opfyldningsmuligheder{
-  display: flex;
-    flex-direction: row;
-    margin-bottom: 40px;
-    gap: 50px;
-    margin-left: 15px;
+    /* hvor kan jeg genopfylde */
+    .hvor_card {
+      height: 150px;
+      width: 350px;
+      background-color: var(--purelyWhite);
+      opacity: 70%;
+      border-radius: 5px;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 15px;
+      padding-right: 8px;
+      /* padding-top:19px; */
+      gap: 9px;
+      margin-left: 15px;
+      display: inline-block;
+      position: relative;
+      display: flex;
+      flex-direction: row;
     }
 
- 
-#hrunder{
-  width: 350px;
-}
-/* Sådan bruger du det */
-#howto_div{
-  margin-top: 65px;
-  margin-left: 15px;
-  margin-right: 15px;
-}
+    .hvor_tekst {
+      padding-top: 19px;
+    }
+    #hvor_div {
+      margin-top: 65px;
+      margin-left: 15px;
+      margin-bottom: 38px;
+    }
+    #hvor_carddiv {
+      overflow-x: scroll;
+      gap: 22px;
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      margin-bottom: 180px;
+    }
+    #opfyldningsmuligheder {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 40px;
+      gap: 50px;
+      margin-left: 15px;
+    }
+
+    #hrunder {
+      width: 350px;
+    }
+    /* Sådan bruger du det */
+    #howto_div {
+      margin-top: 65px;
+      margin-left: 15px;
+      margin-right: 15px;
+    }
   }
 
   /* tablet format (over 600px)*/
   @media (min-width: 600px) {
-    #hvader{
+    #hvader {
       margin-right: 30%;
     }
-    #storediv{
+    #storediv {
       margin-left: 30px;
     }
 
-    #hrunder{
+    #hrunder {
       width: 430px;
     }
- 
+
     /* Hvad kan jeg genopfylde */
-    #hvor{
+    #hvor {
       display: flex;
-    flex-direction: column;
-    gap: 3em;
-    margin-top: 65px;
-    /* margin-right: 30px; */
-    /* margin-left: 30px; */
-    align-items: center;
-    }
-    #hvor_div{
+      flex-direction: column;
+      gap: 3em;
       margin-top: 65px;
-    margin-left: 30px;
-    margin-bottom: 38px;
+      /* margin-right: 30px; */
+      /* margin-left: 30px; */
+      align-items: center;
     }
-    #opfyldningsmuligheder{
+    #hvor_div {
+      margin-top: 65px;
+      margin-left: 30px;
+      margin-bottom: 38px;
+    }
+    #opfyldningsmuligheder {
       display: flex;
-    flex-direction: row;
-    margin-bottom: 40px;
-    gap: 50px;
-    margin-left: 30px;
+      flex-direction: row;
+      margin-bottom: 40px;
+      gap: 50px;
+      margin-left: 30px;
     }
-       /* hvad koster det */
-       #produkt{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-       }
-       #hvadkosterdet{
-        margin-top: 65px;
-        margin-bottom: 38px;
-        margin-left: 30px;
-       }
+    /* hvad koster det */
+    #produkt {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    #hvadkosterdet {
+      margin-top: 65px;
+      margin-bottom: 38px;
+      margin-left: 30px;
+    }
 
-       /* hvor */
+    /* hvor */
 
-       #hvor_carddiv{
-        overflow-x: scroll;
-    gap: 22px;
-    display: grid;
-    grid-template-columns: repeat(7,1fr);
-    margin-bottom: 180px;
-    margin-left: 30px;
-       }
+    #hvor_carddiv {
+      overflow-x: scroll;
+      gap: 22px;
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      margin-bottom: 180px;
+      margin-left: 30px;
+    }
   }
-
 
   /* desktop format (over 900px)*/
   @media (min-width: 900px) {
-
     /* hvad er det */
 
-    #plast img{
-    height: 400px;
-    width: 400px;
-    margin-top: 3em;
-  }
-    #storediv{
+    #plast img {
+      height: 400px;
+      width: 400px;
+      margin-top: 3em;
+    }
+    #storediv {
       display: grid;
-    grid-template-columns: 1fr 1fr;
-  margin-left: 20px;    }
-  /* hvor kan man opfylde */
-  #hvor{
-    align-items: flex-start;
-    margin-left: 90px;
+      grid-template-columns: 1fr 1fr;
+      margin-left: 20px;
     }
-#hvadkanjeg h3{
-  margin-left: 0;
-}
-/* hvad koster det */
-    #koster1{
+    /* hvor kan man opfylde */
+    #hvor {
+      align-items: flex-start;
+      margin-left: 90px;
+    }
+    #hvadkanjeg h3 {
+      margin-left: 0;
+    }
+    /* hvad koster det */
+    #koster1 {
       width: 500px;
-    height: 300px;
-    background-color: var(--mediumSand);
-    box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
-    display: flex;
-    gap: 1em;
-    padding-top: 0;
-    padding-left: 0;
-    margin-bottom: 0;
-    margin-left: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+      height: 300px;
+      background-color: var(--mediumSand);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      display: flex;
+      gap: 1em;
+      padding-top: 0;
+      padding-left: 0;
+      margin-bottom: 0;
+      margin-left: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-    .pris1{
+    .pris1 {
       width: 200px;
-    height: 250px;
-    background-color: var(--lightSand);
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+      height: 250px;
+      background-color: var(--lightSand);
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
-    
-    #koster2{
+
+    #koster2 {
       width: 500px;
-    height: 300px;
-    background-color: var(--darkSand);
-    box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
-    display: flex;
-    gap: 1em;
-    padding-top: 0;
-    padding-left: 0;
-    margin-top: 23px;
-    margin-left: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+      height: 300px;
+      background-color: var(--darkSand);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      display: flex;
+      gap: 1em;
+      padding-top: 0;
+      padding-left: 0;
+      margin-top: 23px;
+      margin-left: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-    #hvadkosterdet{
+    #hvadkosterdet {
       margin-top: 175px;
       margin-left: 90px;
     }
-    #opfyldningsmuligheder{
+    #opfyldningsmuligheder {
       display: flex;
-    flex-direction: row;
-    margin-bottom: 40px;
-    gap: 118px;
-    margin-left: 90px;
+      flex-direction: row;
+      margin-bottom: 40px;
+      gap: 118px;
+      margin-left: 90px;
     }
-    #genopfyldimg{
+    #genopfyldimg {
       width: 450px;
       height: 550px;
       display: grid;
     }
-    #genopfyldning{
+    #genopfyldning {
       position: absolute;
-    top: 880px;
-    left: 480px;
+      top: 880px;
+      left: 480px;
     }
-    .opfyldmulig{
+    .opfyldmulig {
       display: flex;
       align-items: center;
     }
-    #hvor_carddiv{
-    overflow-x: scroll;
-    gap: 22px;
-    display: grid;
-    grid-template-columns: repeat(7,1fr);
-    margin-left: 90px;
-}
-.hvor_card{
-    height: 170px;
-    width: 400px;
-    background-color: var(--purelyWhite);
-    opacity: 70%;
-    border-radius: 5px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 15px;
-    padding-right: 8px;
-    padding-top:0px;
-    gap: 9px;
-    display: inline-block;
-    position:relative;
-    display: flex;
-    margin-left: 0;
-    flex-direction: row;
-    justify-content: space-around;
+    #hvor_carddiv {
+      overflow-x: scroll;
+      gap: 22px;
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      margin-left: 90px;
+    }
+    .hvor_card {
+      height: 170px;
+      width: 400px;
+      background-color: var(--purelyWhite);
+      opacity: 70%;
+      border-radius: 5px;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 15px;
+      padding-right: 8px;
+      padding-top: 0px;
+      gap: 9px;
+      display: inline-block;
+      position: relative;
+      display: flex;
+      margin-left: 0;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+    #hvor_div {
+      margin-top: 65px;
+      margin-left: 90px;
+      margin-bottom: 38px;
+    }
+    .hvor_img {
+      width: 70px;
+    }
+    .hvor_tekst {
+      padding-top: 15px;
+    }
   }
-  #hvor_div{
-  margin-top: 65px;
-  margin-left: 90px;
-  margin-bottom: 38px
-}
-.hvor_img{
-  width:70px;
-}
-.hvor_tekst{
-  padding-top: 15px;
-}
-  }
-
 
   @media (min-width: 1200px) {
-
     /* hvad er det  */
-    #storediv{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-left: 200px;
+    #storediv {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-left: 200px;
     }
-    #plast img{
-    height: 400px;
-    width: 400px;
-    margin-top: 3em;
-  }
+    #plast img {
+      height: 400px;
+      width: 400px;
+      margin-top: 3em;
+    }
     /* hvad kan jeg genopfylde */
-    #hvor{
-    align-items: flex-start;
-    margin-left: 200px;
+    #hvor {
+      align-items: flex-start;
+      margin-left: 200px;
     }
-    #genopfyldimg{
-    width: 550px;
-    height: 650px;
-    display: grid;
+    #genopfyldimg {
+      width: 550px;
+      height: 650px;
+      display: grid;
     }
-    #genopfyldning{
-    position: absolute;
-    top: 880px;
-    left: 710px;
-    background-color: var(--darkSand);
-    width: 530px;
-    height: 644px;
-    border-radius: 5px;
-    box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
-    display: flex;
-    flex-direction: column;
-    gap: 26px;
-    padding-top: 30px;
-    justify-content: space-evenly;
-    padding-bottom: 20px;
+    #genopfyldning {
+      position: absolute;
+      top: 880px;
+      left: 710px;
+      background-color: var(--darkSand);
+      width: 530px;
+      height: 644px;
+      border-radius: 5px;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      display: flex;
+      flex-direction: column;
+      gap: 26px;
+      padding-top: 30px;
+      justify-content: space-evenly;
+      padding-bottom: 20px;
     }
-    .done_div{
-    height: 50px;
-    width: 50px;
-    background-color: var(--lightSand);
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
-      }
-    
-    .done_div img{
-    height: 25px;
-    width: 30px;
-    }
+    .done_div {
+      height: 50px;
+      width: 50px;
+      background-color: var(--lightSand);
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
 
-    /* hvad koster det */
-
-    #hvadkosterdet{
-      margin-top: 350px;
-    margin-left: 200px;
+    .done_div img {
+      height: 25px;
+      width: 30px;
     }
-    #koster1{
-      width: 600px;
+  }
+
+  /* hvad koster det */
+
+  #hvadkosterdet {
+    margin-top: 350px;
+    margin-left: 200px;
+  }
+  #koster1 {
+    width: 600px;
     height: 450px;
     background-color: var(--mediumSand);
-    box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     display: flex;
     gap: 1em;
     padding-top: 0;
@@ -707,12 +695,12 @@ margin-top: 65px;
     display: flex;
     justify-content: center;
     align-items: center;
-    }
-    #koster2{
+  }
+  #koster2 {
     width: 600px;
     height: 450px;
     background-color: var(--darkSand);
-    box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     display: flex;
     gap: 1em;
     padding-top: 0;
@@ -722,9 +710,9 @@ margin-top: 65px;
     display: flex;
     justify-content: center;
     align-items: center;
-    }
-    .pris1{
-      width: 250px;
+  }
+  .pris1 {
+    width: 250px;
     height: 300px;
     background-color: var(--lightSand);
     border-radius: 5px;
@@ -732,17 +720,17 @@ margin-top: 65px;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
-    }
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
 
-    /* hvor kan jeg genopfylde */
-    .hvor_card{
+  /* hvor kan jeg genopfylde */
+  .hvor_card {
     height: 200px;
     width: 430px;
     background-color: var(--purelyWhite);
     opacity: 70%;
     border-radius: 5px;
-    box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     flex-direction: column;
     justify-content: center;
     padding-left: 15px;
@@ -755,34 +743,33 @@ margin-top: 65px;
     margin-left: 0;
     flex-direction: row;
     justify-content: space-around;
-    }
-    #hvor_carddiv{
-      overflow-x: scroll;
+  }
+  #hvor_carddiv {
+    overflow-x: scroll;
     gap: 22px;
     display: grid;
-    grid-template-columns: repeat(7,1fr);
+    grid-template-columns: repeat(7, 1fr);
     margin-left: 200px;
-    }
-    #hvor_div{
+  }
+  #hvor_div {
     margin-top: 65px;
     margin-left: 200px;
     margin-bottom: 50px;
-    }
-    #opfyldningsmuligheder{
+  }
+  #opfyldningsmuligheder {
     display: flex;
     flex-direction: row;
     margin-bottom: 70px;
     gap: 118px;
     margin-left: 200px;
-    }
-    #hrunder{
-      width: 100%;
-    }
-    #genopfyldning h7{
-      font-size: 20px;
-    }
-    #genopfyldning h6{
-      font-size: 20px;
-    }
-  
+  }
+  #hrunder {
+    width: 100%;
+  }
+  #genopfyldning h7 {
+    font-size: 20px;
+  }
+  #genopfyldning h6 {
+    font-size: 20px;
+  }
 </style>

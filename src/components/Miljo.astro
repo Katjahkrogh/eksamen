@@ -1,0 +1,123 @@
+---
+---
+
+<section id="purely-miljo">
+  <h2>Purely og miljø</h2>
+  <div id="scroll_div">
+    <div class="miljo_div" id="miljo_div1">
+      <div class="miljo_billede">
+        <img src="../images/210319_PurelyProfessional-22018.webp" alt="" />
+        <img src="../svgfiles/plastik.svg" alt="" />
+      </div>
+      <div class="miljo_tekst">
+        <h3>PLASTIK</h3>
+      </div>
+    </div>
+    <div class="miljo_div">
+      <div class="miljo_billede">
+        <img src="../images/210319_PurelyProfessional-22018.webp" alt="" />
+        <img src="../svgfiles/biodiversitet.svg" alt="" />
+      </div>
+      <div class="miljo_tekst">
+        <h3>BIODIVERSITET</h3>
+      </div>
+    </div>
+    <div class="miljo_div" id="miljo_div3">
+      <div class="miljo_billede">
+        <img src="../images/210319_PurelyProfessional-22018.webp" alt="" />
+        <img src="../svgfiles/klima.svg" alt="" />
+      </div>
+      <div class="miljo_tekst">
+        <h3>Klima</h3>
+      </div>
+    </div>
+    <div class="miljo_div" id="miljo_div1">
+      <div class="miljo_billede">
+        <img src="../images/210319_PurelyProfessional-22018.webp" alt="" />
+        <img src="../svgfiles/miljofarlige-stoffer.svg" alt="" />
+      </div>
+      <div class="miljo_tekst">
+        <h3>Miljøfarlige stoffer</h3>
+      </div>
+    </div><div class="miljo_div" id="miljo_div1">
+      <div class="miljo_billede">
+        <img src="../images/210319_PurelyProfessional-22018.webp" alt="" />
+        <img src="../svgfiles/affaldssortering.svg" alt="" />
+      </div>
+      <div class="miljo_tekst">
+        <h3>Affalds-sortering</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  #purely-miljo {
+    width: 100vw;
+    height: fit-content;
+    background-color: var(lightSand);
+    padding: 38px 15px;
+  }
+  #scroll_div {
+    display: flex;
+    gap: 22px;
+    margin-top: 42px;
+    overflow-x: scroll;
+  }
+
+  h3 {
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .miljo_billede {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .miljo_billede img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    grid-area: 1/2/1/2;
+  }
+
+  .miljo_div {
+    display: inline-block;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #miljo_div1 {
+    margin-left: 15px;
+  }
+
+  #miljo_div3 {
+    margin-right: 15px;
+  }
+
+  @media (min-width: 900px) {
+    #finhaertype {
+      background-color: var(--mediumOcean);
+      margin-top: 110px;
+    }
+    #miljo_billede {
+      width: 250px;
+      height: 250px;
+      border-radius: 100px;
+    }
+    .miljo_div {
+      margin-left: 15px;
+      gap: 27px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .miljo_billede img {
+      width: 340px;
+      height: 340px;
+      border-radius: 180px;
+    }
+  }
+</style>
