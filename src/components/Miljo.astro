@@ -29,7 +29,6 @@
       <div class="miljo_billede">
         <img src="../images/klima-baggrund.webp" alt="" />
         <div></div>
-
         <img src="../svgfiles/klima.svg" alt="" />
       </div>
       <div class="miljo_tekst">
@@ -40,7 +39,6 @@
       <div class="miljo_billede">
         <img src="../images/miljo-baggrund.webp" alt="" />
         <div></div>
-
         <img src="../svgfiles/miljofarlige-stoffer.svg" alt="" />
       </div>
       <div class="miljo_tekst">
@@ -72,6 +70,7 @@
     gap: 22px;
     margin-top: 42px;
     overflow-x: scroll;
+    overflow-y: hidden;
     height: fit-content;
   }
 
@@ -88,7 +87,7 @@
   .miljo_billede div {
     width: 200px;
     height: 200px;
-    border-radius: 100px;
+    border-radius: 50%;
     grid-area: 1/2/1/2;
   }
   .miljo_billede div {
@@ -96,20 +95,13 @@
   }
 
   .miljo_div {
-    display: inline-block;
-    position: relative;
+    /* display: inline-block; */
+    /* position: relative; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: min-content;
-  }
-
-  #miljo_div1 {
-    margin-left: 15px;
-  }
-
-  #miljo_div3 {
-    margin-right: 15px;
+    height: fit-content;
+    padding-top: 10px;
   }
 
   /* rgba(164, 149, 126, 0.5)
@@ -122,7 +114,6 @@
     #miljo_billede {
       width: 250px;
       height: 250px;
-      border-radius: 100px;
     }
     .miljo_div {
       margin-left: 15px;
@@ -135,7 +126,6 @@
     .miljo_billede div {
       width: 340px;
       height: 340px;
-      border-radius: 180px;
     }
   }
 </style>
