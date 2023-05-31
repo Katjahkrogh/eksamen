@@ -7,7 +7,7 @@ const { img, navn, tekst } = Astro.props;
   <img src={img} alt="" class="hero-img" />
   <div class="tekst">
     <h1>{navn}</h1>
-    <h4>{tekst}</h4>
+    <h4 class="h4-hero">{tekst}</h4>
   </div>
 </section>
 
@@ -35,7 +35,7 @@ const { img, navn, tekst } = Astro.props;
     justify-content: flex-end;
     gap: 12px;
   }
-  h4 {
+  .h4-hero {
     color: var(--purelyWhite);
     margin-bottom: 80px;
   }
@@ -50,7 +50,7 @@ const { img, navn, tekst } = Astro.props;
       width: 530px;
       margin-left: 30px;
     }
-    h4 {
+    .h4-hero {
       margin-bottom: 60px;
     }
   }
@@ -59,7 +59,7 @@ const { img, navn, tekst } = Astro.props;
     .tekst {
       width: 660px;
     }
-    h4 {
+    .h4-hero {
       margin-bottom: 30px;
     }
 
