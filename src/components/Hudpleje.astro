@@ -1,0 +1,117 @@
+---
+---
+
+<section id="hudpleje">
+  <h2>Lær om hudpleje</h2>
+  <div class="bredformat">
+    <div id="ansigtspleje">
+      <img src="../images/210318_PurelyProfessional-2100251.webp" alt="" id="ansigtspleje-img" />
+      <div class="link-container">
+        <div class="link">
+          <div class="link-tekst">
+            <a href="#">Guides til ansigtspleje</a>
+            <img src="../svgfiles/pil.svg" alt="" class="pil" />
+          </div>
+          <hr class="underline" />
+        </div>
+      </div>
+    </div>
+    <div id="kropspleje">
+      <img src="../images/210318_PurelyProfessional_3_100865.webp" alt="" id="kropspleje-img" />
+      <div class="link-container">
+        <div class="link">
+          <div class="link-tekst">
+            <a href="#">Guides til kropspleje</a>
+            <img src="../svgfiles/pil.svg" alt="" class="pil" />
+          </div>
+          <hr class="underline" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Lær om hudpleje */
+  #hudpleje {
+    background-color: var(--mediumSand);
+    padding: 38px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .bredformat {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  #ansigtspleje-img,
+  #kropspleje-img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    margin-bottom: 5px;
+  }
+
+  /* -- link med pil -- */
+  .link-container {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+  }
+  .link {
+    width: max-content;
+    align-self: flex-end;
+  }
+
+  .link-tekst {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 2px;
+  }
+  .link-tekst a {
+    color: var(--purelyBlue);
+  }
+  .pil {
+    width: 16px;
+    rotate: 270deg;
+  }
+
+  .underline {
+    border: 1.5px solid var(--purelyBlue);
+    width: 100%;
+    border-radius: 1.5px;
+  }
+  @media (min-width: 600px) {
+    #ansigtspleje,
+    #kropspleje {
+      width: 500px;
+    }
+    #kropspleje {
+      align-self: flex-end;
+    }
+  }
+  @media (min-width: 900px) {
+    #ansigtspleje,
+    #kropspleje {
+      width: 425px;
+    }
+
+    .bredformat {
+      flex-direction: row;
+      gap: 25px;
+      width: max-content;
+      align-self: center;
+      flex-wrap: wrap;
+    }
+  }
+  @media (min-width: 1200px) {
+    .bredformat {
+      gap: 50px;
+    }
+  }
+</style>
