@@ -7,8 +7,8 @@ const { img1, produktnavn, pris, link } = Astro.props;
   <a href={link}
     ><img src={img1} alt="" title="produkt-img" />
     <div id="tekst">
-      <h4 title="navn">{produktnavn}</h4>
-      <p title="pris">{pris}</p>
+      <h4 title="navn" class="h4-product">{produktnavn}</h4>
+      <p title="pris" class="p-product">{pris}</p>
     </div>
   </a>
   <button id="knap">Føj til kurv</button>
@@ -40,13 +40,13 @@ const { img1, produktnavn, pris, link } = Astro.props;
     margin-top: 5px;
     text-align: left;
   }
-  h4 {
+  .h4-product {
     font-weight: 300;
     font-size: 16px;
     line-height: 21.79px;
   }
 
-  p {
+  .p-product {
     font-weight: 700;
     font-size: 12px;
     line-height: 16px;
@@ -91,12 +91,12 @@ const { img1, produktnavn, pris, link } = Astro.props;
       height: 400px;
     }
 
-    h4 {
+    .h4-product {
       font-size: 20px;
       line-height: 28px;
       margin-left: 10px;
     }
-    p {
+    .p-product {
       font-size: 16px;
       line-height: 20px;
       margin-left: 10px;
