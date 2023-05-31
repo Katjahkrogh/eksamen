@@ -6,7 +6,8 @@
   <div id="scroll_div">
     <div class="miljo_div" id="miljo_div1">
       <div class="miljo_billede">
-        <img src="../images/210319_PurelyProfessional-22018.webp" alt="" />
+        <img src="../images/plastik-baggrund.webp" alt="" />
+        <div></div>
         <img src="../svgfiles/plastik.svg" alt="" />
       </div>
       <div class="miljo_tekst">
@@ -15,7 +16,9 @@
     </div>
     <div class="miljo_div">
       <div class="miljo_billede">
-        <img src="../images/210319_PurelyProfessional-22018.webp" alt="" />
+        <img src="../images/bio-baggrund.webp" alt="" />
+        <div></div>
+
         <img src="../svgfiles/biodiversitet.svg" alt="" />
       </div>
       <div class="miljo_tekst">
@@ -24,7 +27,9 @@
     </div>
     <div class="miljo_div" id="miljo_div3">
       <div class="miljo_billede">
-        <img src="../images/210319_PurelyProfessional-22018.webp" alt="" />
+        <img src="../images/klima-baggrund.webp" alt="" />
+        <div></div>
+
         <img src="../svgfiles/klima.svg" alt="" />
       </div>
       <div class="miljo_tekst">
@@ -33,7 +38,9 @@
     </div>
     <div class="miljo_div" id="miljo_div1">
       <div class="miljo_billede">
-        <img src="../images/210319_PurelyProfessional-22018.webp" alt="" />
+        <img src="../images/miljo-baggrund.webp" alt="" />
+        <div></div>
+
         <img src="../svgfiles/miljofarlige-stoffer.svg" alt="" />
       </div>
       <div class="miljo_tekst">
@@ -41,7 +48,9 @@
       </div>
     </div><div class="miljo_div" id="miljo_div1">
       <div class="miljo_billede">
-        <img src="../images/210319_PurelyProfessional-22018.webp" alt="" />
+        <img src="../images/genbrugsplast-scaled-1.webp" alt="" />
+        <div></div>
+
         <img src="../svgfiles/affaldssortering.svg" alt="" />
       </div>
       <div class="miljo_tekst">
@@ -74,11 +83,15 @@
     grid-template-columns: 1fr;
   }
 
-  .miljo_billede img {
+  .miljo_billede img,
+  .miljo_billede div {
     width: 200px;
     height: 200px;
     border-radius: 100px;
     grid-area: 1/2/1/2;
+  }
+  .miljo_billede div {
+    background-color: rgba(164, 149, 126, 0.5);
   }
 
   .miljo_div {
@@ -97,6 +110,8 @@
     margin-right: 15px;
   }
 
+  /* rgba(164, 149, 126, 0.5)
+ */
   @media (min-width: 900px) {
     #finhaertype {
       background-color: var(--mediumOcean);
@@ -114,7 +129,8 @@
   }
 
   @media (min-width: 1200px) {
-    .miljo_billede img {
+    .miljo_billede img,
+    .miljo_billede div {
       width: 340px;
       height: 340px;
       border-radius: 180px;
