@@ -1,0 +1,147 @@
+---
+---
+
+<section id="indholdsstoffer-container">
+  <h2>Indholdsstoffer</h2>
+  <div id="indholdsstoffer">
+    <p>Nysgerrig på vores ingredienser?<br />Læs mere om dem på vores leksikon</p>
+    <div class="billede-link" id="leksikon">
+      <img src="../images/leksikon.webp" alt="" id="leksikon_billede" />
+      <div class="link">
+        <div class="link-tekst">
+          <a href="#">Leksikon</a>
+          <img src="../svgfiles/pil.svg" alt="" class="pil" />
+        </div>
+        <hr class="underline" />
+      </div>
+    </div>
+    <div class="renhed"><h3>”Hvis jeres produkter er så rene, hvorfor har I så ikke nogen mærker på?”</h3></div><div class="billede-link" id="maerkning">
+      <img src="../images/210319_PurelyProfessional-22018.webp" alt="" id="babyhaender" />
+      <div class="link">
+        <div class="link-tekst">
+          <a href="#">Få svar her</a>
+          <img src="../svgfiles/pil.svg" alt="" class="pil" />
+        </div>
+        <hr class="underline" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Indholdsstoffer */
+  #indholdsstoffer-container {
+    background-color: var(--mediumOcean);
+    width: 100vw;
+    padding: 38px 15px;
+  }
+  #indholdsstoffer {
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  .billede-link {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  #leksikon_billede {
+    height: 218px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .renhed {
+    display: flex;
+    justify-content: center;
+  }
+  h2 {
+    margin-bottom: 20px;
+  }
+  h3 {
+    text-align: center;
+  }
+
+  #babyhaender {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    margin-top: 25px;
+  }
+
+  /* -- link med pil -- */
+  .link-container {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+  }
+  .link {
+    width: max-content;
+    align-self: flex-end;
+  }
+
+  .link-tekst {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 2px;
+  }
+  .link-tekst a {
+    color: var(--purelyBlue);
+  }
+  .pil {
+    width: 16px;
+    rotate: 270deg;
+  }
+
+  .underline {
+    border: 1.5px solid var(--purelyBlue);
+    width: 100%;
+    border-radius: 1.5px;
+  }
+
+  @media (min-width: 600px) {
+    h3 {
+      width: 470px;
+      align-self: center;
+    }
+  }
+  @media (min-width: 900px) {
+    #indholdsstoffer {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 0;
+    }
+    h2 {
+      grid-column: span 3;
+    }
+    #leksikon {
+      grid-column: span 2;
+    }
+    #maerkning {
+      grid-area: 2/1/3/2;
+    }
+    .renhed {
+      grid-column: span 2;
+    }
+    #leksikon_billede {
+      height: 340px;
+      padding-left: 70px;
+    }
+    #babyhaender {
+      margin-top: 20px;
+    }
+  }
+
+  @media (min-width: 1500px) {
+    #indholdsstoffer-container {
+      display: flex;
+      flex-direction: column;
+    }
+    #indholdsstoffer {
+      width: 1500px;
+    }
+  }
+</style>

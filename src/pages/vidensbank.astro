@@ -5,6 +5,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Inspiration from "../components/Inspiration.astro";
 import Miljo from "../components/Miljo.astro";
+import Indholdsstoffer from "../components/Indholdsstoffer.astro";
 ---
 
 <html lang="en">
@@ -27,131 +28,98 @@ import Miljo from "../components/Miljo.astro";
         <button class="vidensbank_button">Inspiration</button>
       </div>
     </div>
-    <div id="indholdsstoffer_div">
-      <div id="indhold_storediv">
-        <div id="leksikon_div">
-          <h2>Indholdsstoffer</h2>
-          <div>
-            <p><strong>N</strong>ysgerrig på vores ingredienser?</p>
-            <p>Læs mere om dem på vores <strong> leksikon</strong></p>
+    <Indholdsstoffer />
+    <Miljo />
+    <div id="denhele">
+      <div id="finhaertype">
+        <h2>Find din hårpleje til din hårtype</h2>
+        <div id="haertypehelediv">
+          <div class="haertype_div">
+            <div class="haertype_billede">
+              <img src="../images/210319_PurelyProfessional-22018.webp" alt="" />
+            </div>
+            <div class="haertype_tekst">
+              <h3>Kraftigt krøllet hår</h3>
+            </div>
           </div>
-          <div class="link">
-            <div class="link-tekst" id="pil1">
-              <a href="#">Leksikon</a>
-              <img src="../svgfiles/pil.svg" alt="" class="pil" />
+          <div class="haertype_div">
+            <div class="haertype_billede">
+              <img src="../images/210319_PurelyProfessional-22018.webp" alt="" />
+            </div>
+            <div class="haertype_tekst">
+              <h3>Fint hår</h3>
+            </div>
+          </div>
+          <div class="haertype_div">
+            <div class="haertype_billede">
+              <img src="../images/210319_PurelyProfessional-22018.webp" alt="" />
+            </div>
+            <div class="haertype_tekst">
+              <h3>Krøller i fint hår</h3>
+            </div>
+          </div>
+
+          <div class="haertype_div">
+            <div class="haertype_billede">
+              <img src="../images/210319_PurelyProfessional-22018.webp" alt="" />
+            </div>
+            <div class="haertype_tekst">
+              <h3>Kraftigt hår</h3>
+            </div>
+          </div>
+
+          <div class="haertype_div">
+            <div class="haertype_billede">
+              <img src="../images/210319_PurelyProfessional-22018.webp" alt="" />
+            </div>
+            <div class="haertype_tekst">
+              <h3>Farvet og kemisk behandlet hår</h3>
+            </div>
+          </div>
+
+          <div class="haertype_div" id="haertype_div6">
+            <div class="haertype_billede">
+              <img src="../images/210319_PurelyProfessional-22018.webp" alt="" />
+            </div>
+            <div class="haertype_tekst">
+              <h3>Hovedbunds problemer og skæl</h3>
             </div>
           </div>
         </div>
-        <div id="leksikon_billede"></div>
       </div>
+      <div class="link">
+        <div class="link-tekst">
+          <a href="#">Guides til hårpleje</a>
+          <img src="../svgfiles/pil.svg" alt="" class="pil" />
+        </div>
+      </div>
+    </div>
+    <div id="learomhudpleje">
+      <h2>Lær om hudpleje</h2>
 
-      <div id="citat_storediv">
-        <div id="citat">
-          <h3>”Hvis jeres produkter er så rene, hvorfor har I så ikke nogen mærker på?”</h3>
+      <div id="denstorelear">
+        <div id="learomhudpleje_div">
+          <div id="learomhudplejeimg1"></div>
+
           <div class="link">
             <div class="link-tekst">
-              <a href="#">Få svar her</a>
+              <a href="#">Guides til hudpleje</a>
               <img src="../svgfiles/pil.svg" alt="" class="pil" />
             </div>
           </div>
         </div>
         <div>
-          <img src="../images/210319_PurelyProfessional-22018.webp" alt="" id="babyhaender" />
-        </div>
-      </div>
-    </div>
-    <div id="miljo_storediv">
-      <Miljo />
-      <div id="denhele">
-        <div id="finhaertype">
-          <h2>Find din hårpleje til din hårtype</h2>
-          <div id="haertypehelediv">
-            <div class="haertype_div">
-              <div class="haertype_billede">
-                <img src="../images/210319_PurelyProfessional-22018.webp" alt="" />
-              </div>
-              <div class="haertype_tekst">
-                <h3>Kraftigt krøllet hår</h3>
-              </div>
-            </div>
-            <div class="haertype_div">
-              <div class="haertype_billede">
-                <img src="../images/210319_PurelyProfessional-22018.webp" alt="" />
-              </div>
-              <div class="haertype_tekst">
-                <h3>Fint hår</h3>
-              </div>
-            </div>
-            <div class="haertype_div">
-              <div class="haertype_billede">
-                <img src="../images/210319_PurelyProfessional-22018.webp" alt="" />
-              </div>
-              <div class="haertype_tekst">
-                <h3>Krøller i fint hår</h3>
-              </div>
-            </div>
-
-            <div class="haertype_div">
-              <div class="haertype_billede">
-                <img src="../images/210319_PurelyProfessional-22018.webp" alt="" />
-              </div>
-              <div class="haertype_tekst">
-                <h3>Kraftigt hår</h3>
-              </div>
-            </div>
-
-            <div class="haertype_div">
-              <div class="haertype_billede">
-                <img src="../images/210319_PurelyProfessional-22018.webp" alt="" />
-              </div>
-              <div class="haertype_tekst">
-                <h3>Farvet og kemisk behandlet hår</h3>
-              </div>
-            </div>
-
-            <div class="haertype_div" id="haertype_div6">
-              <div class="haertype_billede">
-                <img src="../images/210319_PurelyProfessional-22018.webp" alt="" />
-              </div>
-              <div class="haertype_tekst">
-                <h3>Hovedbunds problemer og skæl</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="link">
-          <div class="link-tekst">
-            <a href="#">Guides til hårpleje</a>
-            <img src="../svgfiles/pil.svg" alt="" class="pil" />
-          </div>
-        </div>
-      </div>
-      <div id="learomhudpleje">
-        <h2>Lær om hudpleje</h2>
-
-        <div id="denstorelear">
-          <div id="learomhudpleje_div">
-            <div id="learomhudplejeimg1"></div>
-
-            <div class="link">
-              <div class="link-tekst">
-                <a href="#">Guides til hudpleje</a>
-                <img src="../svgfiles/pil.svg" alt="" class="pil" />
-              </div>
-            </div>
-          </div>
-          <div>
-            <div id="learomhudplejeimg2"></div>
-            <div class="link">
-              <div class="link-tekst">
-                <a href="#">Guides til kropspleje</a>
-                <img src="../svgfiles/pil.svg" alt="" class="pil" />
-              </div>
+          <div id="learomhudplejeimg2"></div>
+          <div class="link">
+            <div class="link-tekst">
+              <a href="#">Guides til kropspleje</a>
+              <img src="../svgfiles/pil.svg" alt="" class="pil" />
             </div>
           </div>
         </div>
       </div>
     </div>
+
     <Inspiration />
     <Footer />
   </body>
@@ -163,7 +131,6 @@ import Miljo from "../components/Miljo.astro";
     /* Mobile first */
 
     /* navigation */
-
     img {
       object-fit: cover;
     }
@@ -187,72 +154,6 @@ import Miljo from "../components/Miljo.astro";
       align-items: center;
       padding-top: 47px;
       padding-bottom: 47px;
-    }
-    /* Indholdsstoffer */
-
-    #indholdsstoffer_div {
-      background-color: var(--mediumOcean);
-      /* margin-left: 7px; */
-    }
-    #leksikon_div {
-      padding-top: 38px;
-      display: flex;
-      flex-direction: column;
-      gap: 25px;
-      margin-left: 15px;
-    }
-    #leksikon_billede {
-      height: 218px;
-      width: 360px;
-      background-image: url("../images/genbrugsplast-scaled-1.jpg");
-      background-size: cover;
-      margin-left: 15px;
-      margin-right: 7px;
-      margin-top: 38px;
-      margin-bottom: 26px;
-    }
-
-    .link {
-      align-self: flex-end;
-      margin-right: 15px;
-    }
-    .link-tekst {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      justify-content: flex-end;
-      padding: 0 2px;
-      padding-bottom: 33px;
-    }
-    .link-tekst a {
-      text-decoration: none;
-      color: var(--darkBrown);
-      text-decoration: underline 2px var(--purelyBlue);
-      text-underline-offset: 8px;
-    }
-    .pil {
-      width: 16px;
-      rotate: -90deg;
-    }
-    .underline {
-      border: 1.5px solid var(--purelyBlue);
-      width: 100%;
-      border-radius: 1.5px;
-      margin-bottom: 25px;
-    }
-
-    #citat {
-      width: 360px;
-      padding-left: 26px;
-      padding-top: 46px;
-      text-align: center;
-    }
-    #babyhaender {
-      width: 360px;
-      height: 350px;
-      padding-left: 23px;
-      margin-top: 30px;
-      margin-bottom: 26px;
     }
 
     /* Find din hårtype */
@@ -376,16 +277,6 @@ import Miljo from "../components/Miljo.astro";
 
     /* desktop format (over 900px)*/
     @media (min-width: 900px) {
-      /* #navigation_vidensbank {
-        display: flex;
-        gap: 33px;
-        padding-top: 47px;
-        padding-bottom: 47px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        justify-items: center;
-      } */
-
       #navigation_vidensbank {
         display: flex;
         display: grid;
@@ -409,86 +300,6 @@ import Miljo from "../components/Miljo.astro";
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         border-radius: 10px;
         border-color: transparent;
-      }
-      /* Inholdsstoffer */
-      #indhold_storediv {
-        display: flex;
-        gap: 49px;
-        justify-content: center;
-        padding-top: 100px;
-      }
-      #citat_storediv {
-        display: flex;
-        flex-direction: row-reverse;
-        /* margin-right: 140px; */
-        gap: 80px;
-        align-items: center;
-        justify-content: center;
-      }
-      #pil1 {
-        margin-top: 100px;
-        text-decoration: none;
-      }
-      .link-tekst a {
-        text-decoration: transparent;
-      }
-      .link-tekst:hover {
-        text-decoration: underline 2px var(--purelyBlue);
-        text-underline-offset: 8px;
-        transition: transform 0.25s ease-out;
-      }
-      #pil1:hover {
-        text-decoration: underline 2px var(--purelyBlue);
-        text-underline-offset: 8px;
-        transition: transform 0.25s ease-out;
-      }
-
-      #leksikon_billede {
-        height: 400px;
-        width: 460px;
-        background-image: url(../images/genbrugsplast-scaled-1.jpg);
-        background-size: cover;
-        margin-left: 0;
-        margin-right: 0;
-        margin-top: 0;
-        margin-bottom: 90px;
-      }
-      .link-tekst {
-        display: flex;
-        gap: 10px;
-        align-items: center;
-        justify-content: flex-end;
-        padding: 0 2px;
-        padding-bottom: 33px;
-        padding-right: 10px;
-      }
-      #babyhaender {
-        width: 450px;
-        height: 460px;
-        padding-left: 0;
-        margin-top: 30px;
-        margin-bottom: 26px;
-        margin-top: 0;
-      }
-      #citat {
-        width: 360px;
-        /* padding-left: 26px; */
-        padding-top: 46px;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        gap: 200px;
-        margin-right: 40px;
-      }
-
-      #citat {
-        width: 360px;
-        /* padding-top: 46px; */
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        gap: 100px;
-        margin-right: 40px;
       }
 
       /* Find din hårtype */
@@ -521,27 +332,6 @@ import Miljo from "../components/Miljo.astro";
       .vidensbank_button {
         width: 500px;
         height: 90px;
-      }
-      /* leksikon */
-      #leksikon_billede {
-        height: 400px;
-        width: 600px;
-        background-image: url(../images/genbrugsplast-scaled-1.jpg);
-        background-size: cover;
-        margin-left: 0;
-        margin-right: 0;
-        margin-top: 0;
-        margin-bottom: 90px;
-      }
-
-      #babyhaender {
-        width: 600px;
-        height: 431px;
-        padding-left: 0;
-        margin-top: 30px;
-        margin-bottom: 112px;
-        margin-top: 0;
-        object-fit: cover;
       }
 
       /* find hårtype */
