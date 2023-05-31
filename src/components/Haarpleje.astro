@@ -1,0 +1,154 @@
+---
+---
+
+<section id="finhaertype">
+  <h2>Find perfekt hårpleje til din hårtype</h2>
+  <div id="carousel">
+    <div class="haertype_div">
+      <div class="haertype_billede">
+        <img src="../images/kraftigt-haar.webp" alt="" />
+      </div>
+      <div class="haertype_tekst">
+        <h4>Kraftigt krøllet hår</h4>
+      </div>
+    </div>
+    <div class="haertype_div">
+      <div class="haertype_billede">
+        <img src="../images/210319_PurelyProfessional-2101847-e1662119504658.webp" alt="" />
+      </div>
+      <div class="haertype_tekst">
+        <h4>Fint hår</h4>
+      </div>
+    </div>
+    <div class="haertype_div">
+      <div class="haertype_billede">
+        <img src="../images/Emilie_123437-e1662119971912.webp" alt="" />
+      </div>
+      <div class="haertype_tekst">
+        <h4>Krøller i fint hår</h4>
+      </div>
+    </div>
+
+    <div class="haertype_div">
+      <div class="haertype_billede">
+        <img src="../images/Texturepaste_123320-e1662120018541.webp" alt="" />
+      </div>
+      <div class="haertype_tekst">
+        <h4>Kraftigt hår</h4>
+      </div>
+    </div>
+
+    <div class="haertype_div">
+      <div class="haertype_billede">
+        <img src="../images/Signe_123789-e1662120053667.webp" alt="" />
+      </div>
+      <div class="haertype_tekst">
+        <h4>Farvet og kemisk<br />behandlet hår</h4>
+      </div>
+    </div>
+    <div class="haertype_div" id="haertype_div6">
+      <div class="haertype_billede">
+        <img src="../images/210319_PurelyProfessional101374-e1662120101448.webp" alt="" />
+      </div>
+      <div class="haertype_tekst">
+        <h4>Irriteret hovedbund<br />og skæl</h4>
+      </div>
+    </div>
+  </div>
+  <div class="link-container">
+    <div class="link">
+      <div class="link-tekst">
+        <a href="#">Guides til hårpleje</a>
+        <img src="../svgfiles/pil.svg" alt="" class="pil" />
+      </div>
+      <hr class="underline" />
+    </div>
+  </div>
+</section>
+
+<style>
+  img {
+    object-fit: cover;
+  }
+  #finhaertype {
+    background-color: var(--mediumOcean);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 38px 15px;
+  }
+
+  #carousel {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    gap: 22px;
+    display: grid;
+    grid-template-columns: repeat(6, 2fr);
+    gap: 15px;
+  }
+
+  .haertype_billede img {
+    width: 280px;
+    height: 320px;
+  }
+
+  h4 {
+    margin-left: 5px;
+  }
+  /* -- link med pil -- */
+  .link-container {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+  }
+  .link {
+    width: max-content;
+    align-self: flex-end;
+  }
+
+  .link-tekst {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 2px;
+  }
+  .link-tekst a {
+    color: var(--purelyBlue);
+  }
+  .pil {
+    width: 16px;
+    rotate: 270deg;
+  }
+
+  .underline {
+    border: 1.5px solid var(--purelyBlue);
+    width: 100%;
+    border-radius: 1.5px;
+  }
+
+  @media (min-width: 600px) {
+    .haertype_billede img {
+      width: 323px;
+      height: 417px;
+    }
+    #carousel {
+      gap: 22px;
+    }
+  }
+  @media (min-width: 900px) {
+  }
+
+  @media (min-width: 1200px) {
+    #finhaertype {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    #carousel {
+      grid-column: span 3;
+    }
+    .link-container {
+      grid-area: 2/4/3/5;
+    }
+  }
+</style>

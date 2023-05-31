@@ -6,6 +6,8 @@ import Footer from "../components/Footer.astro";
 import Inspiration from "../components/Inspiration.astro";
 import Miljo from "../components/Miljo.astro";
 import Indholdsstoffer from "../components/Indholdsstoffer.astro";
+import Haarpleje from "../components/Haarpleje.astro";
+import Hudpleje from "../components/Hudpleje.astro";
 ---
 
 <html lang="en">
@@ -30,96 +32,8 @@ import Indholdsstoffer from "../components/Indholdsstoffer.astro";
     </div>
     <Indholdsstoffer />
     <Miljo />
-    <div id="denhele">
-      <div id="finhaertype">
-        <h2>Find din hårpleje til din hårtype</h2>
-        <div id="haertypehelediv">
-          <div class="haertype_div">
-            <div class="haertype_billede">
-              <img src="../images/210319_PurelyProfessional-22018.webp" alt="" />
-            </div>
-            <div class="haertype_tekst">
-              <h3>Kraftigt krøllet hår</h3>
-            </div>
-          </div>
-          <div class="haertype_div">
-            <div class="haertype_billede">
-              <img src="../images/210319_PurelyProfessional-22018.webp" alt="" />
-            </div>
-            <div class="haertype_tekst">
-              <h3>Fint hår</h3>
-            </div>
-          </div>
-          <div class="haertype_div">
-            <div class="haertype_billede">
-              <img src="../images/210319_PurelyProfessional-22018.webp" alt="" />
-            </div>
-            <div class="haertype_tekst">
-              <h3>Krøller i fint hår</h3>
-            </div>
-          </div>
-
-          <div class="haertype_div">
-            <div class="haertype_billede">
-              <img src="../images/210319_PurelyProfessional-22018.webp" alt="" />
-            </div>
-            <div class="haertype_tekst">
-              <h3>Kraftigt hår</h3>
-            </div>
-          </div>
-
-          <div class="haertype_div">
-            <div class="haertype_billede">
-              <img src="../images/210319_PurelyProfessional-22018.webp" alt="" />
-            </div>
-            <div class="haertype_tekst">
-              <h3>Farvet og kemisk behandlet hår</h3>
-            </div>
-          </div>
-
-          <div class="haertype_div" id="haertype_div6">
-            <div class="haertype_billede">
-              <img src="../images/210319_PurelyProfessional-22018.webp" alt="" />
-            </div>
-            <div class="haertype_tekst">
-              <h3>Hovedbunds problemer og skæl</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="link">
-        <div class="link-tekst">
-          <a href="#">Guides til hårpleje</a>
-          <img src="../svgfiles/pil.svg" alt="" class="pil" />
-        </div>
-      </div>
-    </div>
-    <div id="learomhudpleje">
-      <h2>Lær om hudpleje</h2>
-
-      <div id="denstorelear">
-        <div id="learomhudpleje_div">
-          <div id="learomhudplejeimg1"></div>
-
-          <div class="link">
-            <div class="link-tekst">
-              <a href="#">Guides til hudpleje</a>
-              <img src="../svgfiles/pil.svg" alt="" class="pil" />
-            </div>
-          </div>
-        </div>
-        <div>
-          <div id="learomhudplejeimg2"></div>
-          <div class="link">
-            <div class="link-tekst">
-              <a href="#">Guides til kropspleje</a>
-              <img src="../svgfiles/pil.svg" alt="" class="pil" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
+    <Haarpleje />
+    <Hudpleje />
     <Inspiration />
     <Footer />
   </body>
@@ -131,9 +45,7 @@ import Indholdsstoffer from "../components/Indholdsstoffer.astro";
     /* Mobile first */
 
     /* navigation */
-    img {
-      object-fit: cover;
-    }
+
     .vidensbank_button {
       width: 323px;
       height: 59px;
@@ -156,123 +68,8 @@ import Indholdsstoffer from "../components/Indholdsstoffer.astro";
       padding-bottom: 47px;
     }
 
-    /* Find din hårtype */
-
-    #finhaertype {
-      background-color: var(--mediumOcean);
-      margin-top: 93px;
-      /* width: 104%; */
-    }
-    #finhaertype h2 {
-      padding-top: 33px;
-    }
-
-    .haertype_billede img {
-      width: 323px;
-      height: 417px;
-    }
-    .haertype_div {
-      margin-left: 30px;
-      margin-top: 42px;
-      display: inline-block;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    #haertype_div6 {
-      margin-right: 15px;
-    }
-    #haertypehelediv {
-      overflow-x: scroll;
-      gap: 22px;
-      display: grid;
-      grid-template-columns: repeat(6, 2fr);
-      margin-top: 42px;
-      gap: 26px;
-    }
-
-    /* Lær om hudpleje */
-
-    #learomhudpleje {
-      background-color: var(--mediumSand);
-      margin-top: 46px;
-      /* width: 104%; */
-    }
-    #learomhudpleje h2 {
-      padding-top: 25px;
-      margin-left: 15px;
-    }
-    #learomhudplejeimg1 {
-      width: 360px;
-      height: 450px;
-      background-image: url("../images/210318_purelyprofessional 2100469.JPG");
-      background-size: cover;
-      margin-top: 26px;
-      margin-left: 7px;
-      margin-bottom: 15px;
-    }
-    #learomhudplejeimg2 {
-      width: 360px;
-      height: 450px;
-      background-image: url("../images/210318_PurelyProfessional_3_100865.jpg");
-      background-size: cover;
-      margin-top: 26px;
-      margin-left: 7px;
-      margin-bottom: 15px;
-    }
-
-    /* inspiration */
-
-    #inspiration {
-      background-color: var(--purelyGrey);
-      overflow-x: scroll;
-      display: grid;
-      grid-template-columns: repeat(4, 2fr);
-      margin-top: 56px;
-      gap: 26px;
-      margin-bottom: 56px;
-    }
-
-    .inspi_billede img {
-      width: 318px;
-      height: 417px;
-    }
-
-    .inspi_div {
-      padding-top: 78px;
-      padding-bottom: 46px;
-    }
-    #inspi_div1 {
-      margin-left: 30px;
-    }
-
-    #inspirationscirkel_div {
-      background-color: var(--darkOcean);
-    }
-    .inspirationcircle {
-      position: absolute;
-      z-index: 100;
-      margin: -30px 0px 0px -29px;
-      animation: spin 10s linear infinite;
-    }
-
-    @keyframes spin {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
-    }
     /* tablet format (over 600px)*/
     @media (min-width: 600px) {
-      #indholdsstoffer_div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
     }
 
     /* desktop format (over 900px)*/
@@ -301,26 +98,6 @@ import Indholdsstoffer from "../components/Indholdsstoffer.astro";
         border-radius: 10px;
         border-color: transparent;
       }
-
-      /* Find din hårtype */
-      #finhaertype {
-        background-color: var(--mediumOcean);
-        margin-top: 110px;
-      }
-
-      /* .haertype_billede{
-    width: 230px;
-    height: 317px;
-
-} */
-      #denstorelear {
-        display: flex;
-        justify-content: space-around;
-      }
-      #learomhudpleje h2 {
-        padding-top: 25px;
-        margin-left: 50px;
-      }
     }
 
     @media (min-width: 1200px) {
@@ -332,64 +109,6 @@ import Indholdsstoffer from "../components/Indholdsstoffer.astro";
       .vidensbank_button {
         width: 500px;
         height: 90px;
-      }
-
-      /* find hårtype */
-      #finhaertype {
-        display: flex;
-      }
-
-      #denhele {
-        background-color: var(--mediumOcean);
-      }
-      /* lær om hudpleje  */
-      #denstorelear {
-        display: flex;
-        justify-content: space-evenly;
-        margin-top: 101px;
-      }
-      #learomhudplejeimg1 {
-        width: 482px;
-        height: 536px;
-        background-image: url(../images/210318_purelyprofessional\ 2100469.JPG);
-        background-size: cover;
-        margin-top: 26px;
-        margin-left: 7px;
-        margin-bottom: 15px;
-      }
-      #learomhudplejeimg2 {
-        width: 482px;
-        height: 536px;
-        background-image: url(../images/210318_PurelyProfessional_3_100865.jpg);
-        background-size: cover;
-        margin-top: 26px;
-        margin-left: 7px;
-        margin-bottom: 15px;
-      }
-      #learomhudpleje h2 {
-        padding-top: 75px;
-        margin-left: 85px;
-      }
-      .link-tekst {
-        display: flex;
-        gap: 10px;
-        align-items: center;
-        justify-content: flex-end;
-        padding: 0 2px;
-        padding-bottom: 75px;
-        padding-right: 10px;
-      }
-
-      /* inspiration */
-      #inspiration {
-        background-color: var(--purelyGrey);
-        overflow-x: scroll;
-        margin-top: 56px;
-        gap: 33px;
-        display: flex;
-        margin-bottom: 56px;
-        justify-content: space-evenly;
-        margin-top: 81px;
       }
     }
     .vidensbank_button:hover {
