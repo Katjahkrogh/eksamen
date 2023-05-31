@@ -56,6 +56,7 @@
     width: 100vw;
     height: fit-content;
     background-color: var(lightSand);
+    padding: 38px 15px;
   }
   #scroll_div {
     display: flex;
@@ -63,6 +64,7 @@
     margin-top: 42px;
     overflow-x: scroll;
   }
+
   h3 {
     text-transform: uppercase;
     text-align: center;
@@ -95,25 +97,14 @@
     margin-right: 15px;
   }
 
-  #miljo_storediv {
-    margin-top: 53px;
-  }
-  #miljo_storediv h2 {
-    margin-left: 15px;
-  }
-
   @media (min-width: 900px) {
     #finhaertype {
       background-color: var(--mediumOcean);
       margin-top: 110px;
     }
-    #miljo_storediv {
-      margin-top: 60px;
-      margin-bottom: 60px;
-    }
     #miljo_billede {
       width: 250px;
-      height: 220px;
+      height: 250px;
       border-radius: 100px;
     }
     .miljo_div {
@@ -125,23 +116,8 @@
   @media (min-width: 1200px) {
     .miljo_billede img {
       width: 340px;
-      height: 367px;
+      height: 340px;
       border-radius: 180px;
-      margin-top: 133px;
-    }
-
-    #miljo_storediv h2 {
-      margin-top: 108px;
-      margin-left: 85px;
-    }
-    #scroll_div {
-      overflow-x: scroll;
-      gap: 22px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      margin-top: 42px;
-      gap: 26px;
-      padding-bottom: 70px;
     }
   }
 </style>
