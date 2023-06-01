@@ -15,29 +15,69 @@ import Hudpleje from "../components/Hudpleje.astro";
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
+    <script
+      src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
+    ></script>
     <meta name="generator" content={Astro.generator} />
     <title>Vidensbank</title>
   </head>
   <body>
-    <Header />
-    <Hero img="../images/AfterlightImage-88-2048x2048.webp" tekst="Vores vidensbank er et univers, hvor du kan dykke ned i detaljerne om vores produkter, ingredienser samt finde guides og meget mere." navn="PURELY VIDENSBANK" />
-    <div id="divudenomdiv">
-      <div id="navigation_vidensbank">
-        <button class="vidensbank_button">Indholdsstoffer</button>
-        <button class="vidensbank_button">Purely og miljø</button>
-        <button class="vidensbank_button">Guides</button>
-        <button class="vidensbank_button">Inspiration</button>
+    <div id="loader">
+      <div class="loader-container">
+        <lottie-player
+          src="https://assets10.lottiefiles.com/packages/lf20_isjnfriv.json"
+          background="transparent"
+          speed="1"
+          style="width: 300px; height: 300px;"
+          loop
+          autoplay></lottie-player>
       </div>
     </div>
-    <Indholdsstoffer />
-    <Miljo />
-    <Haarpleje />
-    <Hudpleje />
-    <Inspiration />
-    <Footer />
+    <div id="content" class="hidden">
+      <Header />
+      <Hero
+        img="../images/AfterlightImage-88-2048x2048.webp"
+        tekst="Vores vidensbank er et univers, hvor du kan dykke ned i detaljerne om vores produkter, ingredienser samt finde guides og meget mere."
+        navn="PURELY VIDENSBANK"
+      />
+      <div id="divudenomdiv">
+        <div id="navigation_vidensbank">
+          <button class="vidensbank_button">Indholdsstoffer</button>
+          <button class="vidensbank_button">Purely og miljø</button>
+          <button class="vidensbank_button">Guides</button>
+          <button class="vidensbank_button">Inspiration</button>
+        </div>
+      </div>
+      <Indholdsstoffer />
+      <Miljo />
+      <Haarpleje />
+      <Hudpleje />
+      <Inspiration />
+      <Footer />
+    </div>
   </body>
 
   <style>
+    .hidden {
+      display: none;
+    }
+
+    #loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: var(backgroundBeige);
+      z-index: 9999;
+    }
+
+    .loader-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
     body {
       background-color: var(--lightSand);
     }
@@ -113,4 +153,13 @@ import Hudpleje from "../components/Hudpleje.astro";
       cursor: pointer;
     }
   </style>
+
+  <script>
+    console.log("hej");
+    window.addEventListener("load", function () {
+      // Skjul loader og vis innholdet på siden
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("content").classList.remove("hidden");
+    });
+  </script>
 </html>
