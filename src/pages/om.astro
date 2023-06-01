@@ -11,392 +11,470 @@ import Thepurelypromisebanner from "../components/Thepurelypromisebanner.astro";
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
+    <script
+      src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
+    ></script>
     <meta name="generator" content={Astro.generator} />
     <title>Om Purely</title>
   </head>
 
   <body>
-    <Header />
-    <Hero img="../images/hero/dame_med_v-hals.webp" tekst="Purely Professional er et dansk familieejet brand med mere end 10 års erfaring inden for skønhedspleje. " navn="Vi er Purely " />
-    <main>
-      <div id="founders">
-        <div>
-          <img src="../images/cecilie.webp" alt="Cecilie" />
-          <p>CECILIE</p>
-        </div>
-        <div>
-          <img src="../images/ole.webp" alt="Ole" />
-          <p>OLE</p>
-        </div>
-        <div>
-          <img src="../images/julie.webp" alt="Julie" />
-          <p>JULIE</p>
-        </div>
+    <div id="loader">
+      <div class="loader-container">
+        <lottie-player
+          src="https://assets10.lottiefiles.com/packages/lf20_isjnfriv.json"
+          background="transparent"
+          speed="1"
+          style="width: 300px; height: 300px;"
+          loop
+          autoplay></lottie-player>
       </div>
-      <p>Etableret i 2011 af kemiker Ole Olsen og døtrene Julie og Cecilie Kampmann.</p>
-      <div id="luksus">
-        <h2>Prisvenlig</h2>
-        <h2>luksus</h2>
-      </div>
-      <p class="p-small">Vores vison har siden starten været at skabe hår- og hudpleje til dig, der ønsker prisvenlige, luksuriøse og effektive produkter uden parfume og anden unødvendig kemi.</p>
-      <div id="vand">
-        <img src="../images/IMG_6902-kopi.webp" alt="Produkt i vand" />
-      </div>
-      <h2 id="passion">Passion</h2>
-      <p class="p-small">For os har Purely Professional altid været et projekt af passion. Vi har prøvet os frem drevet af nysgerrighed, stædighed og lysten til at fremstille produkter, vi selv drømte om at bruge.</p>
-      <div id="vaerdier">
-        <div id="vaerdier-img">
-          <img src="../images/flaskerihaan2.webp" alt="" />
-        </div>
-        <br />
-        <h2>Værdier</h2>
-        <p>Vores produkter skal være enkle og rene, de skal virke og have et formål, herudover skal de ikke belaste naturen eller udsætte forbrugeren for unødige indholdsstoffer.</p>
-        <p><u>The Purely Promise</u> er betegnelsen for disse grundværdier.</p>
-        <br />
-      </div>
-      <Thepurelypromisebanner />
-      <div id="vaerdier2">
-        <p>Det er vores løfte til dig, når du står med et Purely produkt i hænderne, at vi har fremstillet det med omtanke og af kun de reneste ingredienser, som virker til dit specifikke formål.</p>
-        <br />
-        <br />
-        <div class="link">
-          <div class="link-tekst">
-            <a href="purelypromise">The Purely Promise</a>
-            <img src="../svgfiles/pil.svg" alt="" class="pil" />
+    </div>
+    <div id="content" class="hidden">
+      <Header />
+      <Hero
+        img="../images/hero/dame_med_v-hals.webp"
+        tekst="Purely Professional er et dansk familieejet brand med mere end 10 års erfaring inden for skønhedspleje. "
+        navn="Vi er Purely "
+      />
+      <main>
+        <div id="founders">
+          <div>
+            <img src="../images/cecilie.webp" alt="Cecilie" />
+            <p>CECILIE</p>
           </div>
-          <hr class="underline" />
+          <div>
+            <img src="../images/ole.webp" alt="Ole" />
+            <p>OLE</p>
+          </div>
+          <div>
+            <img src="../images/julie.webp" alt="Julie" />
+            <p>JULIE</p>
+          </div>
         </div>
-      </div>
-      <hr id="hr-bottom" />
-      <img src="../images/210318_PurelyProfessional_3_100865.webp" alt="Purely model" id="model" />
-      <h2 id="blaa">Hvad så nu?</h2>
-      <p id="bottom-p">
-        Purley Professional er særligt optaget af de mange miljømæssige aspekter, som et skønhedsbrand bør forholde sig til, og arbejder kontinuerligt med at optimere bæredygtigheden af alt fra ingredienser til emballager for at garantere et
-        fremtidssikret produkt for både bruger og omverden.
-      </p>
-    </main>
-    <Footer />
+        <p>
+          Etableret i 2011 af kemiker Ole Olsen og døtrene Julie og Cecilie
+          Kampmann.
+        </p>
+        <div id="luksus">
+          <h2>Prisvenlig</h2>
+          <h2>luksus</h2>
+        </div>
+        <p class="p-small">
+          Vores vison har siden starten været at skabe hår- og hudpleje til dig,
+          der ønsker prisvenlige, luksuriøse og effektive produkter uden parfume
+          og anden unødvendig kemi.
+        </p>
+        <div id="vand">
+          <img src="../images/IMG_6902-kopi.webp" alt="Produkt i vand" />
+        </div>
+        <h2 id="passion">Passion</h2>
+        <p class="p-small">
+          For os har Purely Professional altid været et projekt af passion. Vi
+          har prøvet os frem drevet af nysgerrighed, stædighed og lysten til at
+          fremstille produkter, vi selv drømte om at bruge.
+        </p>
+        <div id="vaerdier">
+          <div id="vaerdier-img">
+            <img src="../images/flaskerihaan2.webp" alt="" />
+          </div>
+          <br />
+          <h2>Værdier</h2>
+          <p>
+            Vores produkter skal være enkle og rene, de skal virke og have et
+            formål, herudover skal de ikke belaste naturen eller udsætte
+            forbrugeren for unødige indholdsstoffer.
+          </p>
+          <p>
+            <u>The Purely Promise</u> er betegnelsen for disse grundværdier.
+          </p>
+          <br />
+        </div>
+        <Thepurelypromisebanner />
+        <div id="vaerdier2">
+          <p>
+            Det er vores løfte til dig, når du står med et Purely produkt i
+            hænderne, at vi har fremstillet det med omtanke og af kun de reneste
+            ingredienser, som virker til dit specifikke formål.
+          </p>
+          <br />
+          <br />
+          <div class="link">
+            <div class="link-tekst">
+              <a href="purelypromise">The Purely Promise</a>
+              <img src="../svgfiles/pil.svg" alt="" class="pil" />
+            </div>
+            <hr class="underline" />
+          </div>
+        </div>
+        <hr id="hr-bottom" />
+        <img
+          src="../images/210318_PurelyProfessional_3_100865.webp"
+          alt="Purely model"
+          id="model"
+        />
+        <h2 id="blaa">Hvad så nu?</h2>
+        <p id="bottom-p">
+          Purley Professional er særligt optaget af de mange miljømæssige
+          aspekter, som et skønhedsbrand bør forholde sig til, og arbejder
+          kontinuerligt med at optimere bæredygtigheden af alt fra ingredienser
+          til emballager for at garantere et fremtidssikret produkt for både
+          bruger og omverden.
+        </p>
+      </main>
+      <Footer />
+    </div>
   </body>
+</html>
 
-  <style>
-    /* Mobile first */
-    main {
-      background-color: var(--lightSand);
-      overflow: hidden;
+<style>
+  /* Mobile first */
+
+  .hidden {
+    display: none;
+  }
+
+  #loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(backgroundBeige);
+    z-index: 9999;
+  }
+
+  .loader-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  main {
+    background-color: var(--lightSand);
+    overflow: hidden;
+  }
+
+  #founders img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    margin-top: 25px;
+  }
+
+  #founders {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  #founders p {
+    text-align: center;
+    font-weight: 300;
+    font-size: 15px;
+    margin-top: -2px;
+  }
+
+  p {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 25px;
+  }
+
+  #luksus {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 30px;
+  }
+
+  #vand img {
+    max-width: 100%;
+    margin-top: 50px;
+  }
+
+  #passion {
+    margin-left: 15px;
+    margin-top: 30px;
+  }
+
+  #vaerdier {
+    background-color: var(--mediumSand);
+    margin-left: 15px;
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    flex-direction: column;
+  }
+
+  #vaerdier-img {
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2%;
+  }
+
+  #vaerdier-img img {
+    width: 100%;
+    object-fit: cover;
+    height: 220px;
+  }
+
+  #vaerdier h2 {
+    margin-left: 15px;
+  }
+
+  #vaerdier2 {
+    background-color: var(--mediumSand);
+    margin-left: 15px;
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .link {
+    align-self: flex-end;
+    margin-right: 15px;
+  }
+  .link-tekst {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 2px;
+  }
+  .link-tekst a {
+    text-decoration: none;
+    color: var(--darkBrown);
+  }
+  .pil {
+    width: 16px;
+    rotate: -90deg;
+  }
+  .underline {
+    border: 1.5px solid var(--purelyBlue);
+    width: 100%;
+    border-radius: 1.5px;
+    margin-bottom: 25px;
+  }
+
+  #model {
+    width: 390px;
+    height: 393px;
+    margin-top: 15px;
+  }
+
+  #blaa {
+    margin-left: 15px;
+    color: var(--purelyBlue);
+    margin-top: 30px;
+  }
+
+  #bottom-p {
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: 400px) {
+    #founders {
+      justify-content: space-around;
     }
-
+  }
+  /* tablet format (over 600px)*/
+  @media (min-width: 600px) {
     #founders img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50px;
-      margin-top: 25px;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-top: 38px;
     }
 
     #founders {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-left: 15px;
-      margin-right: 15px;
+      justify-content: space-evenly;
+      max-width: 700px;
     }
 
     #founders p {
-      text-align: center;
-      font-weight: 300;
       font-size: 15px;
-      margin-top: -2px;
+      margin-top: 10px;
     }
 
     p {
-      margin-left: 15px;
-      margin-right: 15px;
-      margin-top: 25px;
+      margin-left: 5%;
+      margin-top: 2%;
+      line-height: 2em;
     }
 
     #luksus {
-      margin-left: 15px;
-      margin-right: 15px;
-      margin-top: 30px;
+      margin-left: 5%;
+      margin-top: 5%;
+      gap: 0.5em;
     }
 
-    #vand img {
-      max-width: 100%;
-      margin-top: 50px;
+    .p-small {
+      margin-top: 15px;
     }
 
     #passion {
-      margin-left: 15px;
-      margin-top: 30px;
+      margin-left: 5%;
+      margin-top: 5%;
+    }
+
+    #vand {
+      width: 550px;
+      height: auto;
+      margin-left: 5%;
     }
 
     #vaerdier {
-      background-color: var(--mediumSand);
-      margin-left: 15px;
-      margin-right: 15px;
-      display: flex;
-      justify-content: center;
-      margin-top: 30px;
-      flex-direction: column;
-    }
-
-    #vaerdier-img {
-      margin-left: 2%;
-      margin-right: 2%;
-      margin-top: 2%;
+      margin-left: 5%;
+      margin-right: 5%;
+      margin-top: 10%;
     }
 
     #vaerdier-img img {
       width: 100%;
       object-fit: cover;
-      height: 220px;
+      height: 250px;
     }
 
     #vaerdier h2 {
-      margin-left: 15px;
+      margin-left: 2%;
+    }
+
+    #vaerdier p {
+      margin-left: 2%;
+      margin-right: 2%;
     }
 
     #vaerdier2 {
-      background-color: var(--mediumSand);
-      margin-left: 15px;
-      margin-right: 15px;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+
+    #vaerdier2 p {
+      margin-left: 2%;
+      margin-right: 2%;
     }
 
     .link {
-      align-self: flex-end;
-      margin-right: 15px;
-    }
-    .link-tekst {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      justify-content: flex-end;
-      padding: 0 2px;
-    }
-    .link-tekst a {
-      text-decoration: none;
-      color: var(--darkBrown);
-    }
-    .pil {
-      width: 16px;
-      rotate: -90deg;
-    }
-    .underline {
-      border: 1.5px solid var(--purelyBlue);
-      width: 100%;
-      border-radius: 1.5px;
-      margin-bottom: 25px;
+      margin-right: 2%;
     }
 
+    #hr-bottom {
+      margin-left: 5%;
+      border: 1.5px solid var(--purelyWhite);
+      width: 100%;
+      margin-top: 2%;
+    }
     #model {
-      width: 390px;
-      height: 393px;
-      margin-top: 15px;
+      width: 550px;
+      height: auto;
+      margin-left: 5%;
+      margin-top: 2%;
+      margin-right: 5%;
     }
 
     #blaa {
-      margin-left: 15px;
-      color: var(--purelyBlue);
-      margin-top: 30px;
+      margin-top: 5%;
+      margin-left: 5%;
     }
 
     #bottom-p {
-      margin-bottom: 70px;
+      margin-right: 5%;
+    }
+  }
+
+  /* desktop format (over 900px)*/
+  @media (min-width: 900px) {
+    p {
+      margin-left: 5%;
+      margin-top: 38px;
+      line-height: 2em;
     }
 
-    @media (min-width: 400px) {
-      #founders {
-        justify-content: space-around;
-      }
-    }
-    /* tablet format (over 600px)*/
-    @media (min-width: 600px) {
-      #founders img {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        margin-top: 38px;
-      }
-
-      #founders {
-        justify-content: space-evenly;
-        max-width: 700px;
-      }
-
-      #founders p {
-        font-size: 15px;
-        margin-top: 10px;
-      }
-
-      p {
-        margin-left: 5%;
-        margin-top: 2%;
-        line-height: 2em;
-      }
-
-      #luksus {
-        margin-left: 5%;
-        margin-top: 5%;
-        gap: 0.5em;
-      }
-
-      .p-small {
-        margin-top: 15px;
-      }
-
-      #passion {
-        margin-left: 5%;
-        margin-top: 5%;
-      }
-
-      #vand {
-        width: 550px;
-        height: auto;
-        margin-left: 5%;
-      }
-
-      #vaerdier {
-        margin-left: 5%;
-        margin-right: 5%;
-        margin-top: 10%;
-      }
-
-      #vaerdier-img img {
-        width: 100%;
-        object-fit: cover;
-        height: 250px;
-      }
-
-      #vaerdier h2 {
-        margin-left: 2%;
-      }
-
-      #vaerdier p {
-        margin-left: 2%;
-        margin-right: 2%;
-      }
-
-      #vaerdier2 {
-        margin-left: 5%;
-        margin-right: 5%;
-      }
-
-      #vaerdier2 p {
-        margin-left: 2%;
-        margin-right: 2%;
-      }
-
-      .link {
-        margin-right: 2%;
-      }
-
-      #hr-bottom {
-        margin-left: 5%;
-        border: 1.5px solid var(--purelyWhite);
-        width: 100%;
-        margin-top: 2%;
-      }
-      #model {
-        width: 550px;
-        height: auto;
-        margin-left: 5%;
-        margin-top: 2%;
-        margin-right: 5%;
-      }
-
-      #blaa {
-        margin-top: 5%;
-        margin-left: 5%;
-      }
-
-      #bottom-p {
-        margin-right: 5%;
-      }
+    .p-small {
+      max-width: 420px;
+      margin-top: 15px;
     }
 
-    /* desktop format (over 900px)*/
-    @media (min-width: 900px) {
-      p {
-        margin-left: 5%;
-        margin-top: 38px;
-        line-height: 2em;
-      }
-
-      .p-small {
-        max-width: 420px;
-        margin-top: 15px;
-      }
-
-      #luksus {
-        display: flex;
-      }
-
-      #vand {
-        float: right;
-        width: 450px;
-        height: auto;
-        margin-top: -20%;
-      }
-
-      #vaerdier-img img {
-        width: 100%;
-        object-fit: cover;
-        height: 300px;
-      }
-
-      #model {
-        float: left;
-        width: 450px;
-        height: auto;
-        /* margin-left: 5%; */
-        margin-top: 2%;
-        margin-right: 5%;
-      }
+    #luksus {
+      display: flex;
     }
 
-    @media (min-width: 1200px) {
-      .link-tekst {
-        font-size: 20px;
-        line-height: 27px;
-      }
-      p {
-        margin-left: 5%;
-        margin-top: 38px;
-        line-height: 2em;
-      }
-
-      #luksus {
-        display: flex;
-      }
-
-      .p-small {
-        max-width: 600px;
-        margin-top: 15px;
-      }
-
-      #vand {
-        float: right;
-        width: 540px;
-        height: auto;
-        margin-top: -15%;
-      }
-
-      #vaerdier-img img {
-        width: 100%;
-        object-fit: cover;
-        height: 400px;
-      }
-
-      #model {
-        float: left;
-        width: 540px;
-        height: auto;
-        /* margin-left: 5%; */
-        margin-top: 2%;
-        margin-right: 5%;
-      }
+    #vand {
+      float: right;
+      width: 450px;
+      height: auto;
+      margin-top: -20%;
     }
-  </style>
-</html>
+
+    #vaerdier-img img {
+      width: 100%;
+      object-fit: cover;
+      height: 300px;
+    }
+
+    #model {
+      float: left;
+      width: 450px;
+      height: auto;
+      /* margin-left: 5%; */
+      margin-top: 2%;
+      margin-right: 5%;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .link-tekst {
+      font-size: 20px;
+      line-height: 27px;
+    }
+    p {
+      margin-left: 5%;
+      margin-top: 38px;
+      line-height: 2em;
+    }
+
+    #luksus {
+      display: flex;
+    }
+
+    .p-small {
+      max-width: 600px;
+      margin-top: 15px;
+    }
+
+    #vand {
+      float: right;
+      width: 540px;
+      height: auto;
+      margin-top: -15%;
+    }
+
+    #vaerdier-img img {
+      width: 100%;
+      object-fit: cover;
+      height: 400px;
+    }
+
+    #model {
+      float: left;
+      width: 540px;
+      height: auto;
+      /* margin-left: 5%; */
+      margin-top: 2%;
+      margin-right: 5%;
+    }
+  }
+</style>
+
+<script>
+  console.log("hej");
+  window.addEventListener("load", function () {
+    // Skjul loader og vis innholdet på siden
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("content").classList.remove("hidden");
+  });
+</script>
