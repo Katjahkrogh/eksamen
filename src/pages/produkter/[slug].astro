@@ -40,10 +40,10 @@ const { produkt } = Astro.props;
     <main>
       <Singleview
         produktnavn={produkt.produkt_navn}
-        link={"/produkter/" + produkt.id}
-        img1={`../images/shampoo/${produkt.billede_1}`}
-        img2={`../images/shampoo/${produkt.billede_2}`}
-        img3={`../images/shampoo/${produkt.billede_3}`}
+        link={"../produkter/" + produkt.id}
+        img1={`../../images/shampoo/${produkt.billede_1}`}
+        img2={`../../images/shampoo/${produkt.billede_2}`}
+        img3={`../../images/shampoo/${produkt.billede_3}`}
         beskrivelse={produkt.produkt_beskrivelse}
         brug={produkt.brug}
         pris={produkt.pris}
