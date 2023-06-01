@@ -5,8 +5,16 @@ import "../styles/style.css";
 <section class="bestseller-card">
   <div class="container">
     <div class="img-wrapper">
-      <img src="../images/shampoo/shampoo_0_haand.webp" alt="" class="product-img" />
-      <img src="../images/shampoo/shampoo_0_produktbillede.webp" alt="" class="hover-img" />
+      <img
+        src="../images/shampoo/shampoo_0_haand.webp"
+        alt=""
+        class="product-img"
+      />
+      <img
+        src="../images/shampoo/shampoo_0_produktbillede.webp"
+        alt=""
+        class="hover-img"
+      />
       <div class="overlay">
         <p>Til krøllet hår</p>
         <img src="../svgfiles/krollet.svg" alt="hårtype" />
@@ -15,12 +23,21 @@ import "../styles/style.css";
   </div>
   <h4>Shampoo 0</h4>
   <h5>179 kr.</h5>
+  <button class="knap">Føj til kurv</button>
 </section>
 <section class="bestseller-card">
   <div class="container">
     <div class="img-wrapper">
-      <img src="../images/shampoo/shampoo_1_haand.webp" alt="" class="product-img" />
-      <img src="../images/shampoo/shampoo_1_produktbillede.webp" alt="" class="hover-img" />
+      <img
+        src="../images/shampoo/shampoo_1_haand.webp"
+        alt=""
+        class="product-img"
+      />
+      <img
+        src="../images/shampoo/shampoo_1_produktbillede.webp"
+        alt=""
+        class="hover-img"
+      />
       <div class="overlay">
         <p>Til fint hår</p>
         <img src="../svgfiles/fint.svg" alt="hårtype" />
@@ -29,12 +46,21 @@ import "../styles/style.css";
   </div>
   <h4>Shampoo 1</h4>
   <h5>179 kr.</h5>
+  <button class="knap">Føj til kurv</button>
 </section>
 <section class="bestseller-card">
   <div class="container">
     <div class="img-wrapper">
-      <img src="../images/shampoo/Bayby_shampoo_hand.webp" alt="" class="product-img" />
-      <img src="../images/shampoo/baby_shampoo_produktbillede.webp" alt="" class="hover-img" />
+      <img
+        src="../images/shampoo/Bayby_shampoo_hand.webp"
+        alt=""
+        class="product-img"
+      />
+      <img
+        src="../images/shampoo/baby_shampoo_produktbillede.webp"
+        alt=""
+        class="hover-img"
+      />
       <div class="overlay">
         <p>Til småbørn</p>
       </div>
@@ -42,12 +68,21 @@ import "../styles/style.css";
   </div>
   <h4>Baby Shampoo</h4>
   <h5>99 kr.</h5>
+  <button class="knap">Føj til kurv</button>
 </section>
 <section class="bestseller-card">
   <div class="container">
     <div class="img-wrapper">
-      <img src="../images/shampoo/shampoo_4_haand.webp" alt="" class="product-img" />
-      <img src="../images/shampoo/shampoo_4_produktbillede.webp" alt="" class="hover-img" />
+      <img
+        src="../images/shampoo/shampoo_4_haand.webp"
+        alt=""
+        class="product-img"
+      />
+      <img
+        src="../images/shampoo/shampoo_4_produktbillede.webp"
+        alt=""
+        class="hover-img"
+      />
       <div class="overlay">
         <p>Mod skæl</p>
         <img src="../svgfiles/skael.svg" alt="hårtype" />
@@ -56,6 +91,7 @@ import "../styles/style.css";
   </div>
   <h4>Shampoo 4</h4>
   <h5>179 kr.</h5>
+  <button class="knap">Føj til kurv</button>
 </section>
 
 <style>
@@ -140,6 +176,20 @@ import "../styles/style.css";
     opacity: 0;
   }
 
+  .knap {
+    background-color: var(--darkSand);
+    border: none;
+    color: var(--purelyWhite);
+    padding: 6px;
+    font-weight: 400;
+    font-family: "Open Sans";
+    border-radius: 5px;
+    margin-left: 7px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    width: 95%;
+  }
+
   @media (min-width: 500px) {
     .bestseller-card,
     .product-img,
@@ -162,5 +212,8 @@ import "../styles/style.css";
   }
 
   @media (min-width: 1200px) {
+    .knap {
+      font-size: 20px;
+    }
   }
 </style>
