@@ -8,7 +8,8 @@ import "../styles/style.css";
 const url = "https://bwzhyxrwqgaljabpwzkv.supabase.co/rest/v1/Purely_Promise";
 const options = {
   headers: {
-    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ3emh5eHJ3cWdhbGphYnB3emt2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg3ODU1MzksImV4cCI6MTk5NDM2MTUzOX0.zKU7b6CyWwRwF95benSn0okCyoH-QtV96NdDXIKqslM",
+    apikey:
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ3emh5eHJ3cWdhbGphYnB3emt2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg3ODU1MzksImV4cCI6MTk5NDM2MTUzOX0.zKU7b6CyWwRwF95benSn0okCyoH-QtV96NdDXIKqslM",
   },
 };
 const response = await fetch(url, options);
@@ -20,74 +21,114 @@ const data = await response.json();
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
+    <script
+      src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
+    ></script>
     <meta name="generator" content={Astro.generator} />
     <title>The Purely Promise</title>
   </head>
   <body>
-    <header>
+    <div id="loader">
+      <div class="loader-container">
+        <lottie-player
+          src="https://assets10.lottiefiles.com/packages/lf20_isjnfriv.json"
+          background="transparent"
+          speed="1"
+          style="width: 300px; height: 300px;"
+          loop
+          autoplay></lottie-player>
+      </div>
+    </div>
+    <div id="content" class="hidden">
       <Header />
       <Hero
         img="../images/IMG_8923.webp"
         tekst="Vi kalder vores grundværdier for The Purely Promise. Dette er vores løfte til dig, når du vælger at tage hensyn til dig selv, dine nærmeste og dine omgivelser."
         navn="The purely promise"
       />
-    </header>
-    <main>
-      <div class="card-holder">
-        {
-          data.map((promise) => (
-            <Tppcard
-              id={promise.id}
-              illustration={`../svgfiles/${promise.card_illu}`}
-              title1={promise.card_title}
-              title2={promise.title_2}
-              title3={promise.title_3}
-              title4={promise.title_4}
-              text={promise.card_text}
-              p1={promise.p_1}
-              p2={promise.p_2}
-              p3={promise.p_3}
-              p4={promise.p_4}
-              img1={`../images/${promise.img_1}`}
-              img2={`../images/${promise.img_2}`}
-              img3={`../images/${promise.img_3}`}
-              img4={`../images/${promise.img_4}`}
-              bredbillede={`../images/${promise.bredformat_img}`}
-            />
-          ))
-        }
-      </div>
-    </main>
-    <footer>
+      <main>
+        <div class="card-holder">
+          {
+            data.map((promise) => (
+              <Tppcard
+                id={promise.id}
+                illustration={`../svgfiles/${promise.card_illu}`}
+                title1={promise.card_title}
+                title2={promise.title_2}
+                title3={promise.title_3}
+                title4={promise.title_4}
+                text={promise.card_text}
+                p1={promise.p_1}
+                p2={promise.p_2}
+                p3={promise.p_3}
+                p4={promise.p_4}
+                img1={`../images/${promise.img_1}`}
+                img2={`../images/${promise.img_2}`}
+                img3={`../images/${promise.img_3}`}
+                img4={`../images/${promise.img_4}`}
+                bredbillede={`../images/${promise.bredformat_img}`}
+              />
+            ))
+          }
+        </div>
+      </main>
       <Footer />
-    </footer>
+    </div>
   </body>
-</html>
-<style>
-  /* Mobile first */
-  body {
-    background-color: var(--mediumSand);
-  }
-  .card-holder {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* gap: 26px; */
-    max-width: 100vw;
-    height: fit-content;
-    margin: 26px 0;
-  }
-  /* tablet format (over 600px)*/
-  @media (min-width: 600px) {
-  }
-  /* desktop format (over 900px)*/
-  @media (min-width: 900px) {
-    .card-holder {
-      align-items: normal;
-    }
-  }
-  @media (min-width: 1200px) {
-  }
-</style>
+  <style>
+    /* Mobile first */
 
-<script></script>
+    .hidden {
+      display: none;
+    }
+
+    #loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: var(backgroundBeige);
+      z-index: 9999;
+    }
+
+    .loader-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    body {
+      background-color: var(--mediumSand);
+    }
+    .card-holder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* gap: 26px; */
+      max-width: 100vw;
+      height: fit-content;
+      margin: 26px 0;
+    }
+    /* tablet format (over 600px)*/
+    @media (min-width: 600px) {
+    }
+    /* desktop format (over 900px)*/
+    @media (min-width: 900px) {
+      .card-holder {
+        align-items: normal;
+      }
+    }
+    @media (min-width: 1200px) {
+    }
+  </style>
+
+  <script>
+    console.log("hej");
+    window.addEventListener("load", function () {
+      // Skjul loader og vis innholdet på siden
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("content").classList.remove("hidden");
+    });
+  </script>
+</html>
