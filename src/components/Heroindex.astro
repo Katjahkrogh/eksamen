@@ -3,8 +3,12 @@ import "../styles/style.css";
 ---
 
 <section id="hero-index">
-  <img src="../images/billede 17.04.2023 13.36.13.webp" alt="" id="img-mobile" />
-  <img src="../images/hero/hero-index-kopi.webp" alt="" id="img-desktop" />
+  <img
+    src="../images/billede 17.04.2023 13.36.13.webp"
+    alt=""
+    id="img-mobile"
+  />
+  <img src="../images/IMG_8894.webp" alt="" id="img-desktop" />
 </section>
 
 <style>
@@ -12,6 +16,18 @@ import "../styles/style.css";
   #hero-index {
     width: 100%;
     height: 507px;
+    position: relative;
+  }
+
+  #hero-index::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(147, 165, 161, 0.6);
+    z-index: 1;
   }
 
   img {
